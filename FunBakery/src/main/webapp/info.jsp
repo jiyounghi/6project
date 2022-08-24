@@ -10,7 +10,7 @@
     Document Title
     =============================================
     -->
-    <title>Titan | Multipurpose HTML5 Template</title>
+    <title>Info</title>
     <!--  
     Favicons
     =============================================
@@ -362,7 +362,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Blog Grid</h2>
+                <h2 class="module-title font-alt">Info</h2>
                 <div class="module-subtitle font-serif">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
               </div>
             </div>
@@ -371,19 +371,19 @@
         <section class="module">
           <div class="container">
             <div class="row post-masonry post-columns">
-<!-- ì¬ì´ëë° -->
+<!-- 사이드바 -->
               <div class="col-sm-4 col-md-3 sidebar" style="border-right: 1px solid #c2c2c2">
                 <div class="widget">
                   <h5 class="widget-title font-alt">Blog Categories</h5>
                   <ul class="icon-list">
-                    <li><a href="#">ì¬ë£ - ?</a></li>
-                    <li><a href="#">ëêµ¬ - ?</a></li>
+                    <li><a href="#">재료 - ?</a></li>
+                    <li><a href="#">도구 - ?</a></li>
                   </ul>
                 </div>
               </div>
-<!-- ì¬ì´ëë° -->
+<!-- 사이드바 -->
 			<div class="col-sm-8">
-              <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="post">
                   <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
@@ -397,7 +397,7 @@
                   <div class="post-more"><a class="more-link" href="#">Read more</a></div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="post">
                   <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
@@ -411,7 +411,7 @@
                   <div class="post-more"><a class="more-link" href="#">Read more</a></div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="post">
                   <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
@@ -425,7 +425,7 @@
                   <div class="post-more"><a class="more-link" href="#">Read more</a></div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="post">
                   <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
@@ -439,7 +439,7 @@
                   <div class="post-more"><a class="more-link" href="#">Read more</a></div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="post">
                   <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
@@ -453,7 +453,7 @@
                   <div class="post-more"><a class="more-link" href="#">Read more</a></div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="post">
                   <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
@@ -467,7 +467,7 @@
                   <div class="post-more"><a class="more-link" href="#">Read more</a></div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="post">
                   <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
@@ -481,7 +481,7 @@
                   <div class="post-more"><a class="more-link" href="#">Read more</a></div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="post">
                   <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
@@ -495,7 +495,7 @@
                   <div class="post-more"><a class="more-link" href="#">Read more</a></div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="post">
                   <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">

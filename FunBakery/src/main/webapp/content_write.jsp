@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
@@ -8,7 +10,7 @@
     Document Title
     =============================================
     -->
-    <title>Titan | Multipurpose HTML5 Template</title>
+    <title>Write</title>
     <!--  
     Favicons
     =============================================
@@ -356,86 +358,31 @@
         </div>
       </nav>
       <div class="main">
-        <section class="module bg-dark-60 faq-page-header" data-background="assets/images/faq_bg.jpg">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Faq</h2>
-                <div class="module-subtitle font-serif">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="module">
-          <div class="container">
-            <div class="row mb-60">
-              <div class="col-sm-8 col-sm-offset-2">
-                <form role="form">
-                  <div class="search-box">
-                    <input class="form-control" type="text" placeholder="Search..."/>
-                    <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-8 col-sm-offset-2">
-                <div role="tabpanel">
-                  <ul class="nav nav-tabs font-alt" role="tablist">
-                    <li class="active"><a href="#support" data-toggle="tab"><span class="icon-tools-2"></span>support</a></li>
-                    <li><a href="#sales" data-toggle="tab"><span class="icon-tools-2"></span>sales</a></li>
-                  </ul>
-                  <div class="tab-content">
-                    <div class="tab-pane active" id="support">
-                      <div class="panel-group" id="accordion">
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#support1">Support Question 1</a></h4>
-                          </div>
-                          <div class="panel-collapse collapse in" id="support1">
-                            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">Support Question 2</a></h4>
-                          </div>
-                          <div class="panel-collapse collapse" id="support2">
-                            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tab-pane" id="sales">
-                      <div class="panel-group" id="accordion">
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#sales1">Sales Question 1</a></h4>
-                          </div>
-                          <div class="panel-collapse collapse in" id="sales1">
-                            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#sales2">Sales Question 2</a></h4>
-                          </div>
-                          <div class="panel-collapse collapse" id="sales2">
-                            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <article class="module">
+			<div class="container" role="main">
+				<h2 class="font-alt mb-0">글쓰기</h2>
+                <hr class="divider-w mt-10 mb-20">
+				<form name="form" id="form" role="form" method="post" action="#">
+					<div class="row">
+						<label for="title">제목</label>
+						<input type="text" class="form-control" name="title" id="title" placeholder="제목을 입력해주세요" style="margin-bottom: 12px; font-size: 15px;">
+					</div>
+					<div class="row">
+						<label for="reg_id">작성자</label>
+						<input type="text" class="form-control" name="reg_id" id="reg_id" placeholder="작성자를 입력해주세요" style="margin-bottom: 12px; font-size: 15px;">
+					</div>
+					<div class="row">
+						<label for="content">내용</label>
+						<textarea class="form-control" rows="15" name="content" id="content" placeholder="내용을 입력해주세요" style="margin-bottom: 12px; font-size: 15px;"></textarea>
+					</div>
+					<div class="row" style="float: right; font-weight: bold;">
+						<button class="btn btn-danger btn-round" type="reset">취소</button>&nbsp;
+						<button class="btn btn-g btn-round" type="submit">작성</button>&nbsp;
+						<a href="shop_checkout.html" class="btn btn-default btn-round">목록</a>
+					</div>
+				</form>
+			</div>
+		</article>
         <div class="module-small bg-dark">
           <div class="container">
             <div class="row">

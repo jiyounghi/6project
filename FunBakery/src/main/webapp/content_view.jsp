@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
@@ -8,7 +10,7 @@
     Document Title
     =============================================
     -->
-    <title>Titan | Multipurpose HTML5 Template</title>
+    <title>View</title>
     <!--  
     Favicons
     =============================================
@@ -356,164 +358,48 @@
         </div>
       </nav>
       <div class="main">
-        <section class="module bg-dark-60 blog-page-header" data-background="assets/images/blog_bg.jpg">
+        <section class="module-small">
           <div class="container">
             <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Blog Grid</h2>
-                <div class="module-subtitle font-serif">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
+              <div class="col-sm-8 col-sm-offset-2">
+                <div class="post">
+                  <div class="post-header font-alt">
+                    <h1 class="post-title">제목</h1>
+                    <div class="comment-author font-alt">By 작성자 | 작성일</div>
+                  </div>
+                  <div class="post-entry">
+                   	<p>내용</p>
+                  </div>
+                </div>
+                <div class="comments">
+                  <h4 class="comment-title font-alt">댓글</h4>
+                  <div class="comment clearfix">
+                    <div class="comment-content clearfix">
+                      <div class="comment-author font-alt" style="font-weight: bold">작성자</div>
+                      <div class="comment-body">
+                        <p>내용</p>
+                      </div>
+                      <div class="comment-meta font-alt">작성일</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-form">
+                  <form method="post">
+                    <div class="form-group">
+                      <textarea class="form-control" id="comment" name="comment" rows="4" placeholder="Comment"></textarea>
+                    </div>
+                    <button class="btn btn-round btn-g" type="submit" style="float: right">댓글쓰기</button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </section>
-        <section class="module">
           <div class="container">
-            <div class="row post-masonry post-columns">
-<!-- 사이드바 -->
-              <div class="col-sm-4 col-md-3 sidebar" style="border-right: 1px solid #c2c2c2">
-                <div class="widget">
-                  <h5 class="widget-title font-alt">Blog Categories</h5>
-                  <ul class="icon-list">
-                    <li><a href="#">재료 - ?</a></li>
-                    <li><a href="#">도구 - ?</a></li>
-                  </ul>
-                </div>
-              </div>
-<!-- 사이드바 -->
-			<div class="col-sm-8">
-              <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="post">
-                  <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
-                  <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">Our trip to the Alps</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Mark Stone</a>&nbsp;| 23 November | 3 Comments
-                    </div>
-                  </div>
-                  <div class="post-entry">
-                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                  </div>
-                  <div class="post-more"><a class="more-link" href="#">Read more</a></div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="post">
-                  <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
-                  <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">Shore after the tide</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Andy River</a>&nbsp;| 11 November | 4 Comments
-                    </div>
-                  </div>
-                  <div class="post-entry">
-                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                  </div>
-                  <div class="post-more"><a class="more-link" href="#">Read more</a></div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="post">
-                  <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
-                  <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">We in New Zealand</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Dylan Woods</a>&nbsp;| 5 November | 15 Comments
-                    </div>
-                  </div>
-                  <div class="post-entry">
-                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                  </div>
-                  <div class="post-more"><a class="more-link" href="#">Read more</a></div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="post">
-                  <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
-                  <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">Plane in the field</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Mark Stone</a>&nbsp;| 23 November | 3 Comments
-                    </div>
-                  </div>
-                  <div class="post-entry">
-                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                  </div>
-                  <div class="post-more"><a class="more-link" href="#">Read more</a></div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="post">
-                  <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
-                  <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">Clock</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Andy River</a>&nbsp;| 11 November | 4 Comments
-                    </div>
-                  </div>
-                  <div class="post-entry">
-                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                  </div>
-                  <div class="post-more"><a class="more-link" href="#">Read more</a></div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="post">
-                  <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
-                  <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">Lighthouse to the shore</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Dylan Woods</a>&nbsp;| 5 November | 15 Comments
-                    </div>
-                  </div>
-                  <div class="post-entry">
-                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                  </div>
-                  <div class="post-more"><a class="more-link" href="#">Read more</a></div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="post">
-                  <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
-                  <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">Our trip to the Alps</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Mark Stone</a>&nbsp;| 23 November | 3 Comments
-                    </div>
-                  </div>
-                  <div class="post-entry">
-                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                  </div>
-                  <div class="post-more"><a class="more-link" href="#">Read more</a></div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="post">
-                  <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
-                  <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">Shore after the tide</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Andy River</a>&nbsp;| 11 November | 4 Comments
-                    </div>
-                  </div>
-                  <div class="post-entry">
-                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                  </div>
-                  <div class="post-more"><a class="more-link" href="#">Read more</a></div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="post">
-                  <div class="post-thumbnail"><a href="#"><img src="assets/images/post-masonry-1.jpg" alt="Blog-post Thumbnail"/></a></div>
-                  <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">We in New Zealand</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Dylan Woods</a>&nbsp;| 5 November | 15 Comments
-                    </div>
-                  </div>
-                  <div class="post-entry">
-                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                  </div>
-                  <div class="post-more"><a class="more-link" href="#">Read more</a></div>
-                </div>
-              </div>
-            </div>
-            </div>
-<!-- 페이지 이동 -->
-              <div class="col-sm-12" style="text-align: center;">
-                <div class="pagination font-alt"><a href="#"><i class="fa fa-angle-left"></i></a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"><i class="fa fa-angle-right"></i></a></div>
-              </div>
-<!-- 페이지 이동 -->
+	          <div class="col-sm-8 col-sm-offset-2">
+	           	<hr>
+	               <a class="btn btn-round btn-g" href="content_write.jsp">글쓰기</a>
+	               <a href="community.jsp" class="btn btn-default btn-round">목록</a>
+	          </div>
           </div>
         </section>
         <div class="module-small bg-dark">
