@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
@@ -59,7 +61,7 @@
         <div class="loader">Loading...</div>
       </div>
       <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
- 
+ 		<%@ include file="header.html" %>
       </nav>
       <div class="main">
         <section class="module bg-dark-30" data-background="assets/images/section-4.jpg">
