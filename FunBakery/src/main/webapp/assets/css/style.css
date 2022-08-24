@@ -2352,6 +2352,11 @@ Google map
 }
 
 /* Sidebar / Widget common*/
+.sidebar{
+	float: left;
+	border-right: 1px solid black;
+}
+
 .sidebar .widget {
   margin-bottom: 60px;
 }

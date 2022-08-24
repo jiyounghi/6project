@@ -10,7 +10,7 @@
     Document Title
     =============================================
     -->
-    <title>Titan | Multipurpose HTML5 Template</title>
+    <title>View</title>
     <!--  
     Favicons
     =============================================
@@ -67,9 +67,9 @@
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown"><a class="dropdown-toggle" href="category.html" data-toggle="dropdown">Home</a>
+              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Home</a>
                 <ul class="dropdown-menu">
-                  <li><a href="info.html">Default</a></li>
+                  <li><a href="index_mp_fullscreen_video_background.html">Default</a></li>
                   <li><a href="index_op_fullscreen_gradient_overlay.html">One Page</a></li>
                   <li><a href="index_agency.html">Agency</a></li>
                   <li><a href="index_portfolio.html">Portfolio</a></li>
@@ -85,7 +85,7 @@
                   <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Static Image Header</a>
                     <ul class="dropdown-menu">
                       <li><a href="index_mp_fullscreen_static.html">Fulscreen</a></li>
-                      <li><a href="blog_single_left_sidebar.html">Classic</a></li>
+                      <li><a href="index_mp_classic_static.html">Classic</a></li>
                     </ul>
                   </li>
                   <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Flexslider Header</a>
@@ -357,78 +357,124 @@
           </div>
         </div>
       </nav>
-      <section class="bg-dark-30 showcase-page-header module parallax-bg" data-background="assets/images/showcase_bg.jpg">
-        <div class="titan-caption">
-          <div class="caption-content">
-            <div class="font-alt mb-30 titan-title-size-1">Powerful. Multipurpose.</div>
-            <div class="font-alt mb-40 titan-title-size-4">100+ Layouts</div><a class="section-scroll btn btn-border-w btn-round" href="#demos">See Demos</a>
+      <div class="main">
+        <section class="module-small">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <div class="post">
+                  <div class="post-header font-alt">
+                    <h1 class="post-title">제목</h1>
+                    <div class="comment-author font-alt">By 작성자 | 작성일</div>
+                  </div>
+                  <div class="post-entry">
+                   	<p>내용</p>
+                  </div>
+                </div>
+                <div class="comments">
+                  <h4 class="comment-title font-alt">댓글</h4>
+                  <div class="comment clearfix">
+                    <div class="comment-content clearfix">
+                      <div class="comment-author font-alt" style="font-weight: bold">작성자</div>
+                      <div class="comment-body">
+                        <p>내용</p>
+                      </div>
+                      <div class="comment-meta font-alt">작성일</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-form">
+                  <form method="post">
+                    <div class="form-group">
+                      <textarea class="form-control" id="comment" name="comment" rows="4" placeholder="Comment"></textarea>
+                    </div>
+                    <button class="btn btn-round btn-g" type="submit" style="float: right">댓글쓰기</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+	          <div class="col-sm-8 col-sm-offset-2">
+	           	<hr>
+	               <a class="btn btn-round btn-g" href="content_write.jsp">글쓰기</a>
+	               <a href="community.jsp" class="btn btn-default btn-round">목록</a>
+	          </div>
+          </div>
+        </section>
+        <div class="module-small bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">About Titan</h5>
+                  <p>The languages only differ in their grammar, their pronunciation and their most common words.</p>
+                  <p>Phone: +1 234 567 89 10</p>Fax: +1 234 567 89 10
+                  <p>Email:<a href="#">somecompany@example.com</a></p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">Recent Comments</h5>
+                  <ul class="icon-list">
+                    <li>Maria on <a href="#">Designer Desk Essentials</a></li>
+                    <li>John on <a href="#">Realistic Business Card Mockup</a></li>
+                    <li>Andy on <a href="#">Eco bag Mockup</a></li>
+                    <li>Jack on <a href="#">Bottle Mockup</a></li>
+                    <li>Mark on <a href="#">Our trip to the Alps</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">Blog Categories</h5>
+                  <ul class="icon-list">
+                    <li><a href="#">Photography - 7</a></li>
+                    <li><a href="#">Web Design - 3</a></li>
+                    <li><a href="#">Illustration - 12</a></li>
+                    <li><a href="#">Marketing - 1</a></li>
+                    <li><a href="#">Wordpress - 16</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">Popular Posts</h5>
+                  <ul class="widget-posts">
+                    <li class="clearfix">
+                      <div class="widget-posts-image"><a href="#"><img src="assets/images/rp-1.jpg" alt="Post Thumbnail"/></a></div>
+                      <div class="widget-posts-body">
+                        <div class="widget-posts-title"><a href="#">Designer Desk Essentials</a></div>
+                        <div class="widget-posts-meta">23 january</div>
+                      </div>
+                    </li>
+                    <li class="clearfix">
+                      <div class="widget-posts-image"><a href="#"><img src="assets/images/rp-2.jpg" alt="Post Thumbnail"/></a></div>
+                      <div class="widget-posts-body">
+                        <div class="widget-posts-title"><a href="#">Realistic Business Card Mockup</a></div>
+                        <div class="widget-posts-meta">15 February</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-      <div class="main showcase-page">
-        <section class="module-extra-small bg-dark">
+        <hr class="divider-d">
+        <footer class="footer bg-dark">
           <div class="container">
             <div class="row">
-              <div class="col-sm-6 col-md-8 col-lg-9">
-                <div class="callout-text font-alt">
-                  <h4 style="margin-top: 0px;">Start Creating Beautiful Websites</h4>
-                  <p style="margin-bottom: 0px;">Download Titan Free today!</p>
+              <div class="col-sm-6">
+                <p class="copyright font-alt">&copy; 2017&nbsp;<a href="index.html">TitaN</a>, All Rights Reserved</p>
+              </div>
+              <div class="col-sm-6">
+                <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="callout-btn-box"><a class="btn btn-border-w btn-circle" href="https://themewagon.com/themes/titan/">Downlaod Free</a></div>
-              </div>
             </div>
           </div>
-        </section>
-        <section class="module-medium" id="demos">
-          <div class="container">
-            <div class="row multi-columns-row">
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_mp_fullscreen_video_background.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/main_demo.jpg" alt="Main Demo"></div>
-                  <h3 class="content-box-title font-serif">Main Demo</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_agency.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/agency.jpg" alt="Agency"></div>
-                  <h3 class="content-box-title font-serif">Agency</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_portfolio.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/portfolio.jpg" alt="Portfolio"></div>
-                  <h3 class="content-box-title font-serif">Portfolio</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_restaurant.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/restaurant.jpg" alt="Restaurant"></div>
-                  <h3 class="content-box-title font-serif">Restaurant</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_finance.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/finance.jpg" alt="Finance"></div>
-                  <h3 class="content-box-title font-serif">Finance</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_landing.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/landing.jpg" alt="Landing"></div>
-                  <h3 class="content-box-title font-serif">Landing</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_photography.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/photography.jpg" alt="Photography"></div>
-                  <h3 class="content-box-title font-serif">Photography</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_shop.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/shop.jpg" alt="Shop"></div>
-                  <h3 class="content-box-title font-serif">Shop</h3></a></div>
-              <div class="col-md-4 col-sm-6 col-xs-12"><a class="content-box" href="index_op_fullscreen_gradient_overlay.html">
-                  <div class="content-box-image"><img src="assets/images/screenshots/one_page.jpg" alt="One Page"></div>
-                  <h3 class="content-box-title font-serif">One Page</h3></a></div>
-            </div>
-          </div>
-        </section>
-        <section class="module-extra-small bg-dark">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-md-8 col-lg-9">
-                <div class="callout-text font-alt">
-                  <h4 style="margin-top: 0px;">Start Creating Beautiful Websites</h4>
-                  <p style="margin-bottom: 0px;">Download Titan Free today!</p>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="callout-btn-box"><a class="btn btn-border-w btn-circle" href="https://themewagon.com/themes/titan/">Downlaod Free</a></div>
-              </div>
-            </div>
-          </div>
-        </section>
+        </footer>
       </div>
       <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
     </main>
