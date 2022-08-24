@@ -25,7 +25,7 @@ public class RegisterCon extends HttpServlet {
 		int cnt = mbdao.Register(mbvo);
 		
 		if(cnt>0) {
-			response.sendRedirect("login_register.html");
+			response.sendRedirect("login_register.jsp");
 		}else {
 			System.out.println("입력실패");
 		}

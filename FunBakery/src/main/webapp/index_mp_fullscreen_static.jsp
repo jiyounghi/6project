@@ -69,7 +69,7 @@
         <div class="titan-caption">
           <div class="caption-content">
           	<% if(username!=null){ %>
-            	<div class="font-alt mb-30 titan-title-size-1"><%=username%>의</div>
+            	<div class="font-alt mb-30 titan-title-size-1"><h1 style="display:inline;"><%=username%></h1>의</div>
             <%}else{ %>
             	<div class="font-alt mb-30 titan-title-size-1">베이킹왕 문지영의</div>
             <%} %>
