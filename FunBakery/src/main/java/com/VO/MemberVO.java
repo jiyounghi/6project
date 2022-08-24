@@ -28,6 +28,11 @@ public class MemberVO {
 		this.password = password;
 		this.username = username;
 	}
+	public MemberVO(String email, String password) {
+		super();
+		this.email = email;
+		this.password = password;
+	}
 	
 	
 	

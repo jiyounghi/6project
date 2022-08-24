@@ -68,4 +68,27 @@ public class MemberDAO {
 		}
 		return cnt;
 	}
+	public String login(MemberVO vo) {
+		String username="";
+		try {
+			dbConn();
+			
+			String sql = "Select * from t_member where mb_id = ? and mb_pw = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getEmail());
+			psmt.setString(2, vo.getPassword());
+			
+			rs = psmt.executeQuery();
+			if (rs.next()) {
+				
+				username = rs.getString("mb_name");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+		return username;
+	}
 }
