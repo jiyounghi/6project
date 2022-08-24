@@ -56,6 +56,7 @@
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+
     <main>
       <div class="page-loader">
         <div class="loader">Loading...</div>
