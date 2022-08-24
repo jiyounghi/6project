@@ -8,7 +8,7 @@
     Document Title
     =============================================
     -->
-    <title>Community</title>
+    <title>Write</title>
     <!--  
     Favicons
     =============================================
@@ -356,49 +356,31 @@
         </div>
       </nav>
       <div class="main">
-        <section class="module">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <h1 class="module-title font-alt">Community</h1>
-              </div>
-            </div>
-            <hr class="divider-w pt-20">
-            <div class="row">
-              <div class="col-sm-12">
-                <table class="table table-striped">
-                    <tr>
-                      <th></th>
-                      <th style="text-align: center">제목</th>
-                      <th style="text-align: center">작성자</th>
-                      <th style="text-align: center">작성일</th>
-                      <th style="text-align: center">조회</th>
-                    </tr>
-                    <tr>
-                      <td style="width: 5%; text-align: center;">1</td>
-                      <td style="width: 55%"><a href="#">제목</a></td>
-                      <td style="width: 20%">작성자</td>
-                      <td style="width: 15%; text-align: center;">2022/08/23</td>
-                      <td style="width: 5%; text-align: center;">0</td>
-                    </tr>
-                    <tr>
-                      <td style="width: 5%; text-align: center;">2</td>
-                      <td style="width: 55%"><a href="#">제목</a></td>
-                      <td style="width: 20%">작성자</td>
-                      <td style="width: 15%; text-align: center;">2022/08/24</td>
-                      <td style="width: 5%; text-align: center;">0</td>
-                    </tr>
-                </table>
-                <a href="content_write.html"><button class="btn btn-g btn-round" type="submit" style="float: right">글쓰기</button></a>
-              </div>
-<!-- 페이지 이동 -->
-              <div class="col-sm-12" style="text-align: center;">
-                <div class="pagination font-alt"><a href="#"><i class="fa fa-angle-left"></i></a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"><i class="fa fa-angle-right"></i></a></div>
-              </div>
-<!-- 페이지 이동 -->
-            </div>
-          </div>
-        </section>
+        <article class="module">
+			<div class="container" role="main">
+				<h2 class="font-alt mb-0">글쓰기</h2>
+                <hr class="divider-w mt-10 mb-20">
+				<form name="form" id="form" role="form" method="post" action="${pageContext.request.contextPath}/board/saveBoard">
+					<div class="row">
+						<label for="title">제목</label>
+						<input type="text" class="form-control" name="title" id="title" placeholder="제목을 입력해 주세요" style="margin-bottom: 12px; font-size: 15px;">
+					</div>
+					<div class="row">
+						<label for="reg_id">작성자</label>
+						<input type="text" class="form-control" name="reg_id" id="reg_id" placeholder="이름을 입력해 주세요" style="margin-bottom: 12px; font-size: 15px;">
+					</div>
+					<div class="row">
+						<label for="content">내용</label>
+						<textarea class="form-control" rows="15" name="content" id="content" placeholder="내용을 입력해 주세요" style="margin-bottom: 12px; font-size: 15px;"></textarea>
+					</div>
+					<div class="row" style="float: right; font-weight: bold;">
+						<button class="btn btn-danger btn-round" type="reset">취소</button>&nbsp;
+						<button class="btn btn-g btn-round" type="submit">글쓰기</button>&nbsp;
+						<a href="shop_checkout.html"><button class="btn btn-default btn-round" type="button" id="btnList">목록</button></a>
+					</div>
+				</form>
+			</div>
+		</article>
         <div class="module-small bg-dark">
           <div class="container">
             <div class="row">
