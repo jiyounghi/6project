@@ -62,7 +62,7 @@
         <div class="loader">Loading...</div>
       </div>
       <nav class="navbar navbar-custom navbar-fixed-top navbar-transparent" role="navigation">
-		<%@ include file="header.html" %>
+		<%@ include file="header.jsp" %>
        </nav>
       <!-- 메인섹션 -->
       <section class="home-section home-parallax home-fade home-full-height bg-dark-30" id="home" data-background="assets/images/croissants-and-bread-frame-with-copy-space.jpg">
