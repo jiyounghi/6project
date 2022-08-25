@@ -15,6 +15,8 @@ import com.VO.MemberVO;
 public class LoginCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		request.setCharacterEncoding("utf-8");
+
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		
@@ -25,7 +27,7 @@ public class LoginCon extends HttpServlet {
 		if(username != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("username", username);
-			response.sendRedirect("index_mp_fullscreen_static.jsp");
+			response.sendRedirect("main.jsp");
 		}else {
 			response.sendRedirect("login_register.jsp");
 		}
