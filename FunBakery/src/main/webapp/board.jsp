@@ -93,7 +93,7 @@
 	                      <td style="width: 55%"><a href="BoardDetailCon?seq=${blist.article_seq }">${blist.article_title }</a></td>
 	                      <td style="width: 20%">${blist.mb_name }</td>
 	                      <td style="width: 15%; text-align: center;">${blist.article_date }</td>
-	                      <td style="width: 5%; text-align: center;">${blist.article_count }</td>
+	                      <td style="width: 5%; text-align: center;">${blist.count }</td>
 	                    </tr>
                     </c:forEach>
                 </table>

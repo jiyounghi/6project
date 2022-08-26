@@ -53,7 +53,7 @@ public class BoardDAO {
 		try {
 			dbConn();
 
-			String sql = "SELECT b.article_seq, b.article_title, b.article_content, b.article_date, m.mb_name FROM t_community b, t_member m where b.mb_id = m.mb_id and b.article_seq=?";
+			String sql = "SELECT b.article_seq, b.article_title, b.article_content, b.article_date, m.mb_name, b.article_count FROM t_community b, t_member m where b.mb_id = m.mb_id and b.article_seq=?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, seq);
 
@@ -64,8 +64,12 @@ public class BoardDAO {
 				String content = rs.getString(3);
 				Date date = rs.getDate(4);
 				String name = rs.getString(5);
+				int count = rs.getInt(6);
 
 				vo = new BoardVO(aseq, title, content, date, name);
+				count++;
+				countUpdate(count, aseq);
+				
 			}
 
 		} catch (Exception e) {
@@ -75,6 +79,19 @@ public class BoardDAO {
 		}
 		return vo;
 
+	}
+	
+	public void countUpdate(int count, int seq) {
+		try {
+			String sql = "UPDATE t_community SET article_count=? WHERE article_seq=?";
+			psmt = conn.prepareStatement(sql);
+			
+			psmt.setInt(1, count);
+			psmt.setInt(2, seq);
+			psmt.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public ArrayList<CommentVO> commentView(int seq) {
@@ -162,7 +179,7 @@ public class BoardDAO {
 		try {
 			dbConn();
 			
-			String sql = "INSERT INTO t_community VALUES(t_community_SEQ.nextval,?,?,sysdate,?)";
+			String sql = "INSERT INTO t_community VALUES(t_community_SEQ.nextval,?,?,sysdate,?,0)";
 			psmt = conn.prepareStatement(sql);
 			
 			psmt.setString(1, vo.getArticle_title());
