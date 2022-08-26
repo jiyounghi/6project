@@ -178,7 +178,7 @@ puupp <%@ page language="java" contentType="text/html; charset=UTF-8"
 <!-- 페이지이동 -->
             </div>
         </section>
-        <%@ include file="footer.html" %>
+		<%@ include file="footer.jsp" %>
     </main>
     <!--  
     JavaScripts

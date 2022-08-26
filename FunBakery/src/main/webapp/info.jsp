@@ -220,7 +220,7 @@
 <!-- íì´ì§ ì´ë -->
           </div>
         </section>
-        <%@ include file="footer.html" %>
+		<%@ include file="footer.jsp" %>
     </main>
     <!--  
     JavaScripts

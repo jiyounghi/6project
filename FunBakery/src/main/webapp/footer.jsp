@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
 <div class="module-small bg-dark">
 	<div class="container">
@@ -93,5 +95,4 @@
 </footer>
 <div class="scroll-up">
 	<a href="#totop"><i class="fa fa-angle-double-up"></i></a>
-</div>
 </div>
