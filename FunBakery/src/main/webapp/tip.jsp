@@ -82,7 +82,7 @@
                           </div>
                           <div class="panel-collapse collapse in" id="support1">
                             <div class="panel-body"> 
-                            	유의사항이 들어갈 자리입니다
+                            	<img src="assets/images/tip1.jpg">
                             </div>
                           </div>
                         </div>
