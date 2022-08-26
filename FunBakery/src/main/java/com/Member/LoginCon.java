@@ -25,7 +25,8 @@ public class LoginCon extends HttpServlet {
 		if(username != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("username", username);
-			response.sendRedirect("index_mp_fullscreen_static.jsp");
+			session.setAttribute("email", email);
+			response.sendRedirect("main.jsp");
 		}else {
 			response.sendRedirect("login_register.jsp");
 		}

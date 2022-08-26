@@ -217,14 +217,15 @@
               </div>
             </div>
             </div>
-<!-- íì´ì§ ì´ë -->
+<!-- 페이지이동 -->
               <div class="col-sm-12" style="text-align: center;">
                 <div class="pagination font-alt"><a href="#"><i class="fa fa-angle-left"></i></a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"><i class="fa fa-angle-right"></i></a></div>
               </div>
-<!-- íì´ì§ ì´ë -->
+<!-- 페이지이동 -->
           </div>
         </section>
-        <%@ include file="footer.html" %>
+      </div>
+      <%@ include file="footer.html" %>
     </main>
     <!--  
     JavaScripts

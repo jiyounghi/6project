@@ -56,6 +56,7 @@
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+  <%String email = (String)session.getAttribute("email"); %>
     <main>
       <div class="page-loader">
         <div class="loader">Loading...</div>
@@ -68,14 +69,11 @@
 			<div class="container" role="main">
 				<h2 class="font-alt mb-0">글쓰기</h2>
                 <hr class="divider-w mt-10 mb-20">
-				<form name="form" id="form" role="form" method="post" action="#">
+				<form name="form" id="form" role="form" method="post" action="BoardWriteCon">
+					<input type="hidden" name=id value=<%=email %>>
 					<div class="row">
 						<label for="title">제목</label>
 						<input type="text" class="form-control" name="title" id="title" placeholder="제목을 입력해주세요" style="margin-bottom: 12px; font-size: 15px;">
-					</div>
-					<div class="row">
-						<label for="reg_id">작성자</label>
-						<input type="text" class="form-control" name="reg_id" id="reg_id" placeholder="작성자를 입력해주세요" style="margin-bottom: 12px; font-size: 15px;">
 					</div>
 					<div class="row">
 						<label for="content">내용</label>
@@ -84,12 +82,13 @@
 					<div class="row" style="float: right; font-weight: bold;">
 						<button class="btn btn-danger btn-round" type="reset">취소</button>&nbsp;
 						<button class="btn btn-g btn-round" type="submit">작성</button>&nbsp;
-						<a href="shop_checkout.html" class="btn btn-default btn-round">목록</a>
+						<a href="BoardListCon" class="btn btn-default btn-round">목록</a>
 					</div>
 				</form>
 			</div>
 		</article>
-        <%@ include file="footer.html" %>
+	  </div>
+      <%@ include file="footer.html" %>
     </main>
     <!--  
     JavaScripts

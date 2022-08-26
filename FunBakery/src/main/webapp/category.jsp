@@ -93,7 +93,7 @@
                   <h5 class="widget-title font-alt">Popular Posts</h5>
                   <ul class="widget-posts">
                     <li class="clearfix">
-                      <div class="widget-posts-image"><a href="#"><img src="assets/images/rp-1.jpg" alt="Post Thumbnail"/></a></div>
+                      <div class="widget-posts-image"><a href="shop_single_product.jsp"><img src="assets/images/rp-1.jpg" alt="Post Thumbnail"/></a></div>
                       <div class="widget-posts-body">
                         <div class="widget-posts-title"><a href="#">Designer Desk Essentials</a></div>
                         <div class="widget-posts-meta">23 january</div>
@@ -182,7 +182,8 @@
 <!-- 페이지이동 -->
             </div>
         </section>
-        <%@ include file="footer.html" %>
+      </div>
+      <%@ include file="footer.html" %>
     </main>
     <!--  
     JavaScripts
