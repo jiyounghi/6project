@@ -56,14 +56,9 @@
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
-    <% String username = (String)session.getAttribute("username"); %>
     <main>
-      <div class="page-loader">
-        <div class="loader">Loading...</div>
-      </div>
-      <nav class="navbar navbar-custom navbar-fixed-top navbar-transparent" role="navigation">
-		<%@ include file="header.jsp" %>
-       </nav>
+      <!-- 헤더부분 -->
+	  <%@ include file="header.jsp" %>
       <!-- 메인섹션 -->
       <section class="home-section home-parallax home-fade home-full-height bg-dark-30" id="home" data-background="assets/images/croissants-and-bread-frame-with-copy-space.jpg">
         <div class="titan-caption">
@@ -214,7 +209,6 @@
             </div>
           </div>
         </footer>
-      </div>
       <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
     </main>
     <!--  

@@ -57,12 +57,8 @@
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
-      <div class="page-loader">
-        <div class="loader">Loading...</div>
-      </div>
-      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-		<%@ include file="header.html" %>
-      </nav>
+      <!-- 헤더부분 -->
+	  <%@ include file="header.jsp" %>
       <div class="main">
         <section class="module bg-dark-60 blog-page-header" data-background="assets/images/blog_bg.jpg">
           <div class="container">
