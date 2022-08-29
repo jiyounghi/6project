@@ -64,13 +64,13 @@
        	 <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="font-alt" style="text-align:center;">베이킹시 유의사항</h2>
+                <h2 class="module-title font-alt" style="text-align:center;">베이킹시 유의사항</h2>
               </div>
             </div>
           </div>
-          <hr>
           <div class="container">
             <div class="row">
+            <hr class="divider-w pt-20">
               <div class="col-sm-8 col-sm-offset-2">
                 <div role="tabpanel">
                   <div class="tab-content">
