@@ -115,6 +115,7 @@
           </div>
         </section>
 		<%@ include file="footer.jsp" %>
+		</div>
     </main>
     <!--  
     JavaScripts

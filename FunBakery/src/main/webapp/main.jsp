@@ -135,8 +135,8 @@
                 </div></a></li>
           </ul>
         </section>
-      </div>
 		<%@ include file="footer.jsp" %>
+      </div>
     </main>
     <!--  
     JavaScripts

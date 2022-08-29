@@ -124,11 +124,8 @@
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-      </div>
->>>>>>> branch 'master' of https://gwangju-ai-gitlab.elice.io/jiyounghi/firstteamproject.git
 		<%@ include file="footer.jsp" %>
+      </div>
     </main>
     <!--  
     JavaScripts
