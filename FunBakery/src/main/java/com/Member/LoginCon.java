@@ -15,6 +15,8 @@ import com.VO.MemberVO;
 public class LoginCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		request.setCharacterEncoding("utf-8");
+
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		

@@ -23,7 +23,10 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
         /* ---------------------------------------------- /*
          * Scroll top
          /* ---------------------------------------------- */
-
+		if(window.location.href!='http://localhost:8084/FunBakery/main.jsp'){
+			$('.navbar').removeClass('navbar-transparent')
+			console.log('fdsafdsa');
+		}
         $(window).scroll(function() {
             if ($(this).scrollTop() > 100) {
                 $('.scroll-up').fadeIn();

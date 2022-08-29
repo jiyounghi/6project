@@ -2,6 +2,7 @@ select * from T_MEMBER;
 
 insert into T_MEMBER values('admin','admin','admin',sysdate,'a');
 
+<<<<<<< HEAD
 insert into T_COMMUNITY values(1, '제목입니다', '내용입니다', '22/08/25', 'admin',0);
 insert into T_COMMUNITY values(2, '제목입니다', '내용입니다', '22/08/26', 'admin',0);
 insert into T_COMMUNITY values(t_community_SEQ.nextval,'제목입니다', '내용입니다', '22/08/26', 'admin',0);
@@ -23,3 +24,6 @@ insert into T_COMMENT values(5,1,'안녕하세요. 댓글 구현 중입니다. �
 select * from T_COMMENT;
 
 SELECT c.cmt_content, c.cmt_date, m.mb_name FROM t_comment c, t_member m WHERE c.mb_id = m.mb_id and c.article_seq=1 order by cmt_seq;
+=======
+delete from T_MEMBER where mb_id = 'seongjin';
+>>>>>>> sj
