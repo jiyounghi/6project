@@ -61,7 +61,7 @@
         <div class="loader">Loading...</div>
       </div>
       <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-		<%@ include file="header.html" %>
+		<%@ include file="header.jsp" %>
       </nav>
       <div class="main">
         <section class="module">
