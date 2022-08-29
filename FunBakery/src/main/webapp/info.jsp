@@ -222,10 +222,6 @@
         </section>
 		<%@ include file="footer.jsp" %>
       </div>
-<<<<<<< HEAD
-=======
-		<%@ include file="footer.jsp" %>
->>>>>>> branch 'master' of https://gwangju-ai-gitlab.elice.io/jiyounghi/firstteamproject.git
     </main>
     <!--  
     JavaScripts
