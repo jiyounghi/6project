@@ -10,7 +10,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
     });
 
     $(document).ready(function() {
-
+	
         /* ---------------------------------------------- /*
          * WOW Animation When You Scroll
          /* ---------------------------------------------- */
@@ -20,11 +20,13 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
         });
         wow.init();
 
-
         /* ---------------------------------------------- /*
          * Scroll top
          /* ---------------------------------------------- */
-
+		if(window.location.href!='http://localhost:8084/FunBakery/main.jsp'){
+			$('.navbar').removeClass('navbar-transparent')
+			console.log('fdsafdsa');
+		}
         $(window).scroll(function() {
             if ($(this).scrollTop() > 100) {
                 $('.scroll-up').fadeIn();
@@ -53,7 +55,11 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             mobileTest = true;
         }
-
+		/* ---------------------------------------------- /*
+         * include html
+         /* ---------------------------------------------- */
+         
+         
         buildHomeSection(homeSection);
         navbarAnimation(navbar, homeSection, navHeight);
         navbarSubmenu(width);
@@ -84,7 +90,6 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
         /* ---------------------------------------------- /*
          * Home section height
          /* ---------------------------------------------- */
-
         function buildHomeSection(homeSection) {
             if (homeSection.length > 0) {
                 if (homeSection.hasClass('home-full-height')) {
@@ -94,7 +99,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
                 }
             }
         }
-
+        
 
         /* ---------------------------------------------- /*
          * Home section effects
@@ -200,6 +205,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
                 var delay = 0;
                 var setTimeoutConst;
                 $('.navbar-custom .navbar-nav > li.dropdown, .navbar-custom li.dropdown > ul > li.dropdown').hover(function() {
+				console.log("실행")
                         var $this = $(this);
                         setTimeoutConst = setTimeout(function() {
                             $this.addClass('open');
@@ -209,6 +215,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
                     function() {
                         clearTimeout(setTimeoutConst);
                         $(this).removeClass('open');
+                        console.log("실행2")
                         $(this).find('.dropdown-toggle').removeClass('disabled');
                     });
             } else {
@@ -217,8 +224,11 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
                     event.preventDefault();
                     event.stopPropagation();
                     $(this).parent().siblings().removeClass('open');
+                    console.log("실행3")
                     $(this).parent().siblings().find('[data-toggle=dropdown]').parent().removeClass('open');
+                    console.log("실행4")
                     $(this).parent().toggleClass('open');
+                    console.log("실행5")
                 });
             }
         }
