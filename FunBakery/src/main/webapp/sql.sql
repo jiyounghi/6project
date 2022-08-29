@@ -23,3 +23,7 @@ insert into T_COMMENT values(5,1,'안녕하세요. 댓글 구현 중입니다. �
 select * from T_COMMENT;
 
 SELECT c.cmt_content, c.cmt_date, m.mb_name FROM t_comment c, t_member m WHERE c.mb_id = m.mb_id and c.article_seq=1 order by cmt_seq;
+
+SELECT * FROM (SELECT rownum rn, a.* FROM(SELECT b.article_seq, b.article_title, b.article_content, b.article_date, m.mb_name, b.article_count FROM t_community b, t_member m WHERE b.mb_id = m.mb_id ORDER BY article_seq DESC)a) WHERE rn>0 AND rn <= 20;
+
+select b_category, count(b_seq) count from t_bread group by b_category;

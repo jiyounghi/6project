@@ -130,17 +130,17 @@ public class BoardDAO {
 		try {
 			dbConn();
 			
-			String sql = "SELECT b.article_seq, b.article_title, b.article_content, b.article_date, m.mb_name, b.article_count FROM t_community b, t_member m WHERE b.mb_id = m.mb_id ORDER BY b.article_seq DESC";
+			String sql = "SELECT * FROM (SELECT rownum rn, a.* FROM(SELECT b.article_seq, b.article_title, b.article_content, b.article_date, m.mb_name, b.article_count FROM t_community b, t_member m WHERE b.mb_id = m.mb_id ORDER BY article_seq DESC)a) WHERE rn>0 AND rn <= 20";
 			psmt = conn.prepareStatement(sql);
 			
 			rs = psmt.executeQuery();
 			while (rs.next()) {
-				int seq = rs.getInt(1);
-				String title = rs.getString(2);
-				String content = rs.getString(3);
-				Date date = rs.getDate(4);
-				String name = rs.getString(5);
-				int count = rs.getInt(6);
+				int seq = rs.getInt(2);
+				String title = rs.getString(3);
+				String content = rs.getString(4);
+				Date date = rs.getDate(5);
+				String name = rs.getString(6);
+				int count = rs.getInt(7);
 
 				vo = new BoardVO(seq, title, content, date, name, count);
 				blist.add(vo);
