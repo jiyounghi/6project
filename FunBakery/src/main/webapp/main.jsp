@@ -56,14 +56,9 @@
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
-    <% String username = (String)session.getAttribute("username"); %>
     <main>
-      <div class="page-loader">
-        <div class="loader">Loading...</div>
-      </div>
-      <nav class="navbar navbar-custom navbar-fixed-top navbar-transparent" role="navigation">
-		<%@ include file="header.html" %>
-       </nav>
+      <!-- 헤더부분 -->
+	  <%@ include file="header.jsp" %>
       <!-- 메인섹션 -->
       <section class="home-section home-parallax home-fade home-full-height bg-dark-30" id="home" data-background="assets/images/croissants-and-bread-frame-with-copy-space.jpg">
         <div class="titan-caption">
@@ -83,7 +78,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">recipe</h2>
+                <h2 class="module-title font-alt">레시피</h2>
                 <div class="module-subtitle font-serif"></div>
               </div>
             </div>
@@ -92,11 +87,12 @@
             <div class="row">
               <div class="col-sm-12">
                 <ul class="filter font-alt" id="filters">
-                  <li><a class="current wow fadeInUp" href="#" data-filter="*">All</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".illustration" data-wow-delay="0.2s">Illustration</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".marketing" data-wow-delay="0.4s">Marketing</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".photography" data-wow-delay="0.6s">Photography</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".webdesign" data-wow-delay="0.6s">Web Design</a></li>
+                  <li><a class="current wow fadeInUp" href="#" data-filter="*">케이크</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".grilledcookie" data-wow-delay="0.2s">구움과자</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".bread" data-wow-delay="0.4s">(건강)빵</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".cookie" data-wow-delay="0.6s">쿠키</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".nooven" data-wow-delay="0.8s">노오븐</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".frozendough" data-wow-delay="1s">냉동생지</a></li>
                 </ul>
               </div>
             </div>
@@ -139,6 +135,7 @@
                 </div></a></li>
           </ul>
         </section>
+<<<<<<< HEAD
           </div>
 
         <div class="module-small bg-dark">
@@ -215,6 +212,10 @@
           </div>
         </footer>
       <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
+=======
+      </div>
+		<%@ include file="footer.jsp" %>
+>>>>>>> sj
     </main>
     <!--  
     JavaScripts
