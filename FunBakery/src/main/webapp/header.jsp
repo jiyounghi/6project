@@ -59,7 +59,7 @@
 					</ul>
 				</li>
 				<li><a href="tip.jsp">유의사항</a></li>
-				<li><a href="board.jsp">게시판</a></li>
+				<li><a href="BoardListCon">게시판</a></li>
 				<li><a href="http://www.bncmarket.com/" target="_blank" >재료구매</a></li>
 					<% if(username!=null){ %>
 						<li><a href="LogoutCon">로그아웃</a></li>

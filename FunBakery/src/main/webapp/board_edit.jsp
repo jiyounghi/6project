@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,7 +11,7 @@
     Document Title
     =============================================
     -->
-    <title>Titan | Multipurpose HTML5 Template</title>
+    <title>Write</title>
     <!--  
     Favicons
     =============================================
@@ -56,64 +57,35 @@
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+  <%String email = (String)session.getAttribute("email"); %>
     <main>
       <!-- 헤더부분 -->
 	  <%@ include file="header.jsp" %>
       <div class="main">
-        <section class="module bg-dark-30" data-background="assets/images/section-4.jpg">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <h1 class="module-title font-alt mb-0">Login-Register</h1>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="module">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-5 col-sm-offset-1 mb-sm-40">
-                <h4 class="font-alt">Login</h4>
-                <hr class="divider-w mb-10">
-                <form class="form" action="LoginCon" method="post">
-                  <div class="form-group">
-                    <input class="form-control" id="E-mail" type="text" name="email" placeholder="Email"/>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="password" type="password" name="password" placeholder="Password"/>
-                  </div>
-                  <div class="form-group">
-                    <input type="submit" class="btn btn-block btn-round btn-b" value="Login">
-                  </div>
-                  <div class="form-group"><a href="">Forgot Password?</a></div>
-                </form>
-              </div>
-              <div class="col-sm-5">
-                <h4 class="font-alt">Register</h4>
-                <hr class="divider-w mb-10">
-                <form class="form" action="RegisterCon" method="post">
-                  <div class="form-group">
-                    <input class="form-control" id="E-mail" type="text" name="email" placeholder="Email"/>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="username" type="text" name="username" placeholder="Username"/>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="password" type="password" name="password" placeholder="Password"/>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="repassword" type="password" name="repassword" placeholder="Re-enter Password"/>
-                  </div>
-                  <div class="form-group">
-                    <input type="submit" class="btn btn-block btn-round btn-b" value="Register">
-                  </div>
-                </form>
-              </div>
-              
-            </div>
-          </div>
-        </section>
-        </div>
+        <article class="module">
+			<div class="container" role="main">
+				<h2 class="font-alt mb-0">글쓰기</h2>
+                <hr class="divider-w mt-10 mb-20">
+				<form name="form" id="form" role="form" method="post" action="BoardUpdateCon">
+					<input type="hidden" name=id value=<%=email %>>
+					<div class="row">
+						<label for="title">제목</label>
+						<textarea class="form-control" rows="1" name="title" id="title" style="margin-bottom: 12px; font-size: 15px;">${vo.article_title }</textarea>
+					</div>
+					<div class="row">
+						<label for="content">내용</label>
+						<textarea class="form-control" rows="15" name="content" id="content" style="margin-bottom: 12px; font-size: 15px;">${vo.article_content }</textarea>
+					</div>
+					<div class="row" style="float: right; font-weight: bold;">
+						<input type="hidden" name="seq" value="${vo.article_seq }">
+						<button class="btn btn-danger btn-round" type="reset">취소</button>&nbsp;
+						<button class="btn btn-g btn-round" type="submit">수정</button>&nbsp;
+						<a href="BoardListCon" class="btn btn-default btn-round">목록</a>
+					</div>
+				</form>
+			</div>
+		</article>
+	  </div>
 		<%@ include file="footer.jsp" %>
     </main>
     <!--  
