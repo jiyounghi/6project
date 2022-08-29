@@ -1,3 +1,7 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.DAO.BoardDAO"%>
+<%@page import="com.VO.BoardVO"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -70,6 +74,7 @@
             <hr class="divider-w pt-20">
             <div class="row">
               <div class="col-sm-12">
+              	<form method="post">
                 <table class="table table-striped">
                     <tr>
                       <th></th>
@@ -78,22 +83,18 @@
                       <th style="text-align: center">작성일</th>
                       <th style="text-align: center">조회수</th>
                     </tr>
-                    <tr>
-                      <td style="width: 5%; text-align: center;">1</td>
-                      <td style="width: 55%"><a href="content_view.html">제목</a></td>
-                      <td style="width: 20%">작성자</td>
-                      <td style="width: 15%; text-align: center;">2022/08/23</td>
-                      <td style="width: 5%; text-align: center;">0</td>
-                    </tr>
-                    <tr>
-                      <td style="width: 5%; text-align: center;">2</td>
-                      <td style="width: 55%"><a href="#">제목</a></td>
-                      <td style="width: 20%">작성자</td>
-                      <td style="width: 15%; text-align: center;">2022/08/24</td>
-                      <td style="width: 5%; text-align: center;">0</td>
-                    </tr>
+                    <c:forEach items="${blist }" var="blist">
+	                    <tr>
+	                      <td style="width: 5%; text-align: center;">${blist.article_seq }</td>
+	                      <td style="width: 55%"><a href="BoardDetailCon?seq=${blist.article_seq }">${blist.article_title }</a></td>
+	                      <td style="width: 20%">${blist.mb_name }</td>
+	                      <td style="width: 15%; text-align: center;">${blist.article_date }</td>
+	                      <td style="width: 5%; text-align: center;">${blist.count }</td>
+	                    </tr>
+                    </c:forEach>
                 </table>
-                <a href="content_write.jsp" class="btn btn-g btn-round" style="float: right">글쓰기</a>
+                </form>
+                <a href="board_write.jsp" class="btn btn-g btn-round" style="float: right">글쓰기</a>
               </div>
 <!-- 페이지이동 -->
               <div class="col-sm-12" style="text-align: center;">
@@ -104,6 +105,7 @@
           </div>
         </section>
 		<%@ include file="footer.jsp" %>
+      </div>
     </main>
     <!--  
     JavaScripts

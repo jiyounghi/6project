@@ -1,3 +1,8 @@
+<%@page import="com.VO.CommentVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.DAO.BoardDAO"%>
+<%@page import="com.VO.BoardVO"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -56,6 +61,7 @@
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+  <% String email = (String)session.getAttribute("email"); %>
     <main>
       <!-- 헤더부분 -->
 	  <%@ include file="header.jsp" %>
@@ -66,29 +72,40 @@
               <div class="col-sm-8 col-sm-offset-2">
                 <div class="post">
                   <div class="post-header font-alt">
-                    <h1 class="post-title">제목</h1>
-                    <div class="comment-author font-alt">By 작성자 | 작성일</div>
+                    <h1 class="post-title">${vo.article_title }</h1>
+                    <div class="comment-author font-alt">By ${vo.mb_name } | ${vo.article_date }</div>
                   </div>
                   <div class="post-entry">
-                   	<p>내용</p>
+                   	<p>${vo.article_content }</p>
                   </div>
                 </div>
                 <div class="comments">
-                  <h4 class="comment-title font-alt">댓글</h4>
-                  <div class="comment clearfix">
-                    <div class="comment-content clearfix">
-                      <div class="comment-author font-alt" style="font-weight: bold">작성자</div>
-                      <div class="comment-body">
-                        <p>내용</p>
-                      </div>
-                      <div class="comment-meta font-alt">작성일</div>
-                    </div>
-                  </div>
+                  <h4 class="comment-title font-alt">댓글</h4>
+                  <c:forEach items="${clist }" var="clist">
+	                  <div class="comment clearfix">
+	                    <div class="comment-content clearfix">
+	                      <div class="row" style="padding: 0 12px 0 16px;">
+	                        <div class="comment-author font-alt" style="font-weight: bold; float:left">${clist.name }</div>
+	                        <div class="comment-meta font-alt" style="float:right">${clist.date }</div>
+	                      </div>
+	                      <div class="comment-body">
+	                        <p>${clist.content }</p>
+	                      </div>
+	                      <hr>
+	                    </div>
+	                  </div>
+                  </c:forEach>
                 </div>
+                <%if(email != null){ %>
                 <div class="comment-form">
-                  <form method="post">
+                <%}else{ %>
+                <div class="comment-form" style="display:none">
+                <%} %>
+                  <form method="post" action="CommentCon">
                     <div class="form-group">
                       <textarea class="form-control" id="comment" name="comment" rows="4" placeholder="Comment"></textarea>
+                      <input type="hidden" name="id" value=<%=email %>>
+                      <input type="hidden" name="aseq" value=${vo.article_seq }>
                     </div>
                     <button class="btn btn-round btn-g" type="submit" style="float: right">댓글쓰기</button>
                   </form>
@@ -99,12 +116,14 @@
           <div class="container">
 	          <div class="col-sm-8 col-sm-offset-2">
 	           	<hr>
-	               <a class="btn btn-round btn-g" href="content_write.jsp">글쓰기</a>
-	               <a href="community.jsp" class="btn btn-default btn-round">목록</a>
+	               <a class="btn btn-round btn-g" href="board_write.jsp">글쓰기</a>
+	               <a href="BoardListCon" class="btn btn-default btn-round">목록</a>
 	          </div>
+          </div>
           </div>
         </section>
 		<%@ include file="footer.jsp" %>
+      </div>
     </main>
     <!--  
     JavaScripts
