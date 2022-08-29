@@ -143,7 +143,8 @@
             </div>
           </div>
         </section>
-        <%@ include file="footer.html" %>
+      </div>
+      <%@ include file="footer.html" %>
     </main>
     <!--  
     JavaScripts
