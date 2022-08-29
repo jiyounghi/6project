@@ -63,12 +63,8 @@
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
   <% String email = (String)session.getAttribute("email"); %>
     <main>
-      <div class="page-loader">
-        <div class="loader">Loading...</div>
-      </div>
-      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-		<%@ include file="header.html" %>
-      </nav>
+      <!-- 헤더부분 -->
+	  <%@ include file="header.jsp" %>
       <div class="main">
         <section class="module-small">
           <div class="container">
@@ -127,7 +123,7 @@
           </div>
         </section>
       </div>
-      <%@ include file="footer.html" %>
+		<%@ include file="footer.jsp" %>
     </main>
     <!--  
     JavaScripts

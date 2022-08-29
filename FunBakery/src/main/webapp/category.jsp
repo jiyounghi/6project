@@ -57,19 +57,15 @@
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
-      <div class="page-loader">
-        <div class="loader">Loading...</div>
-      </div>
-      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-		<%@ include file="header.html" %>
-      </nav>
+      <!-- 헤더부분 -->
+	  <%@ include file="header.jsp" %>
       <div class="main">
         <section class="module bg-dark-60 shop-page-header" data-background="assets/images/shop/product-page-bg.jpg">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Category</h2>
-                <div class="module-subtitle font-serif">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
+                <h2 class="module-title font-alt">레시피</h2>
+                <div class="module-subtitle font-serif">먹고 싶은게 있었으면 좋겠네?</div>
               </div>
             </div>
           </div>
@@ -80,13 +76,14 @@
  <!-- 사이드바 -->
               <div class="col-sm-4 col-md-3 sidebar" style="border-right: 1px solid #c2c2c2">
                 <div class="widget">
-                  <h5 class="widget-title font-alt">Blog Categories</h5>
+                  <h5 class="widget-title font-alt">레시피 종류</h5>
                   <ul class="icon-list">
-                    <li><a href="#">Photography - 7</a></li>
-                    <li><a href="#">Web Design - 3</a></li>
-                    <li><a href="#">Illustration - 12</a></li>
-                    <li><a href="#">Marketing - 1</a></li>
-                    <li><a href="#">Wordpress - 16</a></li>
+                    <li><a href="#">케이크 - 7</a></li>
+                    <li><a href="#">구움과자 - 3</a></li>
+                    <li><a href="#">(건강)빵 - 12</a></li>
+                    <li><a href="#">쿠키 - 1</a></li>
+                    <li><a href="#">노오븐 - 16</a></li>
+                    <li><a href="#">냉동생지 - 16</a></li>
                   </ul>
                 </div>
                 <div class="widget">
@@ -127,8 +124,7 @@
 				<div class="col-sm-8">
 					<div class="col-sm-6 col-md-6 col-lg-6">
 	                <div class="shop-item">
-	                  <div class="shop-item-image"><img src="assets/images/shop/product-7.jpg" alt="Accessories Pack"/>
-	                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
+	                  <div class="shop-item-image"><a href="shop_single_product.html" target="_blank"><img src="assets/images/shop/product-7.jpg" alt="Accessories Pack"/></a>
 	                  </div>
 	                  <h4 class="shop-item-title font-alt"><a href="#">Accessories Pack</a></h4>Â£9.00
 	                </div>
@@ -183,7 +179,7 @@
             </div>
         </section>
       </div>
-      <%@ include file="footer.html" %>
+		<%@ include file="footer.jsp" %>
     </main>
     <!--  
     JavaScripts

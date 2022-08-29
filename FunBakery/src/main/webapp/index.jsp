@@ -57,12 +57,8 @@
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
-      <div class="page-loader">
-        <div class="loader">Loading...</div>
-      </div>
-      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-		<%@ include file="header.html" %>
-      </nav>
+      <!-- 헤더부분 -->
+	  <%@ include file="header.jsp" %>
       <section class="bg-dark-30 showcase-page-header module parallax-bg" data-background="assets/images/showcase_bg.jpg">
         <div class="titan-caption">
           <div class="caption-content">
