@@ -134,10 +134,11 @@
                   <div class="work-descr">Marketing</div>
                 </div></a></li>
           </ul>
-          </div>
         </section>
+          </div>
       </div>
 		<%@ include file="footer.jsp" %>
+      </div>
     </main>
     <!--  
     JavaScripts
