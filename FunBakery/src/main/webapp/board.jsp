@@ -60,7 +60,6 @@
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
-    <% String email = (String)session.getAttribute("email"); %>
     <main>
       <!-- 헤더부분 -->
 	  <%@ include file="header.jsp" %>
@@ -95,29 +94,11 @@
                     </c:forEach>
                 </table>
                 </form>
-                <%if(email != null){ %>
-	              <a class="btn btn-round btn-g" href="board_write.jsp">글쓰기</a>
-	              <%}else{ %>
-	              <a class="btn btn-round btn-g" href="board_write.jsp" style="display:none">글쓰기</a>
-	              <%} %>
+                <a href="board_write.jsp" class="btn btn-g btn-round" style="float: right">글쓰기</a>
               </div>
 <!-- 페이지이동 -->
               <div class="col-sm-12" style="text-align: center;">
-                <div class="pagination font-alt">
-                  <c:if test="${vo.prev }">
-                  <li><a href="BoardListCon?pageNum=${vo.startPage - 1 }&amount=${vo.amount}"><i class="fa fa-angle-left"></i></a></li>
-				  </c:if>
-								                        		
-                        		
-              	  <c:forEach var="num" begin="${vo.startPage }" end="${vo.endPage }">
-               	  <li><a href="BoardListCon?pageNum=${num }&amount=${vo.amount}">${num }</a></li>
-              	  </c:forEach>
-                        		
-                        		
-                  <c:if test="${vo.next }">
-                  <li><a href="BoardListCon?pageNum=${vo.endPage + 1 }&amount=${vo.amount}"><i class="fa fa-angle-right"></i></a></li>
-                  </c:if>
-                </div>
+                <div class="pagination font-alt"><a href="#"><i class="fa fa-angle-left"></i></a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"><i class="fa fa-angle-right"></i></a></div>
               </div>
 <!-- 페이지이동 -->
             </div>

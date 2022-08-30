@@ -64,14 +64,13 @@ public class BoardVO {
 		this.count = count;
 	}
 	
-	public BoardVO(int article_seq, String article_title, String article_content, Date article_date, String mb_name, String id) {
+	public BoardVO(int article_seq, String article_title, String article_content, Date article_date, String mb_name) {
 		super();
 		this.article_seq = article_seq;
 		this.article_title = article_title;
 		this.article_content = article_content;
 		this.article_date = article_date;
 		this.mb_name = mb_name;
-		this.id = id;
 	}
 	
 	public BoardVO(String article_title, String article_content, String id) {
@@ -80,12 +79,4 @@ public class BoardVO {
 		this.article_content = article_content;
 		this.id = id;
 	}
-	
-	public BoardVO(int article_seq, String article_title, String article_content) {
-		super();
-		this.article_seq = article_seq;
-		this.article_title = article_title;
-		this.article_content = article_content;
-	}
-	
 }
