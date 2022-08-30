@@ -53,7 +53,7 @@ public class BakeryDAO {
 		}
 	}
 	
-	public int findIndex(int b_seq, String button_id) {
+	public int findB_r_index(int b_seq, String button_id) {
 		int b_r_index = 0;
 		String sql = "";
 		
@@ -78,44 +78,44 @@ public class BakeryDAO {
 				} else if (button_id == "taste2") {
 					taste = "and (ingr_name like '%설탕' or ingr_name like '꿀' or ingr_name like '%엿' "
 							+ "or ingr_name like '%초코칩' or ingr_name like '슈가파우더' or ingr_name like '연유' "
-							+ "or ingr_name like '%초콜릿%'') "
+							+ "or ingr_name like '%초콜릿%') "
 							+ "group by b_r_index order by sum_rate desc) ";
 				} else if (button_id == "taste3" && (b_seq == 2 || b_seq == 9 || b_seq == 11 || b_seq == 12 || b_seq == 22)) {
 					// 치즈케이크, 크림치즈 머핀, 황치즈 머핀, 대파치즈스콘, 치즈쿠키
-					taste = "and (ingr_name like '%치즈%' "
+					taste = "and (ingr_name like '%치즈%') "
 							+ "group by b_r_index order by sum_rate desc) ";
 				} else if (button_id == "taste3" && (b_seq == 13 || b_seq == 14 || b_seq == 19)) {
 					// 소금빵, 모닝빵, 버터쿠키
-					taste = "and (ingr_name like '%버터%' "
+					taste = "and (ingr_name like '%버터%') "
 							+ "group by b_r_index order by sum_rate desc) ";
 				} else if (button_id == "taste3" && (b_seq == 5 || b_seq == 15)) {
 					// 티라미수, 모카빵
-					taste = "and (ingr_name like '%커피%' or ingr_name = '에스프레소' or ingr_name = '모카에센스' "
+					taste = "and (ingr_name like '%커피%' or ingr_name = '에스프레소' or ingr_name = '모카에센스') "
 							+ "group by b_r_index order by sum_rate desc) ";
 				} else if (button_id == "taste3" && (b_seq == 21 || b_seq == 23 || b_seq == 24)) {
 					// 코코아쿠키, 얼그레이쿠키, 녹차쿠키
 					taste = "and (ingr_name like '코코아파우더' or ingr_name = '얼그레이%' "
-							+ "or ingr_name = '녹차가루' or ingr_name = '말차가루' "
+							+ "or ingr_name = '녹차가루' or ingr_name = '말차가루') "
 							+ "group by b_r_index order by sum_rate desc) ";
 				} else if (button_id == "taste3" && (b_seq == 3 || b_seq == 10 || b_seq == 20)) {
 					// 초코케이크, 오레오브라우니, 초코칩쿠키
-					taste = "and (ingr_name like '%초콜릿' or ingr_name = '초코칩' or ingr_name = '오레오' "
+					taste = "and (ingr_name like '%초콜릿' or ingr_name = '초코칩' or ingr_name = '오레오') "
 							+ "group by b_r_index order by sum_rate desc) ";
 				} else if (button_id == "taste3" && b_seq == 7) {
 					// 레몬 마들렌
-					taste = "and (ingr_name like '%레몬%' "
+					taste = "and (ingr_name like '%레몬%') "
 							+ "group by b_r_index order by sum_rate desc) ";
 				} else if (button_id == "taste3" && b_seq == 1) {
 					// 생크림케이크
-					taste = "and (ingr_name like '%크림' "
+					taste = "and (ingr_name like '%크림') "
 							+ "group by b_r_index order by sum_rate desc) ";
 				} else if (button_id == "taste3" && b_seq == 4) {
 					// 카스텔라
-					taste = "and (ingr_name like '우유' "
+					taste = "and (ingr_name like '우유') "
 							+ "group by b_r_index order by sum_rate desc) ";
 				} else if (button_id == "taste3" && b_seq == 6) {
 					// 당근케이크
-					taste = "and (ingr_name like '%당근%' "
+					taste = "and (ingr_name like '%당근%') "
 							+ "group by b_r_index order by sum_rate desc) ";
 				}
 				
@@ -126,17 +126,17 @@ public class BakeryDAO {
 						+ "where rownum = 1";
 			}
 			
-			if (sql != "") {
-				psmt = conn.prepareStatement(sql);
-				psmt.setInt(1, b_seq);
 			
-				rs = psmt.executeQuery();
-			}
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, b_seq);
+		
+			rs = psmt.executeQuery();
+			
 			
 			
 			if (rs.next()) {
 				
-				int getb_r_index = rs.getInt(3);
+				int getb_r_index = rs.getInt(1);
 				b_r_index = getb_r_index;
 
 			} else {
@@ -166,9 +166,9 @@ public class BakeryDAO {
 			
 			while (rs.next()) {
 				
-				String getingre_name = rs.getString(4);
-				String getingre_weight = rs.getString(5);
-				float getingre_rate = rs.getFloat(6);
+				String getingre_name = rs.getString(1);
+				String getingre_weight = rs.getString(2);
+				float getingre_rate = rs.getFloat(3);
 				
 				vo = new BakeryVO(b_seq, getingre_name, getingre_weight, getingre_rate);
 				list.add(vo);
@@ -198,9 +198,9 @@ public class BakeryDAO {
 			
 			while (rs.next()) {
 				
-				String getr_content = rs.getString(4);
-				String getr_img = rs.getString(5);
-				float getr_order = rs.getInt(6);
+				String getr_content = rs.getString(1);
+				String getr_img = rs.getString(2);
+				float getr_order = rs.getInt(3);
 				
 				vo = new BakeryVO(b_seq, getr_content, getr_img, getr_order);
 				list.add(vo);
@@ -228,9 +228,9 @@ public class BakeryDAO {
 			
 			if (rs.next()) {
 				
-				String getb_name = rs.getString(4);
-				String getb_desc = rs.getString(5);
-				String getb_img = rs.getString(6);
+				String getb_name = rs.getString(1);
+				String getb_desc = rs.getString(2);
+				String getb_img = rs.getString(3);
 				
 				vo = new BakeryVO(b_seq, getb_name, getb_desc, getb_img);
 				list.add(vo);
