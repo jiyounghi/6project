@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -78,12 +79,9 @@
                 <div class="widget">
                   <h5 class="widget-title font-alt">레시피 종류</h5>
                   <ul class="icon-list">
-                    <li><a href="#">케이크 - 7</a></li>
-                    <li><a href="#">구움과자 - 3</a></li>
-                    <li><a href="#">(건강)빵 - 12</a></li>
-                    <li><a href="#">쿠키 - 1</a></li>
-                    <li><a href="#">노오븐 - 16</a></li>
-                    <li><a href="#">냉동생지 - 16</a></li>
+                  	<c:forEach items="${clist }" var="list">
+                    	<li><a href="CategoryCon?cat=${list.b_categorys }">${list.b_category } - ${list.b_count }</a></li>
+                  	</c:forEach>
                   </ul>
                 </div>
                 <div class="widget">
@@ -122,60 +120,17 @@
               </div>
 <!-- 사이드바 -->
 				<div class="col-sm-8">
+					<c:forEach items="${brlist }" var="list">
 					<div class="col-sm-6 col-md-6 col-lg-6">
-	                <div class="shop-item">
-	                  <div class="shop-item-image"><a href="shop_single_product.html" target="_blank"><img src="assets/images/shop/product-7.jpg" alt="Accessories Pack"/></a>
-	                  </div>
-	                  <h4 class="shop-item-title font-alt"><a href="#">Accessories Pack</a></h4>Â£9.00
+		                <div class="shop-item">
+		                  <div class="shop-item-image"><a href="shop_single_product.html" target="_blank"><img src="${list.b_img }" alt="Accessories Pack"/></a>
+		                  </div>
+		                  <h4 class="shop-item-title font-alt"><a href="#">${list.b_name }</a></h4>
+		                </div>
 	                </div>
-	              </div>
-	              <div class="col-sm-6 col-md-6 col-lg-6">
-	                <div class="shop-item">
-	                  <div class="shop-item-image"><img src="assets/images/shop/product-8.jpg" alt="Menâs Casual Pack"/>
-	                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
-	                  </div>
-	                  <h4 class="shop-item-title font-alt"><a href="#">Menâs Casual Pack</a></h4>Â£12.00
-	                </div>
-	              </div>
-	              <div class="col-sm-6 col-md-6 col-lg-6">
-	                <div class="shop-item">
-	                  <div class="shop-item-image"><img src="assets/images/shop/product-9.jpg" alt="Menâs Garb"/>
-	                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
-	                  </div>
-	                  <h4 class="shop-item-title font-alt"><a href="#">Menâs Garb</a></h4>Â£6.00
-	                </div>
-	              </div>
-	              <div class="col-sm-6 col-md-6 col-lg-6">
-	                <div class="shop-item">
-	                  <div class="shop-item-image"><img src="assets/images/shop/product-10.jpg" alt="Cold Garb"/>
-	                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
-	                  </div>
-	                  <h4 class="shop-item-title font-alt"><a href="#">Cold Garb</a></h4>Â£14.00
-	                </div>
-	              </div>
-	              <div class="col-sm-6 col-md-6 col-lg-6">
-	                <div class="shop-item">
-	                  <div class="shop-item-image"><img src="assets/images/shop/product-11.jpg" alt="Accessories Pack"/>
-	                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
-	                  </div>
-	                  <h4 class="shop-item-title font-alt"><a href="#">Accessories Pack</a></h4>Â£9.00
-	                </div>
-	              </div>
-	              <div class="col-sm-6 col-md-6 col-lg-6">
-	                <div class="shop-item">
-	                  <div class="shop-item-image"><img src="assets/images/shop/product-12.jpg" alt="Menâs Casual Pack"/>
-	                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
-	                  </div>
-	                  <h4 class="shop-item-title font-alt"><a href="#">Menâs Casual Pack</a></h4>Â£12.00
-	                </div>
-	              </div>
+					</c:forEach>
               	</div>		  	     
             </div>
-<!-- 페이지이동 -->
-              <div class="col-sm-12" style="text-align: center;">
-                <div class="pagination font-alt"><a href="#"><i class="fa fa-angle-left"></i></a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"><i class="fa fa-angle-right"></i></a></div>
-              </div>
-<!-- 페이지이동 -->
             </div>
         </section>
 		<%@ include file="footer.jsp" %>
