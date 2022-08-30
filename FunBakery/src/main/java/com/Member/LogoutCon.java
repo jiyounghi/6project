@@ -14,9 +14,17 @@ public class LogoutCon extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		
-		session.removeAttribute("username");
-	
-		response.sendRedirect("main.jsp");
+		String referer = request.getHeader("referer");
+		
+		session.invalidate();
+		
+//		String resplit = referer.substring(32, 39);
+//		
+//		if(resplit.equals("board_w") || resplit.equals("board_e")) {
+//			response.sendRedirect("main.jsp");
+//		}
+		
+		response.sendRedirect(referer);
 		
 		
 	}

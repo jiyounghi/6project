@@ -83,8 +83,8 @@
 				</form>
 			</div>
 		</article>
-		<%@ include file="footer.jsp" %>
 	  </div>
+		<%@ include file="footer.jsp" %>
     </main>
     <!--  
     JavaScripts
