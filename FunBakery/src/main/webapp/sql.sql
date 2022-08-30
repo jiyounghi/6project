@@ -2,9 +2,10 @@ select * from T_MEMBER;
 
 insert into T_MEMBER values('admin','admin','admin',sysdate,'a');
 
+<<<<<<< HEAD
 insert into T_COMMUNITY values(1, '제목입니다', '내용입니다', '22/08/25', 'admin',0);
 insert into T_COMMUNITY values(2, '제목입니다', '내용입니다', '22/08/26', 'admin',0);
-insert into T_COMMUNITY values(t_community_SEQ.nextval,'제목입니다', '내용입니다', '22/08/29', 'admin',0);
+insert into T_COMMUNITY values(t_community_SEQ.nextval,'제목입니다', '내용입니다', '22/08/26', 'admin',0);
 
 SELECT b.article_seq, b.article_title, b.article_content, b.article_date, m.mb_name, b.article_count FROM t_community b, t_member m WHERE b.mb_id = m.mb_id ORDER BY b.article_seq DESC;
 

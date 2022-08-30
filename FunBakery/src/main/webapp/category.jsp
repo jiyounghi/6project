@@ -178,8 +178,8 @@
 <!-- 페이지이동 -->
             </div>
         </section>
-      </div>
 		<%@ include file="footer.jsp" %>
+      </div>
     </main>
     <!--  
     JavaScripts

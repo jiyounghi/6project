@@ -56,6 +56,7 @@
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+
     <main>
       <!-- 헤더부분 -->
 	  <%@ include file="header.jsp" %>
@@ -108,13 +109,13 @@
                     <input type="submit" class="btn btn-block btn-round btn-b" value="Register">
                   </div>
                 </form>
-              </div>
+              </div>~
               
             </div>
           </div>
         </section>
-        </div>
 		<%@ include file="footer.jsp" %>
+		</div>
     </main>
     <!--  
     JavaScripts
