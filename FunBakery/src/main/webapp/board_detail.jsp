@@ -116,14 +116,26 @@
           <div class="container">
 	          <div class="col-sm-8 col-sm-offset-2">
 	           	<hr>
-	               <a class="btn btn-round btn-g" href="board_write.jsp">글쓰기</a>
-	               <a href="BoardListCon" class="btn btn-default btn-round">목록</a>
+	           	  <c:set var="id" value="${vo.id }"></c:set>
+	           	  <% String id = (String)pageContext.getAttribute("id"); %>
+	           
+	           	  <%if(email != null){ %>
+		           	  <% if(email.equals(id)){ %>
+		           	  <a class="btn btn-danger btn-round" href="BoardEditCon?seq=${vo.article_seq }">수정하기</a>
+		           	  <%}else{ %>
+		           	  <a class="btn btn-danger btn-round" style="display:none">수정하기</a>
+		           	  <%} %>
+	              <a class="btn btn-round btn-g" href="board_write.jsp">글쓰기</a>
+	              <%}else{ %>
+	              <a class="btn btn-round btn-g" style="display:none">글쓰기</a>
+	              <%} %>
+	              <a href="BoardListCon" class="btn btn-default btn-round">목록</a>
 	          </div>
           </div>
           </div>
         </section>
-		<%@ include file="footer.jsp" %>
       </div>
+		<%@ include file="footer.jsp" %>
     </main>
     <!--  
     JavaScripts

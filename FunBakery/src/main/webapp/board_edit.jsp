@@ -1,6 +1,3 @@
-<%@page import="java.util.ArrayList"%>
-<%@page import="com.DAO.BoardDAO"%>
-<%@page import="com.VO.BoardVO"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -14,7 +11,7 @@
     Document Title
     =============================================
     -->
-    <title>Community</title>
+    <title>Write</title>
     <!--  
     Favicons
     =============================================
@@ -60,70 +57,35 @@
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
-    <% String email = (String)session.getAttribute("email"); %>
+  <%String email = (String)session.getAttribute("email"); %>
     <main>
       <!-- 헤더부분 -->
 	  <%@ include file="header.jsp" %>
       <div class="main">
-        <section class="module">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <h1 class="module-title font-alt">Community</h1>
-              </div>
-            </div>
-            <hr class="divider-w pt-20">
-            <div class="row">
-              <div class="col-sm-12">
-              	<form method="post">
-                <table class="table table-striped">
-                    <tr>
-                      <th></th>
-                      <th style="text-align: center">제목</th>
-                      <th style="text-align: center">작성자</th>
-                      <th style="text-align: center">작성일</th>
-                      <th style="text-align: center">조회수</th>
-                    </tr>
-                    <c:forEach items="${blist }" var="blist">
-	                    <tr>
-	                      <td style="width: 5%; text-align: center;">${blist.article_seq }</td>
-	                      <td style="width: 55%"><a href="BoardDetailCon?seq=${blist.article_seq }">${blist.article_title }</a></td>
-	                      <td style="width: 20%">${blist.mb_name }</td>
-	                      <td style="width: 15%; text-align: center;">${blist.article_date }</td>
-	                      <td style="width: 5%; text-align: center;">${blist.count }</td>
-	                    </tr>
-                    </c:forEach>
-                </table>
-                </form>
-                <%if(email != null){ %>
-	              <a class="btn btn-round btn-g" href="board_write.jsp">글쓰기</a>
-	              <%}else{ %>
-	              <a class="btn btn-round btn-g" href="board_write.jsp" style="display:none">글쓰기</a>
-	              <%} %>
-              </div>
-<!-- 페이지이동 -->
-              <div class="col-sm-12" style="text-align: center;">
-                <div class="pagination font-alt">
-                  <c:if test="${vo.prev }">
-                  <li><a href="BoardListCon?pageNum=${vo.startPage - 1 }&amount=${vo.amount}"><i class="fa fa-angle-left"></i></a></li>
-				  </c:if>
-								                        		
-                        		
-              	  <c:forEach var="num" begin="${vo.startPage }" end="${vo.endPage }">
-               	  <li><a href="BoardListCon?pageNum=${num }&amount=${vo.amount}">${num }</a></li>
-              	  </c:forEach>
-                        		
-                        		
-                  <c:if test="${vo.next }">
-                  <li><a href="BoardListCon?pageNum=${vo.endPage + 1 }&amount=${vo.amount}"><i class="fa fa-angle-right"></i></a></li>
-                  </c:if>
-                </div>
-              </div>
-<!-- 페이지이동 -->
-            </div>
-          </div>
-        </section>
-      </div>
+        <article class="module">
+			<div class="container" role="main">
+				<h2 class="font-alt mb-0">글쓰기</h2>
+                <hr class="divider-w mt-10 mb-20">
+				<form name="form" id="form" role="form" method="post" action="BoardUpdateCon">
+					<input type="hidden" name=id value=<%=email %>>
+					<div class="row">
+						<label for="title">제목</label>
+						<textarea class="form-control" rows="1" name="title" id="title" style="margin-bottom: 12px; font-size: 15px;">${vo.article_title }</textarea>
+					</div>
+					<div class="row">
+						<label for="content">내용</label>
+						<textarea class="form-control" rows="15" name="content" id="content" style="margin-bottom: 12px; font-size: 15px;">${vo.article_content }</textarea>
+					</div>
+					<div class="row" style="float: right; font-weight: bold;">
+						<input type="hidden" name="seq" value="${vo.article_seq }">
+						<button class="btn btn-danger btn-round" type="reset">취소</button>&nbsp;
+						<button class="btn btn-g btn-round" type="submit">수정</button>&nbsp;
+						<a href="BoardListCon" class="btn btn-default btn-round">목록</a>
+					</div>
+				</form>
+			</div>
+		</article>
+	  </div>
 		<%@ include file="footer.jsp" %>
     </main>
     <!--  
