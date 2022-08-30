@@ -99,9 +99,9 @@
             <div class="row mt-70">
               <div class="col-sm-12">
                 <ul class="nav nav-tabs font-alt" role="tablist">
-                  <li class="active"><a href="#description" data-toggle="tab"><span class="icon-tools-2"></span>Description</a></li>
-                  <li><a href="#data-sheet" data-toggle="tab"><span class="icon-tools-2"></span>Data sheet</a></li>
-                  <li><a href="#reviews" data-toggle="tab"><span class="icon-tools-2"></span>Reviews (2)</a></li>
+                  <li class="active"><a id="taste1" href="#description" data-toggle="tab"><span class="icon-tools-2"></span>Description</a></li>
+                  <li><a id="taste2" href="#data-sheet" data-toggle="tab"><span class="icon-tools-2"></span>Data sheet</a></li>
+                  <li><a id="taste3" href="#reviews" data-toggle="tab"><span class="icon-tools-2"></span>Reviews (2)</a></li>
                 </ul>
                 <div class="tab-content">
                   <div class="tab-pane active" id="description">
