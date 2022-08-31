@@ -1,3 +1,9 @@
+<%@page import="java.util.Enumeration"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.VO.BakeryVO" %>
+<%@page import="com.DAO.BakeryDAO" %>
+<%@page import="com.Bakery.BakeryCon" %>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -99,14 +105,56 @@
             <div class="row mt-70">
               <div class="col-sm-12">
                 <ul class="nav nav-tabs font-alt" role="tablist">
-                  <li class="active"><a id="taste1" href="#description" data-toggle="tab"><span class="icon-tools-2"></span>Description</a></li>
+                  <li class="active"><a id="taste1" href="#description" data-toggle="tab"><span class="icon-tools-2"></span>레시피1</a></li>
                   <li><a id="taste2" href="#data-sheet" data-toggle="tab"><span class="icon-tools-2"></span>Data sheet</a></li>
                   <li><a id="taste3" href="#reviews" data-toggle="tab"><span class="icon-tools-2"></span>Reviews (2)</a></li>
                 </ul>
                 <div class="tab-content">
                   <div class="tab-pane active" id="description">
-                    <p>Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.</p>
-                    <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words.</p>
+                     <!--  버튼1의 내용!  -->
+                     
+                     <!--  재료 비율 계산기  -->
+                     <form class="form_ingr">
+				        <input class="input_ingr_name" type="text" name="name" placeholder="재료명을 입력해주세요." />
+				        <input class="input_ingr_weight" type="number" name="weight" placeholder="재료량을 입력해주세요." />
+				        <button type="submit">전송</button>
+				    </form>
+                     
+                     <hr width='90%'>
+                     <!--  재료 테이블 시작 -->
+                     <table>
+
+					 <%
+					 
+					 	
+	
+                     	ArrayList<ArrayList<BakeryVO>> taste1 = (ArrayList<ArrayList<BakeryVO>>)request.getAttribute("taste1");
+                     	
+					 
+                     	for(int i=0; i<taste1.get(1).size(); i++) {
+                     		out.print("<tr>");
+                     		out.print("<td>" + taste1.get(1).get(i).getIngr_name() + "</td>");
+							out.print("<td>" + taste1.get(1).get(i).getIngr_weight() + "</td>");
+							out.print("</tr>");
+                     	}
+                     	
+                     %>	
+                     </table>
+                     <hr width='90%'>
+                     <table>
+                     <%	
+                     	
+                     	for(int i=0; i<taste1.get(0).size(); i++) {
+                     		out.print("<tr>");
+                     		out.print("<td>" + taste1.get(0).get(i).getR_content() + "</td>");
+							out.print("<td>" + taste1.get(0).get(i).getR_img() + "</td>");
+							out.print("<td>" + taste1.get(0).get(i).getR_order() + "</td>");
+							out.print("</tr>");
+                     	}
+                     	
+                     
+                     %>
+                     </table>
                   </div>
                   <div class="tab-pane" id="data-sheet">
                     <table class="table table-striped ds-table table-responsive">
