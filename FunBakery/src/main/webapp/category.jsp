@@ -75,12 +75,13 @@
           <div class="container">
             <div class="row multi-columns-row">
  <!-- 사이드바 -->
-              <div class="col-sm-4 col-md-3 sidebar" style="border-right: 1px solid #c2c2c2">
+              <div class="col-sm-4 col-md-3 sidebar" style="height:1400px;">
+              	<div style="border-right: 1px solid #c2c2c2; position:sticky;top:17.5%">
                 <div class="widget">
                   <h5 class="widget-title font-alt">레시피 종류</h5>
                   <ul class="icon-list">
                  	<li><a href="CategoryCon?cat=케이크">케이크</a></li>
-					<li><a href="CategoryCon?cat=구운과자">구움과자</a></li>
+					<li><a href="CategoryCon?cat=구움과자">구움과자</a></li>
 					<li><a href="CategoryCon?cat=빵">(건강)빵</a></li>
 					<li><a href="CategoryCon?cat=쿠키">쿠키</a></li>
 					<li><a href="CategoryCon?cat=노오븐">노오븐</a></li>
@@ -100,6 +101,7 @@
                     </li>
                     </c:forEach>
                   </ul>
+                </div>
                 </div>
               </div>
 <!-- 사이드바 -->
