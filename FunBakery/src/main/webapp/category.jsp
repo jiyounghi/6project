@@ -11,7 +11,7 @@
     Document Title
     =============================================
     -->
-    <title>Category</title>
+    <title>Fun Bakery</title>
     <!--  
     Favicons
     =============================================
@@ -79,42 +79,26 @@
                 <div class="widget">
                   <h5 class="widget-title font-alt">레시피 종류</h5>
                   <ul class="icon-list">
-                  	<c:forEach items="${clist }" var="list">
-                    	<li><a href="CategoryCon?cat=${list.b_categorys }">${list.b_category } - ${list.b_count }</a></li>
-                  	</c:forEach>
+                 	<li><a href="CategoryCon?cat=케이크">케이크</a></li>
+					<li><a href="CategoryCon?cat=구운과자">구움과자</a></li>
+					<li><a href="CategoryCon?cat=빵">(건강)빵</a></li>
+					<li><a href="CategoryCon?cat=쿠키">쿠키</a></li>
+					<li><a href="CategoryCon?cat=노오븐">노오븐</a></li>
+					<li><a href="CategoryCon?cat=냉동생지">냉동생지</a></li>
                   </ul>
                 </div>
                 <div class="widget">
                   <h5 class="widget-title font-alt">Popular Posts</h5>
                   <ul class="widget-posts">
+                    <c:forEach items="${plist }" var="list">
                     <li class="clearfix">
-                      <div class="widget-posts-image"><a href="shop_single_product.jsp"><img src="assets/images/rp-1.jpg" alt="Post Thumbnail"/></a></div>
+                      <div class="widget-posts-image"><a href="#"><img src="${list.b_img }" alt="Post Thumbnail"/></a></div>
                       <div class="widget-posts-body">
-                        <div class="widget-posts-title"><a href="#">Designer Desk Essentials</a></div>
-                        <div class="widget-posts-meta">23 january</div>
+                        <div class="widget-posts-title"><a href="#">${list.b_name }</a></div>
+                        <div class="widget-posts-meta">${list.b_category }</div>
                       </div>
                     </li>
-                    <li class="clearfix">
-                      <div class="widget-posts-image"><a href="#"><img src="assets/images/rp-2.jpg" alt="Post Thumbnail"/></a></div>
-                      <div class="widget-posts-body">
-                        <div class="widget-posts-title"><a href="#">Realistic Business Card Mockup</a></div>
-                        <div class="widget-posts-meta">15 February</div>
-                      </div>
-                    </li>
-                    <li class="clearfix">
-                      <div class="widget-posts-image"><a href="#"><img src="assets/images/rp-3.jpg" alt="Post Thumbnail"/></a></div>
-                      <div class="widget-posts-body">
-                        <div class="widget-posts-title"><a href="#">Eco bag Mockup</a></div>
-                        <div class="widget-posts-meta">21 February</div>
-                      </div>
-                    </li>
-                    <li class="clearfix">
-                      <div class="widget-posts-image"><a href="#"><img src="assets/images/rp-4.jpg" alt="Post Thumbnail"/></a></div>
-                      <div class="widget-posts-body">
-                        <div class="widget-posts-title"><a href="#">Bottle Mockup</a></div>
-                        <div class="widget-posts-meta">2 March</div>
-                      </div>
-                    </li>
+                    </c:forEach>
                   </ul>
                 </div>
               </div>
@@ -123,7 +107,7 @@
 					<c:forEach items="${brlist }" var="list">
 					<div class="col-sm-6 col-md-6 col-lg-6">
 		                <div class="shop-item">
-		                  <div class="shop-item-image"><a href="shop_single_product.html" target="_blank"><img src="${list.b_img }" alt="Accessories Pack"/></a>
+		                  <div class="shop-item-image"><a href="shop_single_product.html" target="_blank"><img style="width:600px; height:400px;" src="${list.b_img }" alt="Accessories Pack"/></a>
 		                  </div>
 		                  <h4 class="shop-item-title font-alt"><a href="#">${list.b_name }</a></h4>
 		                </div>
