@@ -71,20 +71,24 @@
       </nav>
       <div class="main">
         <section class="module">
+        <% 
+        BakeryVO breadInfo = (BakeryVO)request.getAttribute("breadInfo"); 
+        %>
           <div class="container">
             <div class="row">
-              <div class="col-sm-6 mb-sm-40"><a class="gallery" href="assets/images/shop/product-7.jpg"><img src="assets/images/shop/product-7.jpg" alt="Single Product Image"/></a>
+              <div class="col-sm-6 mb-sm-40"><a class="gallery" href=<%=breadInfo.getB_img()%>>
+              	 <%out.print("<img src=" + breadInfo.getB_img() +" alt='Bread image'>");%>
               </div>
               <div class="col-sm-6">
                 <div class="row" style="margin-bottom: 40px">
                   <div class="col-sm-12">
-                    <h1 class="product-title font-alt">초코케이크</h1>
+                    <h1 class="product-title font-alt"><%=breadInfo.getB_name() %></h1>
                   </div>
                 </div>
                 <div class="row mb-20">
                   <div class="col-sm-12">
                     <div class="description">
-                      <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words.</p>
+                      <%=breadInfo.getB_desc() %>
                     </div>
                   </div>
                 </div>
@@ -106,14 +110,14 @@
               <div class="col-sm-12">
                 <ul class="nav nav-tabs font-alt" role="tablist">
                   <li class="active"><a id="taste1" href="#description" data-toggle="tab"><span class="icon-tools-2"></span>레시피1</a></li>
-                  <li><a id="taste2" href="#data-sheet" data-toggle="tab"><span class="icon-tools-2"></span>Data sheet</a></li>
-                  <li><a id="taste3" href="#reviews" data-toggle="tab"><span class="icon-tools-2"></span>Reviews (2)</a></li>
+                  <li><a id="taste2" href="#data-sheet" data-toggle="tab"><span class="icon-tools-2"></span>레시피2</a></li>
+                  <li><a id="taste3" href="#reviews" data-toggle="tab"><span class="icon-tools-2"></span>레시피3</a></li>
                 </ul>
                 <div class="tab-content">
                   <div class="tab-pane active" id="description">
                      <!--  버튼1의 내용!  -->
                      
-                     <!--  재료 비율 계산기  -->
+                     <!--  재료 비율 계산기 + 재료테이블   -->
                      <form class="form_ingr">
 				        <input class="input_ingr_name" type="text" name="name" placeholder="재료명을 입력해주세요." />
 				        <input class="input_ingr_weight" type="number" name="weight" placeholder="재료량을 입력해주세요." />
@@ -125,22 +129,53 @@
                      <table>
 
 					 <%
-					 
-					 	
-	
+						// 해당 레시피의 재료명과 재료량을 배열로 묶어두기 (js로 넘기기 위해)
                      	ArrayList<ArrayList<BakeryVO>> taste1 = (ArrayList<ArrayList<BakeryVO>>)request.getAttribute("taste1");
+                     	int arr_len = taste1.get(1).size();
+                     	String ingrName_java[] = new String[arr_len];  //재료명을 담을 배열
+                     	String ingrWeight_java[] = new String[arr_len]; //재료량을 담을 배열 
                      	
-					 
+                     	//재료명과 재료량을 배열로 저장하는 반복문
                      	for(int i=0; i<taste1.get(1).size(); i++) {
-                     		out.print("<tr>");
-                     		out.print("<td>" + taste1.get(1).get(i).getIngr_name() + "</td>");
-							out.print("<td>" + taste1.get(1).get(i).getIngr_weight() + "</td>");
-							out.print("</tr>");
+                     		ingrName_java[i] = taste1.get(1).get(i).getIngr_name();
+                     		ingrWeight_java[i] = taste1.get(1).get(i).getIngr_weight();
                      	}
-                     	
+                	
                      %>	
+                     
+                     <script>
+                     	// jsp 코드의 재료명 배열을 자바스크립트 배열로 옮기기
+                     	// 배열을 만든 후 각 원소를 class에 넣기 
+                     	var ingrName = new Array();
+                     	<% for(int i=0; i<arr_len; i++) {%>
+                     		ingrName.push('<%=ingrName_java[i]%>');
+                     	<%}%>
+                     		
+                     	// jsp 코드의 재료량 배열을 자바스크립트 배열로 옮기기 
+                     	// g으로 끝나는 것은 g 떼고 Number타입으로 전환 
+                     	var ingrWeight = new Array();
+                     	<% for(int i=0; i<arr_len; i++) {
+                     		if(ingrWeight_java[i].contains("g")) {
+                     			// g가 붙으면 g 제거 후 int형으로 바꾼 후 ingrWeight에 추가 
+                     			String weight = ingrWeight_java[i];
+                     			weight = weight.replace("g", "");
+                     			int int_weight = Integer.parseInt(weight); %>
+                     			ingrWeight.push('<%=int_weight%>')
+                     			
+                     		<%} else {%>
+                     			ingrWeight.push('<%=ingrWeight_java[i] %>');
+                  
+                     		<%}%>
+                     		
+                     	<%}%>
+                     	
+                     	console.log(ingrName,ingrWeight);
+                     	
+                     </script>
                      </table>
                      <hr width='90%'>
+                     
+                     <!--  레시피 출력 -->
                      <table>
                      <%	
                      	
@@ -155,46 +190,85 @@
                      
                      %>
                      </table>
+                     
+                     <%
+                     	out.print("<div>");
+                     	for(int i=0; i < taste1.get(0).size(); i++){
+                     		out.print("<div>");
+                     		out.print("<div id=stepdescr>" + taste1.get(0).get(i).getR_order() + "</div>");
+                     		out.print("<div id=stepdescr>" + taste1.get(0).get(i).getR_content() + "</div>");
+                     		out.print("<div id=stepimg><img src=" + taste1.get(0).get(i).getR_img() + "></div>");
+                     		out.print("</div>");
+                     	}
+                     	out.print("</div>");
+                     
+                     
+                     
+                     %>
+                 
+                     
+
                   </div>
+                  <!--  버튼 2 시작 -->
                   <div class="tab-pane" id="data-sheet">
-                    <table class="table table-striped ds-table table-responsive">
-                      <tbody>
-                        <tr>
-                          <th>Title</th>
-                          <th>Info</th>
-                        </tr>
-                        <tr>
-                          <td>Compositions</td>
-                          <td>Jeans</td>
-                        </tr>
-                        <tr>
-                          <td>Size</td>
-                          <td>44, 46, 48</td>
-                        </tr>
-                        <tr>
-                          <td>Color</td>
-                          <td>Black</td>
-                        </tr>
-                        <tr>
-                          <td>Brand</td>
-                          <td>Somebrand</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <% 
+                  ArrayList<ArrayList<BakeryVO>> taste2 = (ArrayList<ArrayList<BakeryVO>>)request.getAttribute("taste2");
+                  
+                  out.print("<table>");
+                  // 재료 테이블 
+                  for(int i=0; i<taste2.get(1).size(); i++) {
+                 		out.print("<tr>");
+                 		out.print("<td>" + taste2.get(1).get(i).getIngr_name() + "</td>");
+  						out.print("<td>" + taste2.get(1).get(i).getIngr_weight() + "</td>");
+  						out.print("</tr>");
+                 		}
+                  out.print("</table>");  
+                
+                  out.print("<hr>");
+                  out.print("<table>");
+  				// 레시피 테이블                 
+                  for(int i=0; i<taste2.get(0).size(); i++) {
+               		out.print("<tr>");
+               		out.print("<td>" + taste2.get(0).get(i).getR_content() + "</td>");
+						out.print("<td>" + taste2.get(0).get(i).getR_img() + "</td>");
+						out.print("<td>" + taste2.get(0).get(i).getR_order() + "</td>");
+						out.print("</tr>");
+               		}
+                  out.print("</table>");
+                  
+                  %>
+                    
                   </div>
+                  
+                  <!--  버튼 3 레시피 시작 -->
                   <div class="tab-pane" id="reviews">
                     <div class="comments reviews">
-                      <div class="comment clearfix">
-                        <div class="comment-avatar"><img src="" alt="avatar"/></div>
-                        <div class="comment-content clearfix">
-                          <div class="comment-author font-alt"><a href="#">John Doe</a></div>
-                          <div class="comment-body">
-                            <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The European languages are members of the same family. Their separate existence is a myth.</p>
-                          </div>
-                          <div class="comment-meta font-alt">Today, 14:55 -<span><i class="fa fa-star star"></i></span><span><i class="fa fa-star star"></i></span><span><i class="fa fa-star star"></i></span><span><i class="fa fa-star star"></i></span><span><i class="fa fa-star star-off"></i></span>
-                          </div>
-                        </div>
-                      </div>
+                      <% 
+                  ArrayList<ArrayList<BakeryVO>> taste3 = (ArrayList<ArrayList<BakeryVO>>)request.getAttribute("taste3");
+                  
+                  out.print("<table>");
+                  // 재료 테이블 
+                  for(int i=0; i<taste3.get(1).size(); i++) {
+                 		out.print("<tr>");
+                 		out.print("<td>" + taste3.get(1).get(i).getIngr_name() + "</td>");
+  						out.print("<td>" + taste3.get(1).get(i).getIngr_weight() + "</td>");
+  						out.print("</tr>");
+                 		}
+                  out.print("</table>");  
+                
+                  out.print("<hr>");
+                  out.print("<table>");
+  				// 레시피 테이블                 
+                  for(int i=0; i<taste3.get(0).size(); i++) {
+               		out.print("<tr>");
+               		out.print("<td>" + taste3.get(0).get(i).getR_content() + "</td>");
+						out.print("<td>" + taste3.get(0).get(i).getR_img() + "</td>");
+						out.print("<td>" + taste3.get(0).get(i).getR_order() + "</td>");
+						out.print("</tr>");
+               		}
+                  out.print("</table>");
+                  
+                  %>
                       <div class="comment clearfix">
                         <div class="comment-avatar"><img src="" alt="avatar"/></div>
                         <div class="comment-content clearfix">
