@@ -126,10 +126,10 @@
                      
                      <hr width='90%'>
                      <!--  재료 테이블 시작 -->
-                     <table>
+                     <table id="ingr_table" border="1"></table>
 
 					 <%
-						// 해당 레시피의 재료명과 재료량을 배열로 묶어두기 (js로 넘기기 위해)
+						// 해당 레시피의 재료명과 재료량을 배열에 담아서 js로 넘기기
                      	ArrayList<ArrayList<BakeryVO>> taste1 = (ArrayList<ArrayList<BakeryVO>>)request.getAttribute("taste1");
                      	int arr_len = taste1.get(1).size();
                      	String ingrName_java[] = new String[arr_len];  //재료명을 담을 배열
@@ -143,53 +143,61 @@
                 	
                      %>	
                      
+                     <script src="assets/js/RecipeTable.js"></script>
                      <script>
-                     	// jsp 코드의 재료명 배열을 자바스크립트 배열로 옮기기
-                     	// 배열을 만든 후 각 원소를 class에 넣기 
-                     	var ingrName = new Array();
+                     	// jsp 코드의 재료명 배열을 자바스크립트 배열로 옮기기 
+                     	let ingrName = new Array();
                      	<% for(int i=0; i<arr_len; i++) {%>
                      		ingrName.push('<%=ingrName_java[i]%>');
                      	<%}%>
                      		
-                     	// jsp 코드의 재료량 배열을 자바스크립트 배열로 옮기기 
-                     	// g으로 끝나는 것은 g 떼고 Number타입으로 전환 
-                     	var ingrWeight = new Array();
-                     	<% for(int i=0; i<arr_len; i++) {
-                     		if(ingrWeight_java[i].contains("g")) {
-                     			// g가 붙으면 g 제거 후 int형으로 바꾼 후 ingrWeight에 추가 
-                     			String weight = ingrWeight_java[i];
-                     			weight = weight.replace("g", "");
-                     			int int_weight = Integer.parseInt(weight); %>
-                     			ingrWeight.push('<%=int_weight%>')
-                     			
-                     		<%} else {%>
-                     			ingrWeight.push('<%=ingrWeight_java[i] %>');
-                  
-                     		<%}%>
-                     		
+
+                     	let ingrWeight = new Array();
+                     	<% for(int i=0; i<arr_len; i++) {%>
+                     		ingrWeight.push('<%=ingrWeight_java[i] %>');    
                      	<%}%>
                      	
-                     	console.log(ingrName,ingrWeight);
+                     	// 클래스에 넣어주기 위해 딕셔너리 생성 (key-ingrName, value-ingrWeight)
+                     	let ingrTable = {};
+                     	for(var j=0; j<(ingrName.length)-1; j++) {
+                     		let key = ingrName[j];
+                     		ingrTable[key] = ingrWeight[j];
+                     	}
                      	
+                     	console.log(ingrName, ingrWeight);
+                     	console.log(ingrTable);
+                     	
+                     	// 객체 생성
+                     	const recipeTable = new RecipeTable(ingrTable);
+                     	console.log(recipeTable);
+                     	
+                     	const form = document.querySelector(".form_ingr");
+                        const nameInput = document.querySelector(".input_ingr_name");
+                        const weightInput = document.querySelector(".input_ingr_weight");
+                        let table = document.getElementById('ingr_table');
+
+                        const getInputValue = (/** @type { Event } */ event) => {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            let nameValue = nameInput.value;
+                            let weightValue = weightInput.value;
+                            recipeTable.update(nameValue, weightValue)
+                            table.innerHTML = recipeTable.toHtml();
+                        };
+
+                        const init = () => {
+                            form.addEventListener("submit", getInputValue);
+                            table.innerHTML = recipeTable.toHtml();
+                        };
+
+                        init();
+                     	
+                        
                      </script>
-                     </table>
+                     
                      <hr width='90%'>
                      
                      <!--  레시피 출력 -->
-                     <table>
-                     <%	
-                     	
-                     	for(int i=0; i<taste1.get(0).size(); i++) {
-                     		out.print("<tr>");
-                     		out.print("<td>" + taste1.get(0).get(i).getR_content() + "</td>");
-							out.print("<td>" + taste1.get(0).get(i).getR_img() + "</td>");
-							out.print("<td>" + taste1.get(0).get(i).getR_order() + "</td>");
-							out.print("</tr>");
-                     	}
-                     	
-                     
-                     %>
-                     </table>
                      
                      <%
                      	out.print("<div>");
@@ -211,22 +219,87 @@
                   </div>
                   <!--  버튼 2 시작 -->
                   <div class="tab-pane" id="data-sheet">
-                  <% 
-                  ArrayList<ArrayList<BakeryVO>> taste2 = (ArrayList<ArrayList<BakeryVO>>)request.getAttribute("taste2");
                   
-                  out.print("<table>");
-                  // 재료 테이블 
-                  for(int i=0; i<taste2.get(1).size(); i++) {
-                 		out.print("<tr>");
-                 		out.print("<td>" + taste2.get(1).get(i).getIngr_name() + "</td>");
-  						out.print("<td>" + taste2.get(1).get(i).getIngr_weight() + "</td>");
-  						out.print("</tr>");
-                 		}
-                  out.print("</table>");  
-                
-                  out.print("<hr>");
-                  out.print("<table>");
-  				// 레시피 테이블                 
+                   <!--  재료 비율 계산기 + 재료테이블   -->
+                     <form class="form_ingr">
+				        <input class="input_ingr_name" type="text" name="name" placeholder="재료명을 입력해주세요." />
+				        <input class="input_ingr_weight" type="number" name="weight" placeholder="재료량을 입력해주세요." />
+				        <button type="submit">전송</button>
+				    </form>
+                     
+                     <hr width='90%'>
+                     <!--  재료 테이블 시작 -->
+                     <table id="ingr_table" border="1"></table>
+
+					 <%
+						// 해당 레시피의 재료명과 재료량을 배열에 담아서 js로 넘기기
+                     	ArrayList<ArrayList<BakeryVO>> taste2 = (ArrayList<ArrayList<BakeryVO>>)request.getAttribute("taste2");
+                     	arr_len = taste2.get(1).size();
+                     	ingrName_java = new String[arr_len];  //재료명을 담을 배열
+                     	ingrWeight_java = new String[arr_len]; //재료량을 담을 배열 
+                     	
+                     	//재료명과 재료량을 배열로 저장하는 반복문
+                     	for(int i=0; i<taste2.get(1).size(); i++) {
+                     		ingrName_java[i] = taste2.get(1).get(i).getIngr_name();
+                     		ingrWeight_java[i] = taste2.get(1).get(i).getIngr_weight();
+                     	}
+                	
+                     %>	
+
+                     <script>
+                     	// jsp 코드의 재료명 배열을 자바스크립트 배열로 옮기기 
+                     	let ingrName = new Array();
+                     	<% for(int i=0; i<arr_len; i++) {%>
+                     		ingrName.push('<%=ingrName_java[i]%>');
+                     	<%}%>
+                     		
+
+                     	let ingrWeight = new Array();
+                     	<% for(int i=0; i<arr_len; i++) {%>
+                     		ingrWeight.push('<%=ingrWeight_java[i] %>');    
+                     	<%}%>
+                     	
+                     	// 클래스에 넣어주기 위해 딕셔너리 생성 (key-ingrName, value-ingrWeight)
+                     	let ingrTable = {};
+                     	for(var j=0; j<(ingrName.length)-1; j++) {
+                     		let key = ingrName[j];
+                     		ingrTable[key] = ingrWeight[j];
+                     	}
+                     	
+                     	console.log(ingrName, ingrWeight);
+                     	console.log(ingrTable);
+                     	
+                     	// 객체 생성
+                     	const recipeTable = new RecipeTable(ingrTable);
+                     	console.log(recipeTable);
+                     	
+                     	const form = document.querySelector(".form_ingr");
+                        const nameInput = document.querySelector(".input_ingr_name");
+                        const weightInput = document.querySelector(".input_ingr_weight");
+                        let table = document.getElementById('ingr_table');
+
+                        const getInputValue = (/** @type { Event } */ event) => {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            let nameValue = nameInput.value;
+                            let weightValue = weightInput.value;
+                            recipeTable.update(nameValue, weightValue)
+                            table.innerHTML = recipeTable.toHtml();
+                        };
+
+                        const init = () => {
+                            form.addEventListener("submit", getInputValue);
+                            table.innerHTML = recipeTable.toHtml();
+                        };
+
+                        init();
+                     	
+                     	
+                     </script>
+                  
+                  
+  				// 레시피 테이블   
+  				<%              
                   for(int i=0; i<taste2.get(0).size(); i++) {
                		out.print("<tr>");
                		out.print("<td>" + taste2.get(0).get(i).getR_content() + "</td>");
@@ -236,7 +309,7 @@
                		}
                   out.print("</table>");
                   
-                  %>
+                %>
                     
                   </div>
                   
