@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +18,7 @@ import com.VO.BakeryVO;
 public class BakeryCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	public void service(HttpServletRequest request, HttpServletResponse response) {
+	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			request.setCharacterEncoding("utf-8");
 		} catch (UnsupportedEncodingException e) {
@@ -26,7 +27,8 @@ public class BakeryCon extends HttpServlet {
 		}
 		
 		BakeryDAO dao = new BakeryDAO();
-		int b_seq = Integer.parseInt(request.getParameter("b_seq"));
+//		int b_seq = Integer.parseInt(request.getParameter("b_seq"));
+		int b_seq = 22;
 		
 		
 		ArrayList<ArrayList<BakeryVO>> taste1 = new ArrayList<ArrayList<BakeryVO>>();
@@ -36,16 +38,17 @@ public class BakeryCon extends HttpServlet {
 		int index1 = dao.findB_r_index(b_seq, "taste1");
 		taste1.add(dao.getRecipe(b_seq, index1));
 		taste1.add(dao.getIngredients(b_seq, index1));
+//		System.out.println(taste1.get(0).get(0).getR_order());
 		
 		int index2 = dao.findB_r_index(b_seq, "taste2");
-		taste1.add(dao.getRecipe(b_seq, index2));
-		taste1.add(dao.getIngredients(b_seq, index2));
+		taste2.add(dao.getRecipe(b_seq, index2));
+		taste2.add(dao.getIngredients(b_seq, index2));
 		
 		int index3 = dao.findB_r_index(b_seq, "taste3");
-		taste1.add(dao.getRecipe(b_seq, index3));
-		taste1.add(dao.getIngredients(b_seq, index3));
+		taste3.add(dao.getRecipe(b_seq, index3));
+		taste3.add(dao.getIngredients(b_seq, index3));
 		
-		BakeryVO breadInfo = dao.getBreadInfo(13);
+		BakeryVO breadInfo = dao.getBreadInfo(b_seq);
 		
 		request.setAttribute("taste1", taste1);
 		request.setAttribute("taste2", taste2);
@@ -53,12 +56,15 @@ public class BakeryCon extends HttpServlet {
 		request.setAttribute("breadInfo", breadInfo);
 		
 //		"shop_single_product.jsp";
-		try {
-			response.sendRedirect("shop_single_product.jsp");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			response.sendRedirect("test.jsp");
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
+		RequestDispatcher rd = request.getRequestDispatcher("test.jsp");
+		rd.forward(request, response);
 		
 	}
 

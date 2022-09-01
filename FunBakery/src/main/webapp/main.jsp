@@ -66,9 +66,9 @@
           	<% if(username!=null){ %>
             	<div class="font-alt mb-30 titan-title-size-1"><h1 style="display:inline;"><%=username%></h1>의</div>
             <%}else{ %>
-            	<div class="font-alt mb-30 titan-title-size-1">베이킹왕 문지영의</div>
+            	
             <%} %>
-            <div class="font-alt mb-40 titan-title-size-4">Fun(便) Bakery</div><a class="section-scroll btn btn-border-w btn-round" href="#works">더보기</a>
+            <div class="font-title mb-40 titan-title-size-5">Fun Bakery</div><a class="section-scroll btn btn-border-w btn-round" href="#works">더보기</a>
           </div>
         </div>
       </section>
@@ -89,7 +89,7 @@
                 <ul class="filter font-alt" id="filters">
                   <li><a class="current wow fadeInUp" href="#" data-filter="*">케이크</a></li>
                   <li><a class="wow fadeInUp" href="#" data-filter=".grilledcookie" data-wow-delay="0.2s">구움과자</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".bread" data-wow-delay="0.4s">(건강)빵</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".bread" data-wow-delay="0.4s">빵</a></li>
                   <li><a class="wow fadeInUp" href="#" data-filter=".cookie" data-wow-delay="0.6s">쿠키</a></li>
                   <li><a class="wow fadeInUp" href="#" data-filter=".nooven" data-wow-delay="0.8s">노오븐</a></li>
                   <li><a class="wow fadeInUp" href="#" data-filter=".frozendough" data-wow-delay="1s">냉동생지</a></li>
