@@ -10,7 +10,7 @@
     Document Title
     =============================================
     -->
-    <title>Info</title>
+    <title>Fun Bakery</title>
     <!--  
     Favicons
     =============================================
@@ -74,7 +74,7 @@
           <div class="container">
             <div class="row post-masonry post-columns">
 <!-- 사이드바 -->
-              <div class="col-sm-4 col-md-3 sidebar" style="border-right: 1px solid #c2c2c2">
+              <div class="col-sm-4 col-md-3 sidebar" style="border-right: 1px solid #c2c2c2;">
                 <div class="widget">
                   <h5 class="widget-title font-alt">Blog Categories</h5>
                   <ul class="icon-list">

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,7 +11,7 @@
     Document Title
     =============================================
     -->
-    <title>Category</title>
+    <title>Fun Bakery</title>
     <!--  
     Favicons
     =============================================
@@ -74,108 +75,48 @@
           <div class="container">
             <div class="row multi-columns-row">
  <!-- 사이드바 -->
-              <div class="col-sm-4 col-md-3 sidebar" style="border-right: 1px solid #c2c2c2">
+              <div class="col-sm-4 col-md-3 sidebar" style="height:1400px;">
+              	<div style="border-right: 1px solid #c2c2c2; position:sticky;top:17.5%">
                 <div class="widget">
                   <h5 class="widget-title font-alt">레시피 종류</h5>
                   <ul class="icon-list">
-                    <li><a href="#">케이크 - 7</a></li>
-                    <li><a href="#">구움과자 - 3</a></li>
-                    <li><a href="#">(건강)빵 - 12</a></li>
-                    <li><a href="#">쿠키 - 1</a></li>
-                    <li><a href="#">노오븐 - 16</a></li>
-                    <li><a href="#">냉동생지 - 16</a></li>
+                 	<li><a href="CategoryCon?cat=케이크">케이크</a></li>
+					<li><a href="CategoryCon?cat=구움과자">구움과자</a></li>
+					<li><a href="CategoryCon?cat=빵">(건강)빵</a></li>
+					<li><a href="CategoryCon?cat=쿠키">쿠키</a></li>
+					<li><a href="CategoryCon?cat=노오븐">노오븐</a></li>
+					<li><a href="CategoryCon?cat=냉동생지">냉동생지</a></li>
                   </ul>
                 </div>
                 <div class="widget">
                   <h5 class="widget-title font-alt">Popular Posts</h5>
                   <ul class="widget-posts">
+                    <c:forEach items="${plist }" var="list">
                     <li class="clearfix">
-                      <div class="widget-posts-image"><a href="shop_single_product.jsp"><img src="assets/images/rp-1.jpg" alt="Post Thumbnail"/></a></div>
+                      <div class="widget-posts-image"><a href="#"><img src="${list.b_img }" alt="Post Thumbnail"/></a></div>
                       <div class="widget-posts-body">
-                        <div class="widget-posts-title"><a href="#">Designer Desk Essentials</a></div>
-                        <div class="widget-posts-meta">23 january</div>
+                        <div class="widget-posts-title"><a href="#">${list.b_name }</a></div>
+                        <div class="widget-posts-meta">${list.b_category }</div>
                       </div>
                     </li>
-                    <li class="clearfix">
-                      <div class="widget-posts-image"><a href="#"><img src="assets/images/rp-2.jpg" alt="Post Thumbnail"/></a></div>
-                      <div class="widget-posts-body">
-                        <div class="widget-posts-title"><a href="#">Realistic Business Card Mockup</a></div>
-                        <div class="widget-posts-meta">15 February</div>
-                      </div>
-                    </li>
-                    <li class="clearfix">
-                      <div class="widget-posts-image"><a href="#"><img src="assets/images/rp-3.jpg" alt="Post Thumbnail"/></a></div>
-                      <div class="widget-posts-body">
-                        <div class="widget-posts-title"><a href="#">Eco bag Mockup</a></div>
-                        <div class="widget-posts-meta">21 February</div>
-                      </div>
-                    </li>
-                    <li class="clearfix">
-                      <div class="widget-posts-image"><a href="#"><img src="assets/images/rp-4.jpg" alt="Post Thumbnail"/></a></div>
-                      <div class="widget-posts-body">
-                        <div class="widget-posts-title"><a href="#">Bottle Mockup</a></div>
-                        <div class="widget-posts-meta">2 March</div>
-                      </div>
-                    </li>
+                    </c:forEach>
                   </ul>
+                </div>
                 </div>
               </div>
 <!-- 사이드바 -->
 				<div class="col-sm-8">
+					<c:forEach items="${brlist }" var="list">
 					<div class="col-sm-6 col-md-6 col-lg-6">
-	                <div class="shop-item">
-	                  <div class="shop-item-image"><a href="shop_single_product.html" target="_blank"><img src="assets/images/shop/product-7.jpg" alt="Accessories Pack"/></a>
-	                  </div>
-	                  <h4 class="shop-item-title font-alt"><a href="#">Accessories Pack</a></h4>Â£9.00
+		                <div class="shop-item">
+		                  <div class="shop-item-image"><a href="shop_single_product.html" target="_blank"><img style="width:600px; height:400px;" src="${list.b_img }" alt="Accessories Pack"/></a>
+		                  </div>
+		                  <h4 class="shop-item-title font-alt"><a href="#">${list.b_name }</a></h4>
+		                </div>
 	                </div>
-	              </div>
-	              <div class="col-sm-6 col-md-6 col-lg-6">
-	                <div class="shop-item">
-	                  <div class="shop-item-image"><img src="assets/images/shop/product-8.jpg" alt="Menâs Casual Pack"/>
-	                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
-	                  </div>
-	                  <h4 class="shop-item-title font-alt"><a href="#">Menâs Casual Pack</a></h4>Â£12.00
-	                </div>
-	              </div>
-	              <div class="col-sm-6 col-md-6 col-lg-6">
-	                <div class="shop-item">
-	                  <div class="shop-item-image"><img src="assets/images/shop/product-9.jpg" alt="Menâs Garb"/>
-	                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
-	                  </div>
-	                  <h4 class="shop-item-title font-alt"><a href="#">Menâs Garb</a></h4>Â£6.00
-	                </div>
-	              </div>
-	              <div class="col-sm-6 col-md-6 col-lg-6">
-	                <div class="shop-item">
-	                  <div class="shop-item-image"><img src="assets/images/shop/product-10.jpg" alt="Cold Garb"/>
-	                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
-	                  </div>
-	                  <h4 class="shop-item-title font-alt"><a href="#">Cold Garb</a></h4>Â£14.00
-	                </div>
-	              </div>
-	              <div class="col-sm-6 col-md-6 col-lg-6">
-	                <div class="shop-item">
-	                  <div class="shop-item-image"><img src="assets/images/shop/product-11.jpg" alt="Accessories Pack"/>
-	                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
-	                  </div>
-	                  <h4 class="shop-item-title font-alt"><a href="#">Accessories Pack</a></h4>Â£9.00
-	                </div>
-	              </div>
-	              <div class="col-sm-6 col-md-6 col-lg-6">
-	                <div class="shop-item">
-	                  <div class="shop-item-image"><img src="assets/images/shop/product-12.jpg" alt="Menâs Casual Pack"/>
-	                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
-	                  </div>
-	                  <h4 class="shop-item-title font-alt"><a href="#">Menâs Casual Pack</a></h4>Â£12.00
-	                </div>
-	              </div>
+					</c:forEach>
               	</div>		  	     
             </div>
-<!-- 페이지이동 -->
-              <div class="col-sm-12" style="text-align: center;">
-                <div class="pagination font-alt"><a href="#"><i class="fa fa-angle-left"></i></a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"><i class="fa fa-angle-right"></i></a></div>
-              </div>
-<!-- 페이지이동 -->
             </div>
         </section>
 		<%@ include file="footer.jsp" %>
