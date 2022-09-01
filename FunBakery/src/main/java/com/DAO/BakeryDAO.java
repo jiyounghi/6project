@@ -15,8 +15,7 @@ public class BakeryDAO {
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
 	int cnt = 0;
-	BakeryVO vo = null;
-	ArrayList<BakeryVO> list = new ArrayList<>();
+	
 
 	public BakeryDAO() {
 		// TODO Auto-generated constructor stub
@@ -153,6 +152,8 @@ public class BakeryDAO {
 	}
 	
 	public ArrayList<BakeryVO> getIngredients(int b_seq, int b_r_index) {
+		BakeryVO vo = null;
+		ArrayList<BakeryVO> list = new ArrayList<>();
 		try {
 			dbConn();
 			String sql = "select ingr_name, ingr_weight, ingr_rate "
@@ -185,10 +186,12 @@ public class BakeryDAO {
 	}
 	
 	public ArrayList<BakeryVO> getRecipe(int b_seq, int b_r_index) {
+		BakeryVO vo = null;
+		ArrayList<BakeryVO> list = new ArrayList<>();
 		try {
 			dbConn();
 			String sql = "select r_content, r_img, r_order "
-						+ "from t_recipe where b_seq = ? and b_r_index = ?";
+						+ "from t_recipe where b_seq = ? and b_r_index = ? order by r_order";
 			
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, b_seq);
@@ -200,10 +203,12 @@ public class BakeryDAO {
 				
 				String getr_content = rs.getString(1);
 				String getr_img = rs.getString(2);
-				float getr_order = rs.getInt(3);
+				int getr_order = rs.getInt(3);
+				
 				
 				vo = new BakeryVO(b_seq, getr_content, getr_img, getr_order);
 				list.add(vo);
+				System.out.println(vo.getR_content());
 
 			}
 			
@@ -217,6 +222,8 @@ public class BakeryDAO {
 	}
 	
 	public BakeryVO getBreadInfo(int b_seq) {
+		BakeryVO vo = null;
+		ArrayList<BakeryVO> list = new ArrayList<>();
 		try {
 			dbConn();
 			String sql = "select b_name, b_desc, b_img from t_bread where b_seq = ?";

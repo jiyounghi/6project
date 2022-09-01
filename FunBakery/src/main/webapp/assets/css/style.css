@@ -1,4 +1,118 @@
 /*--------------------------------------------------------------
+	레시피 디테일 페이지
+--------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recipekorea';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.best_tit{
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 재료 부분 */
+
+.ingre_two {
+    display:inline-block;
+    margin: 0;
+    list-style: none;
+    width: 49%;
+    font-family: 'Pretendard-Regular';
+    font-size: 20px;
+}
+
+.ingre_two li {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ingre_one li {
+    display:inline-block;
+    margin: 0;
+    width: 49%;
+    list-style: none;
+}
+
+.ingre_one {
+    font-family: 'Pretendard-Regular';
+    font-size: 20px;
+}
+
+.ready_ingre3 ul {
+    padding: 0 0 25px 0;
+    vertical-align: top;
+}
+
+.ready_ingre3_tt {
+    display: block;
+}
+
+#divConfirmedMaterialArea1 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ingre_name {
+  display: inline-block;
+  width: 200px;
+  color: black;
+}
+
+#btnMeasureModal {
+  font-family: 'Pretendard-Regular';
+  font-size: 15px;
+}
+
+/* 레시피 부분 */
+.view_step_cont > .media-left{
+    width: 35px;
+    /* float: left; */
+    text-align: center;
+    font-family: 'Recipekorea';
+    font-size: 30px;
+    height: 200px;
+    line-height: 60px;
+}
+.view_step_cont > .media-body{
+    width: 700px;
+    /* float: left; */
+    font-family: 'Pretendard-Regular';
+    font-size: 20px;
+    line-height: 29px;
+    height: 200px;
+    
+}
+.view_step_cont > .media-right{
+    width: 200px;
+    /* float: left; */
+    height: 200px;
+}
+
+.view_step_cont {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#r_index {
+    font-family: 'Pretendard-Regular';
+    font-size: 25px;
+}
+
+/*--------------------------------------------------------------
 	Common
 --------------------------------------------------------------*/
 html {
@@ -888,6 +1002,108 @@ blockquote {
   padding: 0;
 }
 
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KOHIBaeumOTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Happiness-Sans-Title';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Happiness-Sans-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NEXEN_TIRE_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/NEXEN_TIRE_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SEBANG_Gothic_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recipekorea';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MaplestoryOTFBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KOTRALEAP';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRALEAP.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ONE-Mobile-POP';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-title {
+  font-family: 'ONE-Mobile-POP';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.font-title2 {
+  font-family: "TmoneyRoundWindExtraBold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.font-title3 {
+  font-family: "NanumSquareRound", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 .font-alt {
   font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
@@ -1400,6 +1616,12 @@ General Styles - Owlcarousel
   letter-spacing: 24px;
   font-weight: 400;
   font-size: 48px;
+}
+
+.titan-title-size-5 {
+  letter-spacing: 24px;
+  font-weight: 400;
+  font-size: 60px;
 }
 
 /* Agency Page Header */
