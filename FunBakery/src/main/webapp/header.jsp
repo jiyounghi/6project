@@ -76,12 +76,12 @@
 				</li>
 				<li><a href="tip.jsp">유의사항</a></li>
 				<li><a href="BoardListCon">게시판</a></li>
-				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#" target="_blank" >재료 및 도구</a>
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#">재료 및 도구</a>
 					<ul class="dropdown-menu">
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">판매처</a>
 						<ul class="dropdown-menu">
-							<li><a href="http://www.bncmarket.com/">b&c market</a></li>
-							<li><a href="http://www.bakingfarm.co.kr/">baking farm</a></li>
+							<li><a href="http://www.bncmarket.com/" target="_blank">b&c market</a></li>
+							<li><a href="http://www.bakingfarm.co.kr/" target="_blank">baking farm</a></li>
 						</ul></li>
 					<li><a href="info.jsp">정보</a></li>
 				</ul></li>
