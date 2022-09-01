@@ -76,7 +76,7 @@
 				</li>
 				<li><a href="tip.jsp">유의사항</a></li>
 				<li><a href="BoardListCon">게시판</a></li>
-				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#" target="_blank" >재료 및 도구</a>
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#">재료 및 도구</a>
 					<ul class="dropdown-menu">
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">판매처</a>
 						<ul class="dropdown-menu">
