@@ -22,9 +22,22 @@
     justify-content: space-between;
 }
 
+/* 빵 정보 부분 */
+
+
+#breadname {
+	font-family: 'Pretendard-Regular';
+    font-size: 50px;
+}
+
+#breaddesc {
+	font-family: 'Pretendard-Regular';
+    font-size: 25px;
+}
+
 /* 재료 부분 */
 
-.ingre_two {
+/* .ingre_two {
     display:inline-block;
     margin: 0;
     list-style: none;
@@ -38,6 +51,11 @@
     justify-content: space-between;
     padding-left: 10px;
     padding-right: 10px;
+} */
+
+.ingre_one {
+    font-family: 'Pretendard-Regular';
+    font-size: 20px;
 }
 
 .ingre_one li {
@@ -47,9 +65,62 @@
     list-style: none;
 }
 
-.ingre_one {
+.ingre_one li div {
+	display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ingre_one hr {
+	width: 525px;
+}
+
+.ingre_two {
     font-family: 'Pretendard-Regular';
     font-size: 20px;
+}
+
+.ingre_two li {
+    display:inline-block;
+    margin: 0;
+    width: 49%;
+    list-style: none;
+}
+
+.ingre_two li div {
+	display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ingre_two hr {
+	width: 525px;
+}
+
+
+.ingre_three {
+    font-family: 'Pretendard-Regular';
+    font-size: 20px;
+}
+
+.ingre_three li {
+    display:inline-block;
+    margin: 0;
+    width: 49%;
+    list-style: none;
+}
+
+.ingre_three li div {
+	display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ingre_three hr {
+	width: 525px;
 }
 
 .ready_ingre3 ul {

@@ -38,7 +38,6 @@ public class BakeryCon extends HttpServlet {
 		int index1 = dao.findB_r_index(b_seq, "taste1");
 		taste1.add(dao.getRecipe(b_seq, index1));
 		taste1.add(dao.getIngredients(b_seq, index1));
-//		System.out.println(taste1.get(0).get(0).getR_order());
 		
 		int index2 = dao.findB_r_index(b_seq, "taste2");
 		taste2.add(dao.getRecipe(b_seq, index2));
@@ -54,14 +53,6 @@ public class BakeryCon extends HttpServlet {
 		request.setAttribute("taste2", taste2);
 		request.setAttribute("taste3", taste3);
 		request.setAttribute("breadInfo", breadInfo);
-		
-//		"shop_single_product.jsp";
-//		try {
-//			response.sendRedirect("test.jsp");
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
 		
 		RequestDispatcher rd = request.getRequestDispatcher("test.jsp");
 		rd.forward(request, response);

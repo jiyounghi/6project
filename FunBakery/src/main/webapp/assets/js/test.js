@@ -48,13 +48,13 @@ class RecipeTable {
            
             return`
                 <li>
-                    <span class="ingre_name">${name}</span>
-                    
-                    <span class="ingre_unit">${this.recipe[name]}</span>
+	                <div>
+	                    <span class="ingre_name">${name}</span>
+	                    <span class="ingre_unit">${this.recipe[name]}</span>
+	                </div>
+                    <hr class="divider-w pt-20">
                 </li>
-                <hr class="divider-w pt-20">
                 `
-
         });
 
         return rows.join('');
