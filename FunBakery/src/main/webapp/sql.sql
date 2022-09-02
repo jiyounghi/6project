@@ -2,7 +2,6 @@ select * from T_MEMBER;
 
 insert into T_MEMBER values('admin','admin','admin',sysdate,'a');
 
-<<<<<<< HEAD
 insert into T_COMMUNITY values(1, '제목입니다', '내용입니다', '22/08/25', 'admin',0);
 insert into T_COMMUNITY values(2, '제목입니다', '내용입니다', '22/08/26', 'admin',0);
 insert into T_COMMUNITY values(t_community_SEQ.nextval,'제목입니다', '내용입니다', '22/08/26', 'admin',0);

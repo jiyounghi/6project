@@ -64,79 +64,66 @@
 		<%@ include file="header.jsp" %>
       </nav>
       <div class="main">
-        <section class="module faq-page-header">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">베이킹시 유의사항</h2>
-              </div>
-            </div>
-          </div>
-        </section>
         <section class="module">
           <div class="container">
-            <div class="row mb-60">
-              <div class="col-sm-8 col-sm-offset-2">
-                <form role="form">
-                  <div class="search-box">
-                    <input class="form-control" type="text" placeholder="Search..."/>
-                    <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
-                  </div>
-                </form>
-              </div>
-            </div>
+			  <div class="container">
+	            <div class="row">
+	              <div class="col-sm-6 col-sm-offset-3">
+	                <h1 class="module-title font-title2">베이킹 시 유의 사항</h1>
+	              </div>
+	            </div>
+	          </div>
+	          <hr class="divider-w pt-20">
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2">
                 <div role="tabpanel">
-                  <ul class="nav nav-tabs font-alt" role="tablist">
-                    <li class="active"><a href="#support" data-toggle="tab"><span class="icon-tools-2"></span>support</a></li>
-                    <li><a href="#sales" data-toggle="tab"><span class="icon-tools-2"></span>sales</a></li>
-                  </ul>
                   <div class="tab-content">
                     <div class="tab-pane active" id="support">
                       <div class="panel-group" id="accordion">
+                        
                         <div class="panel panel-default">
                           <div class="panel-heading">
-                            <h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#support1">Support Question 1</a></h4>
+                            <h4 class="panel-title font-title3"><a data-toggle="collapse" data-parent="#accordion" href="#support1">오븐에서 구운 빵을 꺼낼 땐 반드시 화상 조심!</a></h4>
                           </div>
                           <div class="panel-collapse collapse in" id="support1">
-                            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                            <div class="panel-body">오븐뿐 아니라 베이킹 틀과 빵은 고온에서 오래 달궈진 이후 나오는 것이기 때문에 매우 뜨겁습니다. 오븐을 사용한 사람뿐만 아니라 주변 가족들, 반려동물들이 화상에 입지 않도록 주의해주세요!
                             </div>
                           </div>
                         </div>
+                        
                         <div class="panel panel-default">
                           <div class="panel-heading">
-                            <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">Support Question 2</a></h4>
+                            <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">오븐에 넣으면 화재가 발생할 수 있어요!</a></h4>
                           </div>
                           <div class="panel-collapse collapse" id="support2">
-                            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                            <div class="panel-body">오븐 안에 유산지를 넣을 경우 화재 사고가 일어날 수 있습니다. 화재 사고가 일어나지 않기 위해서는 오븐에 넣기 전, 불이 날 만한 요소가 없는지 철저하게 확인해보는 것이 매우 중요합니다.
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="tab-pane" id="sales">
-                      <div class="panel-group" id="accordion">
+                        
                         <div class="panel panel-default">
                           <div class="panel-heading">
-                            <h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#sales1">Sales Question 1</a></h4>
+                            <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support3">베이킹 재료 관리에 유의해주세요!</a></h4>
                           </div>
-                          <div class="panel-collapse collapse in" id="sales1">
-                            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                          <div class="panel-collapse collapse" id="support3">
+                            <div class="panel-body">특히 재료를 대량으로 구매했을 경우 관리가 중요합니다. 베이킹에 들어가는 재료에는 유제품이 많기 때문에 재료 관리를 제대로 하지 못하거나 제조 과정에서 위생을 신경 쓰지 않으면 재료가 금방 상하거나 탈이 날 수 있습니다.
                             </div>
                           </div>
                         </div>
+                        
                         <div class="panel panel-default">
                           <div class="panel-heading">
-                            <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#sales2">Sales Question 2</a></h4>
+                            <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support4">밀가루도 관리가 중요해요!</a></h4>
                           </div>
-                          <div class="panel-collapse collapse" id="sales2">
-                            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                          <div class="panel-collapse collapse" id="support4">
+                            <div class="panel-body">밀가루는 제대로 익히지 않고 먹으면 식중독을 유발할 수 있는 음식 중 하나입니다. 밀가루는 입자가 고운 가루의 형태이기 때문에 퍼지기가 매우 쉽습니다. 익혀서 먹지 않는 음식들이 밀가루에 닿지 않도록 하고, 밀가루가 묻는 도마나 칼, 접시 등은 철저히 세척하는 것이 중요합니다.
                             </div>
                           </div>
                         </div>
+                        
                       </div>
                     </div>
+                    
                   </div>
                 </div>
               </div>
