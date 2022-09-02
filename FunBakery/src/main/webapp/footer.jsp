@@ -1,3 +1,8 @@
+<%@page import="com.VO.BoardVO"%>
+<%@page import="com.DAO.BoardDAO"%>
+<%@page import="com.VO.BakeryVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.DAO.BakeryDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -6,25 +11,26 @@
 		<div class="row">
 			<div class="col-sm-3">
 				<div class="widget">
-					<h5 class="widget-title font-alt">About Titan</h5>
-					<p>The languages only differ in their grammar, their
-						pronunciation and their most common words.</p>
-					<p>Phone: +1 234 567 89 10</p>
-					Fax: +1 234 567 89 10
-					<p>
-						Email:<a href="#">somecompany@example.com</a>
-					</p>
+					<h5 class="widget-title font-alt">About Fun Bakery</h5>
+					<p>팀장 : 문지영</p>
+					<p>팀원 : 노성진</p>
+					<p>팀원 : 박현성</p>
+					<p>팀원 : 윤예지</p>
+					<p>팀원 : 박현성</p>
 				</div>
 			</div>
 			<div class="col-sm-3">
 				<div class="widget">
-					<h5 class="widget-title font-alt">Recent Comments</h5>
+					<h5 class="widget-title font-alt">Recent Article</h5>
 					<ul class="icon-list">
-						<li>Maria on <a href="#">Designer Desk Essentials</a></li>
-						<li>John on <a href="#">Realistic Business Card Mockup</a></li>
-						<li>Andy on <a href="#">Eco bag Mockup</a></li>
-						<li>Jack on <a href="#">Bottle Mockup</a></li>
-						<li>Mark on <a href="#">Our trip to the Alps</a></li>
+						<%
+							BoardDAO bdao = new BoardDAO();
+							ArrayList<BoardVO> flist = bdao.footer();
+							
+							for(BoardVO vo : flist){
+						%>
+						<li><%=vo.getMb_name() %> on <a href="BoardDetailCon?seq=<%=vo.getArticle_seq() %>"><%=vo.getArticle_title() %></a></li>
+						<%	} %>
 					</ul>
 				</div>
 			</div>
@@ -32,12 +38,12 @@
 				<div class="widget">
 					<h5 class="widget-title font-alt">레시피 분류</h5>
 					<ul class="icon-list">
-						<li><a href="#">케이크 - 1</a></li>
-						<li><a href="#">구움과자 - 2</a></li>
-						<li><a href="#">(건강)빵 - 3</a></li>
-						<li><a href="#">쿠키 - 4</a></li>
-						<li><a href="#">노오븐 - 5</a></li>
-						<li><a href="#">냉동생지 - 6</a></li>
+						<li><a href="CategoryCon?cat=케이크">케이크</a></li>
+						<li><a href="CategoryCon?cat=구움과자">구움과자</a></li>
+						<li><a href="CategoryCon?cat=">(건강)빵</a></li>
+						<li><a href="CategoryCon?cat=빵">쿠키</a></li>
+						<li><a href="CategoryCon?cat=노오븐">노오븐</a></li>
+						<li><a href="CategoryCon?cat=냉동생지">냉동생지</a></li>
 					</ul>
 				</div>
 			</div>
@@ -45,28 +51,24 @@
 				<div class="widget">
 					<h5 class="widget-title font-alt">Popular Posts</h5>
 					<ul class="widget-posts">
+						<%
+							BakeryDAO dao = new BakeryDAO();
+							ArrayList<BakeryVO> list = dao.popular();
+							
+							for(BakeryVO vo : list){
+						%>
 						<li class="clearfix">
 							<div class="widget-posts-image">
-								<a href="#"><img src="assets/images/rp-1.jpg" alt="Post Thumbnail" /></a>
+								<a href="#"><img src="<%=vo.getB_img() %>" alt="Post Thumbnail" /></a>
 							</div>
 							<div class="widget-posts-body">
 								<div class="widget-posts-title">
-									<a href="#">Designer Desk Essentials</a>
+									<a href="#"><%=vo.getB_name() %></a>
 								</div>
-								<div class="widget-posts-meta">23 january</div>
+								<div class="widget-posts-meta"><%=vo.getB_category() %></div>
 							</div>
 						</li>
-						<li class="clearfix">
-							<div class="widget-posts-image">
-								<a href="#"><img src="assets/images/rp-2.jpg" alt="Post Thumbnail" /></a>
-							</div>
-							<div class="widget-posts-body">
-								<div class="widget-posts-title">
-									<a href="#">Realistic Business Card Mockup</a>
-								</div>
-								<div class="widget-posts-meta">15 February</div>
-							</div>
-						</li>
+						<%	} %>
 					</ul>
 				</div>
 			</div>

@@ -84,56 +84,39 @@
             </div>
           </div>
           <div class="container">
-            <div class="row">
-              <div class="col-sm-12">
-                <ul class="filter font-alt" id="filters">
-                  <li><a class="current wow fadeInUp" href="#" data-filter="*">케이크</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".grilledcookie" data-wow-delay="0.2s">구움과자</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".bread" data-wow-delay="0.4s">빵</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".cookie" data-wow-delay="0.6s">쿠키</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".nooven" data-wow-delay="0.8s">노오븐</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".frozendough" data-wow-delay="1s">냉동생지</a></li>
-                </ul>
-              </div>
-            </div>
           <ul class="works-grid works-grid-gut works-grid-3 works-hover-w" id="works-grid">
-            <li class="work-item illustration webdesign"><a href="portfolio-single-1.html">
+            <li class="work-item illustration webdesign"><a href="CategoryCon?cat=케이크">
                 <div class="work-image"><img src="assets/images/work-1.jpg" alt="Portfolio Item"/></div>
                 <div class="work-caption font-alt">
-                  <h3 class="work-title">Corporate Identity</h3>
-                  <div class="work-descr">Illustration</div>
+                  <h3 class="work-title">케이크</h3>
                 </div></a></li>
-            <li class="work-item marketing photography"><a href="portfolio-single-1.html">
+            <li class="work-item marketing photography"><a href="CategoryCon?cat=구움과자">
                 <div class="work-image"><img src="assets/images/work-2.jpg" alt="Portfolio Item"/></div>
                 <div class="work-caption font-alt">
-                  <h3 class="work-title">Bag MockUp</h3>
-                  <div class="work-descr">Marketing</div>
+                  <h3 class="work-title">구움과자</h3>
                 </div></a></li>
-            <li class="work-item illustration photography"><a href="portfolio-single-1.html">
+            <li class="work-item illustration photography"><a href="CategoryCon?cat=빵">
                 <div class="work-image"><img src="assets/images/work-3.jpg" alt="Portfolio Item"/></div>
                 <div class="work-caption font-alt">
-                  <h3 class="work-title">Disk Cover</h3>
-                  <div class="work-descr">Illustration</div>
+                  <h3 class="work-title">(건강)빵</h3>
                 </div></a></li>
-            <li class="work-item marketing photography"><a href="portfolio-single-1.html">
+            <li class="work-item marketing photography"><a href="CategoryCon?cat=쿠키">
                 <div class="work-image"><img src="assets/images/work-4.jpg" alt="Portfolio Item"/></div>
                 <div class="work-caption font-alt">
-                  <h3 class="work-title">Business Card</h3>
-                  <div class="work-descr">Photography</div>
+                  <h3 class="work-title">쿠키</h3>
                 </div></a></li>
-            <li class="work-item illustration webdesign"><a href="portfolio-single-1.html">
+            <li class="work-item illustration webdesign"><a href="CategoryCon?cat=노오븐">
                 <div class="work-image"><img src="assets/images/work-5.jpg" alt="Portfolio Item"/></div>
                 <div class="work-caption font-alt">
-                  <h3 class="work-title">Business Card</h3>
-                  <div class="work-descr">Webdesign</div>
+                  <h3 class="work-title">노오븐</h3>
                 </div></a></li>
-            <li class="work-item marketing webdesign"><a href="portfolio-single-1.html">
+            <li class="work-item marketing webdesign"><a href="CategoryCon?cat=냉동생지">
                 <div class="work-image"><img src="assets/images/work-6.jpg" alt="Portfolio Item"/></div>
                 <div class="work-caption font-alt">
-                  <h3 class="work-title">Business Cards in paper clip</h3>
-                  <div class="work-descr">Marketing</div>
+                  <h3 class="work-title">냉동생지</h3>
                 </div></a></li>
           </ul>
+          </div>
         </section>
           </div>
       </div>

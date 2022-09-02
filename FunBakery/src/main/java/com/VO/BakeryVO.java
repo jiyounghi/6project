@@ -1,6 +1,8 @@
 package com.VO;
 
 public class BakeryVO {
+	private int b_seq;
+	private String b_category;
 	private String b_name;
 	private String b_desc;
 	private String b_img;
@@ -54,6 +56,21 @@ public class BakeryVO {
 		this.r_content = r_content;
 		this.r_img = r_img;
 		this.r_order = r_order;
+	}
+	
+	public BakeryVO(int b_seq, String b_category, String b_name, String b_img, int b_count) {
+		super();
+		this.b_seq = b_seq;
+		this.b_category = b_category;
+		this.b_name = b_name;
+		this.b_img = b_img;
+		this.b_count = b_count;
+	}
+	
+	public BakeryVO(String b_category, int b_count) {
+		super();
+		this.b_category = b_category;
+		this.b_count = b_count;
 	}
 
 	
@@ -153,7 +170,20 @@ public class BakeryVO {
 		this.r_order = r_order;
 	}
 	
+	public int getB_seq() {
+		return b_seq;
+	}
 	
+	public void setB_seq(int b_seq) {
+		this.b_seq = b_seq;
+	}
 	
+	public String getB_category() {
+		return b_category;
+	}
+	
+	public void setB_category(String b_category) {
+		this.b_category = b_category;
+	}
 	
 }
