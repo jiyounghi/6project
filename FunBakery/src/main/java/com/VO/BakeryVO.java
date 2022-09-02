@@ -5,7 +5,6 @@ public class BakeryVO {
 	private String b_desc;
 	private String b_img;
 	private int b_count;
-	private int b_seq;
 	
 	private int b_r_index;
 	private String ingr_name;
@@ -153,7 +152,9 @@ public class BakeryVO {
 		this.r_order = r_order;
 	}
 	
-	
+	public String getB_category() {
+		return b_category;
+	}
 	
 	
 }

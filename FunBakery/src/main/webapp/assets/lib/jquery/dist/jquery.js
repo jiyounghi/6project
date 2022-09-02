@@ -10212,6 +10212,24 @@ if ( !noGlobal ) {
 	window.jQuery = window.$ = jQuery;
 }
 
+	$(document).ready(function(){
+		$('#all').click(function(){
+			$('.ingredients').show();
+			$('.implements').show();
+			return false;
+		});	
+		$('#ingredients').click(function(){
+			$('.ingredients').show();
+			$('.implements').hide();
+			return false;
+		});	
+		$('#implements').click(function(){
+			$('.ingredients').hide();
+			$('.implements').show();
+			return false;
+		});	
+	});
+
 
 
 

@@ -208,7 +208,6 @@ public class BakeryDAO {
 				
 				vo = new BakeryVO(b_seq, getr_content, getr_img, getr_order);
 				list.add(vo);
-				System.out.println(vo.getR_content());
 
 			}
 			
