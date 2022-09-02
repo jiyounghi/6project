@@ -7,7 +7,6 @@ public class BakeryVO {
 	private String b_desc;
 	private String b_img;
 	private int b_count;
-	private int b_seq;
 	
 	private int b_r_index;
 	private String ingr_name;
@@ -168,14 +167,6 @@ public class BakeryVO {
 
 	public void setR_order(int r_order) {
 		this.r_order = r_order;
-	}
-	
-	public int getB_seq() {
-		return b_seq;
-	}
-	
-	public void setB_seq(int b_seq) {
-		this.b_seq = b_seq;
 	}
 	
 	public String getB_category() {
