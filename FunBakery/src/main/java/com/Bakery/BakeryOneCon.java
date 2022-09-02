@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.DAO.BakeryDAO;
 import com.VO.BakeryVO;
 
-@WebServlet("/BakeryCon")
-public class BakeryCon extends HttpServlet {
+@WebServlet("/BakeryOneCon")
+public class BakeryOneCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -28,33 +28,19 @@ public class BakeryCon extends HttpServlet {
 		
 		BakeryDAO dao = new BakeryDAO();
 		int b_seq = Integer.parseInt(request.getParameter("seq"));
-//		int b_seq = 22;
 		
 		
 		ArrayList<ArrayList<BakeryVO>> taste1 = new ArrayList<ArrayList<BakeryVO>>();
-		ArrayList<ArrayList<BakeryVO>> taste2 = new ArrayList<ArrayList<BakeryVO>>();
-		ArrayList<ArrayList<BakeryVO>> taste3 = new ArrayList<ArrayList<BakeryVO>>();
 		
-		int index1 = dao.findB_r_index(b_seq, "taste1");
-		taste1.add(dao.getRecipe(b_seq, index1));
-		taste1.add(dao.getIngredients(b_seq, index1));
-		
-		int index2 = dao.findB_r_index(b_seq, "taste2");
-		taste2.add(dao.getRecipe(b_seq, index2));
-		taste2.add(dao.getIngredients(b_seq, index2));
-		
-		int index3 = dao.findB_r_index(b_seq, "taste3");
-		taste3.add(dao.getRecipe(b_seq, index3));
-		taste3.add(dao.getIngredients(b_seq, index3));
+		taste1.add(dao.getRecipe(b_seq, 1));
+		taste1.add(dao.getIngredients(b_seq, 1));
 		
 		BakeryVO breadInfo = dao.getBreadInfo(b_seq);
 		
 		request.setAttribute("taste1", taste1);
-		request.setAttribute("taste2", taste2);
-		request.setAttribute("taste3", taste3);
 		request.setAttribute("breadInfo", breadInfo);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("recipe_detail_page.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("recipe_one_detail_page.jsp");
 		rd.forward(request, response);
 		
 	}
