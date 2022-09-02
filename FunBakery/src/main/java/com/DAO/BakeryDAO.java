@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.VO.BakeryVO;
@@ -16,10 +15,6 @@ public class BakeryDAO {
 	ResultSet rs = null;
 	int cnt = 0;
 	
-
-	public BakeryDAO() {
-		// TODO Auto-generated constructor stub
-	}
 
 	public void dbConn() {
 		try {
@@ -239,7 +234,6 @@ public class BakeryDAO {
 				String getb_img = rs.getString(3);
 				
 				vo = new BakeryVO(b_seq, getb_name, getb_desc, getb_img);
-				list.add(vo);
 
 			} else {
 				System.out.println("빵 정보 실패");
@@ -253,9 +247,100 @@ public class BakeryDAO {
 		
 		return vo;
 	}
-	
-	
-	
+
+	public ArrayList<BakeryVO> category(String cat){
+		BakeryVO vo = null;
+		ArrayList<BakeryVO> brlist = new ArrayList<>();
+		
+		try {
+			dbConn();
+			
+			String sql = "SELECT b_seq, b_category, b_name, b_img, b_count FROM t_bread WHERE b_category=? ORDER BY b_seq";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, cat);
+
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				int seq = rs.getInt(1);
+				String category = rs.getString(2);
+				String name = rs.getString(3);
+				String img = rs.getString(4);
+				int count = rs.getInt(5);
+				
+				vo = new BakeryVO(seq, category, name, img, count);
+				brlist.add(vo);
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+		
+		return brlist;
+	}
+
+	public ArrayList<BakeryVO> count(){
+		BakeryVO vo = null;
+		ArrayList<BakeryVO> clist = new ArrayList<>();
+		
+		try {
+			dbConn();
+			
+			String sql = "SELECT b_category, COUNT(b_category) FROM t_bread GROUP BY b_category";
+			psmt = conn.prepareStatement(sql);
+
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				String category = rs.getString(1);
+				int count = rs.getInt(2);
+				
+				vo = new BakeryVO(category, count);
+				clist.add(vo);
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+		
+		return clist;
+	}
+
+	public ArrayList<BakeryVO> popular(){
+		BakeryVO vo = null;
+		ArrayList<BakeryVO> plist = new ArrayList<>();
+		
+		try {
+			dbConn();
+			
+			String sql = "SELECT * FROM(SELECT b_seq, b_img, b_name, b_category, b_count FROM t_bread ORDER BY b_count) WHERE rownum<=3";
+			psmt = conn.prepareStatement(sql);
+
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				int seq = rs.getInt(1);
+				String img = rs.getString(2);
+				String name = rs.getString(3);
+				String category = rs.getString(4);
+				int count = rs.getInt(5);
+				
+				vo = new BakeryVO(seq, category, name, img, count);
+				plist.add(vo);
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+		
+		return plist;
+	}
 	
 	
 	

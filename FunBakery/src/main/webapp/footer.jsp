@@ -51,28 +51,24 @@
 				<div class="widget">
 					<h5 class="widget-title font-alt">Popular Posts</h5>
 					<ul class="widget-posts">
+						<%
+							BakeryDAO dao = new BakeryDAO();
+							ArrayList<BakeryVO> list = dao.popular();
+							
+							for(BakeryVO vo : list){
+						%>
 						<li class="clearfix">
 							<div class="widget-posts-image">
-								<a href="#"><img src="assets/images/rp-1.jpg" alt="Post Thumbnail" /></a>
+								<a href="#"><img src="<%=vo.getB_img() %>" alt="Post Thumbnail" /></a>
 							</div>
 							<div class="widget-posts-body">
 								<div class="widget-posts-title">
-									<a href="#">Designer Desk Essentials</a>
+									<a href="#"><%=vo.getB_name() %></a>
 								</div>
-								<div class="widget-posts-meta">23 january</div>
+								<div class="widget-posts-meta"><%=vo.getB_category() %></div>
 							</div>
 						</li>
-						<li class="clearfix">
-							<div class="widget-posts-image">
-								<a href="#"><img src="assets/images/rp-2.jpg" alt="Post Thumbnail" /></a>
-							</div>
-							<div class="widget-posts-body">
-								<div class="widget-posts-title">
-									<a href="#">Realistic Business Card Mockup</a>
-								</div>
-								<div class="widget-posts-meta">15 February</div>
-							</div>
-						</li>
+						<%	} %>
 					</ul>
 				</div>
 			</div>

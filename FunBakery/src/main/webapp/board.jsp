@@ -14,7 +14,7 @@
     Document Title
     =============================================
     -->
-    <title>Community</title>
+    <title>Fun Bakery</title>
     <!--  
     Favicons
     =============================================
