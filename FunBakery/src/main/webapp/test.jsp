@@ -99,9 +99,9 @@
               <div class="col-sm-12">
                 <ul class="nav nav-tabs font-alt" role="tablist">
                   
-                  <li class="active"><a id="taste1" href="#description" data-toggle="tab"><span class="icon-tools-2"></span>밀가루</a></li>
-                  <li><a id="taste2" href="#data-sheet" data-toggle="tab"><span class="icon-tools-2"></span>달달함</a></li>
-                  <li><a id="taste3" href="#reviews" data-toggle="tab"><span class="icon-tools-2"></span>진함</a></li>
+                  <li class="active"><a id="taste1" href="#description" data-toggle="tab"><span class="icon-tools-2"></span>레시피1</a></li>
+                  <li><a id="taste2" href="#data-sheet" data-toggle="tab"><span class="icon-tools-2"></span>레시피2</a></li>
+                  <li><a id="taste3" href="#reviews" data-toggle="tab"><span class="icon-tools-2"></span>레시피3</a></li>
                   
                   <div class="best_tit_rmn">
                       <button id="btnMeasureModal" type="button" class="btn btn-default" onclick="$('#measureModal').modal('show');" style="float:right; margin:0 15px 5px 0;">계량법 안내</button>
@@ -243,8 +243,8 @@
                           	<b id="r_index">재료</b>
                           	<!--  재료 비율 계산기 + 재료테이블   -->
                           	<form class="form_ingr2">
-			                    <input class="input_ingr_name" type="text" name="name" placeholder="재료명을 입력해주세요." />
-			                    <input class="input_ingr_weight" type="number" name="weight" placeholder="재료량을 입력해주세요." />
+			                    <input class="input_ingr_name2" type="text" name="name" placeholder="재료명을 입력해주세요." />
+			                    <input class="input_ingr_weight2" type="number" name="weight" placeholder="재료량을 입력해주세요." />
 			                    <button type="submit">전송</button>
 			                </form>
                           
@@ -359,8 +359,8 @@
                           	<b id="r_index">재료</b>
                           	<!--  재료 비율 계산기 + 재료테이블   -->
                           	<form class="form_ingr3">
-			                    <input class="input_ingr_name" type="text" name="name" placeholder="재료명을 입력해주세요." />
-			                    <input class="input_ingr_weight" type="number" name="weight" placeholder="재료량을 입력해주세요." />
+			                    <input class="input_ingr_name3" type="text" name="name" placeholder="재료명을 입력해주세요." />
+			                    <input class="input_ingr_weight3" type="number" name="weight" placeholder="재료량을 입력해주세요." />
 			                    <button type="submit">전송</button>
 			                </form>
                       </div>
