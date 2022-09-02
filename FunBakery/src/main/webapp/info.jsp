@@ -109,22 +109,23 @@
 			</section>
 			<section class="module">
 				<div class="container">
-					<div class="row post-masonry post-columns">
+					<div class="row post-masonry post-columns" style="height:100%">
 						<!-- 사이드바 -->
 						<div class="col-sm-4 col-md-3 sidebar"
 							style="border-right: 1px solid #c2c2c2">
 							<div class="widget">
 								<h5 class="widget-title font-alt">Blog Categories</h5>
 								<ul class="icon-list">
-									<li><a href="#">재료- 6</a></li>
-									<li><a href="#">도구 - 10</a></li>
+									<li><a href="#none" id="all">전체 - 16</a></li>
+									<li><a href="#none" id="ingredients">재료 - 6</a></li>
+									<li><a href="#none" id="implements">도구 - 10</a></li>
 								</ul>
 							</div>
 						</div>
 						<!-- 사이드바 -->
 						<div class="col-sm-8">
 							<div id="ingre">
-								<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="col-sm-6 col-md-6 col-lg-6 ingredients">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/밀가루.png"
@@ -140,7 +141,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="col-sm-6 col-md-6 col-lg-6 ingredients">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/밀가루.png"
@@ -156,7 +157,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="col-sm-6 col-md-6 col-lg-6 ingredients">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/버터.jpg"
@@ -172,7 +173,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="col-sm-6 col-md-6 col-lg-6 ingredients">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/이스트.jpg"
@@ -188,7 +189,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="col-sm-6 col-md-6 col-lg-6 ingredients">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/베이킹파우더.jpg"
@@ -204,7 +205,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="col-sm-6 col-md-6 col-lg-6 ingredients">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/우유.jpg"
@@ -222,7 +223,7 @@
 								</div>
 							</div>
 							<div id="tool">
-								<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="col-sm-6 col-md-6 col-lg-6 implements">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/오븐.png"
@@ -238,7 +239,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="col-sm-6 col-md-6 col-lg-6 implements">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/전자저울.jpg"
@@ -254,7 +255,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="col-sm-6 col-md-6 col-lg-6 implements">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/고운 체.jpg"
@@ -270,7 +271,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="col-sm-6 col-md-6 col-lg-6 implements">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/주걱.jpg"
@@ -286,7 +287,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="col-sm-6 col-md-6 col-lg-6 implements">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/휘핑기.jpg"
@@ -302,7 +303,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="col-sm-6 col-md-6 col-lg-6 implements">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/빵틀.jpg"
@@ -318,7 +319,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="col-sm-6 col-md-6 col-lg-6 implements">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/밀대.jpg"
@@ -334,7 +335,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="col-sm-6 col-md-6 col-lg-6 implements">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/믹싱볼.jpg"
@@ -350,7 +351,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="col-sm-6 col-md-6 col-lg-6 implements">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/계량스푼.jpg"
@@ -366,13 +367,13 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="col-sm-6 col-md-6 col-lg-6 implements">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/식힘망.jpg"
 												alt="Blog-post Thumbnail" />
 										</div>
-										<div class="post-header font-alt">
+										<div class="post-header font-alt implements">
 											<h2 class="post-title">
 												<a href="#">식힘용 받이</a>
 											</h2>

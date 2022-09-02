@@ -10214,18 +10214,18 @@ if ( !noGlobal ) {
 
 	$(document).ready(function(){
 		$('#all').click(function(){
-			$('.ingredients').show();
-			$('.implements').show();
+			$('.ingredients').css('display','block');
+			$('.implements').css('display','block');
 			return false;
 		});	
 		$('#ingredients').click(function(){
-			$('.ingredients').show();
-			$('.implements').hide();
+			$('.ingredients').css('display','block');
+			$('.implements').css('display','none');
 			return false;
 		});	
 		$('#implements').click(function(){
-			$('.ingredients').hide();
-			$('.implements').show();
+			$('.ingredients').css('display','none');
+			$('.implements').css('display','block');
 			return false;
 		});	
 	});
