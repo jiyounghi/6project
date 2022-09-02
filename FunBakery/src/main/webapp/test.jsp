@@ -60,55 +60,6 @@
     <!-- Main stylesheet and color file-->
     <link href="assets/css/style.css" rel="stylesheet">
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
-    
-	<style>
-	    #modal.modal-overlay {
-	    display: none;
-	    }
-	    .modal-dialog {
-	        width:600px;
-	        margin:30px auto
-	    }
-	    .modal-content {
-	        -webkit-box-shadow:0 5px 5px 0 rgba(0, 0, 0, .1);
-	        box-shadow:0 5px 5px 0 rgba(0, 0, 0, .1);
-	        border-radius: 10px;
-	        border: 1px solid rgba(0, 0, 0, .2);
-	    }
-	    .modal-header {
-	        min-height:16.43px;
-	        padding:15px 17px 14px;
-	        border-bottom:1px solid #b4b4b4;
-	        background:#efefef;
-	        border-radius:10px 10px 0 0 ;
-	    }
-	    .weighing_modal {width:100%; margin-bottom:10px;}
-	    .weighing_modal tr {border-bottom:1px solid #e9e9e9;}
-	    .weighing_modal th {width:120px; color:#000; padding:9px 2px 9px 15px;}
-	    .weighing_modal td {text-align:right; line-height:1.6; color:#888; padding:9px 15px 9px 2px;}
-	    .weighing_modal tr:nth-child(2n+2) {background:#f9f9f9;}
-	    .modal-footer {
-	        padding:20px 0 40px;
-	        text-align:center;
-	        border-top:1px solid #b4b4b4;
-	        background:#efefef;
-	        border-radius: 0 0 10px 10px;
-	    }
-	    body, html, th, td, input, select, textarea, button {font-family: 'Noto Sans KR', sans-serif;}
-	    .close {
-	        float:right;
-	        font-size:21px;
-	        font-weight:700;
-	        line-height:1;
-	        color:#000;
-	        text-shadow:0 1px 0 #fff;
-	        filter:alpha(opacity=20);
-	        opacity:.2
-	    }
-	    button{
-	        outline-style: none;
-	    }
-    </style>
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
@@ -148,71 +99,13 @@
               <div class="col-sm-12">
                 <ul class="nav nav-tabs font-alt" role="tablist">
                   
-                  <li class="active"><a id="taste1" href="#description" data-toggle="tab">레시피1</a></li>
-                  <li><a id="taste2" href="#data-sheet" data-toggle="tab">레시피2</a></li>
-                  <li><a id="taste3" href="#reviews" data-toggle="tab">레시피3</a></li>
+                  <li class="active"><a id="taste1" href="#description" data-toggle="tab"><span class="icon-tools-2"></span>레시피1</a></li>
+                  <li><a id="taste2" href="#data-sheet" data-toggle="tab"><span class="icon-tools-2"></span>레시피2</a></li>
+                  <li><a id="taste3" href="#reviews" data-toggle="tab"><span class="icon-tools-2"></span>레시피3</a></li>
                   
                   <div class="best_tit_rmn">
-                      <button id="btnMeasureModal" type="button" class="btn btn-default" onclick="modalOn()" style="float:right; margin:0 15px 5px 0;">계량법 안내</button>
+                      <button id="btnMeasureModal" type="button" class="btn btn-default" onclick="$('#measureModal').modal('show');" style="float:right; margin:0 15px 5px 0;">계량법 안내</button>
                   </div>
-    <div id="modal" class="modal-overlay">
-        <div class="modal-dialog">      
-            <div class="modal-content md" style="padding:0;">
-                <div class="modal-header md" text-align="center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="modalOff()"><span aria-hidden="true"><img src="https://recipe1.ezmember.co.kr/img/btn_close.gif" alt="닫기" width="18px" height="18px"></span></button>
-                    <h4 class="modal-title md">계량법 안내</h4>
-                </div>
-                <div class="modal-body md">
-                    <table class="weighing_modal md">
-                        <tbody>
-                            <tr>
-                                <th>1큰술(1T, 1Ts)<br>= 1숟가락</th>
-                                <td>15ml = 3t<br>(계량스푼이 없는 경우 밥숟가락으로 볼록하게 가득 담으면 1큰술)</td>
-                            </tr>
-                            <tr>
-                                <th>1작은술(1t, 1ts)</th>
-                                <td>5ml<br>(티스푼으로는 2스푼이 1작은술)</td>
-                            </tr>
-                            <tr>
-                                <th>1컵(1Cup, 1C)</th>
-                                <td>200ml = 16T(한국,중국,일본)<br>(미국 및 서양의 경우 1C가 240~250ml이므로 계량컵 구매 사용시 주의)</td>
-                            </tr>
-                            <tr>
-                                <th>1종이컵</th>
-                                <td>180ml</td>
-                            </tr>
-                            <tr>
-                                <th>1oz</th>
-                                <td>28.3g</td>
-                            </tr>
-                            <tr>
-                                <th>1파운드(lb)</th>
-                                <td>약 0.453 킬로그램(kg)</td>
-                            </tr>
-                            <tr>
-                                <th>1갤런(gallon)</th>
-                                <td>약 3.78 리터(ℓ)</td>
-                            </tr>
-                            <tr>
-                                <th>1꼬집</th>
-                                <td>약 2g 정도이며 '약간'이라고 표현하기도 함</td>
-                            </tr>
-                            <tr>
-                                <th>조금</th>
-                                <td>약간의 2~3배</td>
-                            </tr>
-                            <tr>
-                                <th>적당량</th>
-                                <td>기호에 따라 마음대로 조절해서 넣으란 표현</td>
-                            </tr>
-                        </tbody>
-                    </table>            
-                </div>
-                <div class="modal-footer md">
-                </div>
-            </div>
-        </div>
-    </div>
                 </ul>
                 <div class="tab-content">
                 	<!-- 버튼1 시작 -->
@@ -599,44 +492,5 @@
     <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
-    
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script>
-
-        const modal = document.getElementById("modal")
-
-        function modalOn() {
-            modal.style.display = "block"
-            $('tbody,tr,th,td').addClass('md');
-        }
-
-        function isModalOn() {
-            return modal.style.display === "block"
-        }
-
-        function modalOff() {
-            modal.style.display = "none"
-        }
-
-        modal.addEventListener("click", e => {
-            const evTarget = e.target
-            if(evTarget.classList.contains("modal-content")) {
-                modalOff()
-            }
-        })
-
-        window.addEventListener("keyup", e => {
-            if(isModalOn() && e.key === "Escape") {
-                modalOff()
-            }
-        })
-
-        $('#modal').click(function(e){
-          if(!$(e.target).hasClass('md')){
-            $('#modal').hide();
-          }
-        });
-        
-    </script> 
   </body>
 </html>
