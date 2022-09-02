@@ -66,9 +66,9 @@
           	<% if(username!=null){ %>
             	<div class="font-alt mb-30 titan-title-size-1"><h1 style="display:inline;"><%=username%></h1>의</div>
             <%}else{ %>
-            	<div class="font-alt mb-30 titan-title-size-1">베이킹왕 문지영의</div>
+            	
             <%} %>
-            <div class="font-alt mb-40 titan-title-size-4">Fun(便) Bakery</div><a class="section-scroll btn btn-border-w btn-round" href="#works">더보기</a>
+            <div class="font-title mb-40 titan-title-size-5">Fun Bakery</div><a class="section-scroll btn btn-border-w btn-round" href="#works">더보기</a>
           </div>
         </div>
       </section>

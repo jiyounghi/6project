@@ -7,6 +7,7 @@ public class BakeryVO {
 	private String b_desc;
 	private String b_img;
 	private int b_count;
+	private int b_seq;
 	
 	private int b_r_index;
 	private String ingr_name;
@@ -49,9 +50,9 @@ public class BakeryVO {
 		this.ingr_rate = ingr_rate;
 	}
 
-	public BakeryVO(int b_r_index, String r_content, String r_img, int r_order) {
+	public BakeryVO(int b_seq, String r_content, String r_img, int r_order) {
 		super();
-		this.b_r_index = b_r_index;
+		this.b_seq = b_seq;
 		this.r_content = r_content;
 		this.r_img = r_img;
 		this.r_order = r_order;
@@ -70,6 +71,15 @@ public class BakeryVO {
 		super();
 		this.b_category = b_category;
 		this.b_count = b_count;
+	}
+
+	
+	public int getB_seq() {
+		return b_seq;
+	}
+
+	public void setB_seq(int b_seq) {
+		this.b_seq = b_seq;
 	}
 
 	public String getB_name() {
