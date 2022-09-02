@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.VO.MemberVO;
@@ -91,5 +92,59 @@ public class MemberDAO {
 			dbClose();
 		}
 		return username;
+	}
+	public ArrayList<MemberVO> Select() {	// 전체 회원 검색
+		String mb_id = "";
+		String mb_pw = "";
+		String mb_name = "";
+		String mb_joindate = "";
+		
+		ArrayList<MemberVO> list = new ArrayList<>();
+		
+		try {
+			dbConn();
+			
+			String sql = "Select * from t_member";
+			psmt = conn.prepareStatement(sql);
+			
+			rs = psmt.executeQuery();
+			while (rs.next()) {
+				mb_id = rs.getString("mb_id");
+				mb_pw = rs.getString("mb_pw");
+				mb_name = rs.getString("mb_name");
+				mb_joindate = rs.getString("mb_joindate");
+				
+				MemberVO vo = new MemberVO(mb_id, mb_pw, mb_name, mb_joindate);
+				
+				list.add(vo);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+		return list;
+	}
+	
+	
+	public int Delete(String mb_id) {		// 회원 삭제
+		
+		int cnt = 0;
+		try {
+			dbConn();
+			
+			String sql = "delete from t_member where mb_id = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, mb_id);
+			
+			cnt = psmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+		return cnt;
 	}
 }

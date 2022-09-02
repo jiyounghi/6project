@@ -56,21 +56,21 @@
 							</ul></li>
 						<li class="dropdown"><a class="dropdown-toggle"  href="CategoryCon?cat=노오븐" data-toggle="dropdown">노오븐</a>
 							<ul class="dropdown-menu">
-								<li><a href="BakeryCon?seq=25">초코 브라우니</a></li>
-								<li><a href="BakeryCon?seq=26">카스테라</a></li>
-								<li><a href="BakeryCon?seq=27">고구마 케이크</a></li>
-								<li><a href="BakeryCon?seq=28">타르트</a></li>
-								<li><a href="BakeryCon?seq=29">검은깨 쿠키</a></li>
-								<li><a href="BakeryCon?seq=30">고구마 빵</a></li>
+								<li><a href="BakeryOneCon?seq=25">초코 브라우니</a></li>
+								<li><a href="BakeryOneCon?seq=26">카스테라</a></li>
+								<li><a href="BakeryOneCon?seq=27">고구마 케이크</a></li>
+								<li><a href="BakeryOneCon?seq=28">타르트</a></li>
+								<li><a href="BakeryOneCon?seq=29">검은깨 쿠키</a></li>
+								<li><a href="BakeryOneCon?seq=30">고구마 빵</a></li>
 							</ul></li>
 						<li class="dropdown"><a class="dropdown-toggle"  href="CategoryCon?cat=냉동생지" data-toggle="dropdown">냉동생지</a>
 							<ul class="dropdown-menu">
-								<li><a href="BakeryCon?seq=31">유령 머핀</a></li>
-								<li><a href="BakeryCon?seq=32">치즈빵-오징어 먹물</a></li>
-								<li><a href="BakeryCon?seq=33">부추빵</a></li>
-								<li><a href="BakeryCon?seq=34">크로플</a></li>
-								<li><a href="BakeryCon?seq=35">데니쉬식빵</a></li>
-								<li><a href="BakeryCon?seq=36">브레즈앤롤</a></li>
+								<li><a href="BakeryOneCon?seq=31">유령 머핀</a></li>
+								<li><a href="BakeryOneCon?seq=32">치즈빵-오징어 먹물</a></li>
+								<li><a href="BakeryOneCon?seq=33">부추빵</a></li>
+								<li><a href="BakeryOneCon?seq=34">크로플</a></li>
+								<li><a href="BakeryOneCon?seq=35">데니쉬식빵</a></li>
+								<li><a href="BakeryOneCon?seq=36">브레즈앤롤</a></li>
 							</ul></li>
 					</ul>
 				</li>
@@ -88,7 +88,7 @@
 					<% if(username!=null){ %>
 						<li><a href="LogoutCon">로그아웃</a></li>
 						<% if(username.equals("admin")){ %>
-							<li><a href="ManageCon">회원관리</a></li>
+							<li><a href="member_manage.jsp">회원관리</a></li>
 						<%} %>
 					<%}else{ %>
 						<li><a href="login_register.jsp">로그인</a></li>

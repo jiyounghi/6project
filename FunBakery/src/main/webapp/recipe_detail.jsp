@@ -16,7 +16,7 @@
     Document Title
     =============================================
     -->
-    <title>Titan | Multipurpose HTML5 Template</title>
+    <title>Fun Bakery</title>
     <!--  
     Favicons
     =============================================
@@ -60,55 +60,7 @@
     <!-- Main stylesheet and color file-->
     <link href="assets/css/style.css" rel="stylesheet">
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
-    
-	<style>
-	    #modal.modal-overlay {
-	    display: none;
-	    }
-	    .modal-dialog {
-	        width:600px;
-	        margin:30px auto
-	    }
-	    .modal-content {
-	        -webkit-box-shadow:0 5px 5px 0 rgba(0, 0, 0, .1);
-	        box-shadow:0 5px 5px 0 rgba(0, 0, 0, .1);
-	        border-radius: 10px;
-	        border: 1px solid rgba(0, 0, 0, .2);
-	    }
-	    .modal-header {
-	        min-height:16.43px;
-	        padding:15px 17px 14px;
-	        border-bottom:1px solid #b4b4b4;
-	        background:#efefef;
-	        border-radius:10px 10px 0 0 ;
-	    }
-	    .weighing_modal {width:100%; margin-bottom:10px;}
-	    .weighing_modal tr {border-bottom:1px solid #e9e9e9;}
-	    .weighing_modal th {width:120px; color:#000; padding:9px 2px 9px 15px;}
-	    .weighing_modal td {text-align:right; line-height:1.6; color:#888; padding:9px 15px 9px 2px;}
-	    .weighing_modal tr:nth-child(2n+2) {background:#f9f9f9;}
-	    .modal-footer {
-	        padding:20px 0 40px;
-	        text-align:center;
-	        border-top:1px solid #b4b4b4;
-	        background:#efefef;
-	        border-radius: 0 0 10px 10px;
-	    }
-	    body, html, th, td, input, select, textarea, button {font-family: 'Noto Sans KR', sans-serif;}
-	    .close {
-	        float:right;
-	        font-size:21px;
-	        font-weight:700;
-	        line-height:1;
-	        color:#000;
-	        text-shadow:0 1px 0 #fff;
-	        filter:alpha(opacity=20);
-	        opacity:.2
-	    }
-	    button{
-	        outline-style: none;
-	    }
-    </style>
+
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
@@ -160,7 +112,7 @@
             <div class="modal-content md" style="padding:0;">
                 <div class="modal-header md" text-align="center">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="modalOff()"><span aria-hidden="true"><img src="https://recipe1.ezmember.co.kr/img/btn_close.gif" alt="닫기" width="18px" height="18px"></span></button>
-                    <h4 class="modal-title md">계량법 안내</h4>
+                    <h4 class="modal-title md"><b>계량법 안내</b></h4>
                 </div>
                 <div class="modal-body md">
                     <table class="weighing_modal md">
@@ -223,10 +175,10 @@
                      	
                           	<b id="r_index">재료</b>
                           	<!--  재료 비율 계산기 + 재료테이블   -->
-                          	<form class="form_ingr">
+                          	<form class="form_ingr" id="ingr_cal">
 			                    <input class="input_ingr_name" type="text" name="name" placeholder="재료명을 입력해주세요." />
 			                    <input class="input_ingr_weight" type="number" name="weight" placeholder="재료량을 입력해주세요." />
-			                    <button type="submit">전송</button>
+			                    <button type="submit">입력</button>
 			                </form>
                           
                       </div>
@@ -253,7 +205,7 @@
                         
                      %>   
                      
-                     <script src="assets/js/test.js"></script>
+                     <script src="assets/js/recipe_cal.js"></script>
                      
                      <!-- toHtml() 결과가 들어갈 곳 -->
                      <ul class='ingre_one' id='one_type'></ul>
@@ -352,7 +304,7 @@
                           	<form class="form_ingr2">
 			                    <input class="input_ingr_name2" type="text" name="name" placeholder="재료명을 입력해주세요." />
 			                    <input class="input_ingr_weight2" type="number" name="weight" placeholder="재료량을 입력해주세요." />
-			                    <button type="submit">전송</button>
+			                    <button type="submit">입력</button>
 			                </form>
                           
                       </div>
@@ -468,7 +420,7 @@
                           	<form class="form_ingr3">
 			                    <input class="input_ingr_name3" type="text" name="name" placeholder="재료명을 입력해주세요." />
 			                    <input class="input_ingr_weight3" type="number" name="weight" placeholder="재료량을 입력해주세요." />
-			                    <button type="submit">전송</button>
+			                    <button type="submit">입력</button>
 			                </form>
                       </div>
                      

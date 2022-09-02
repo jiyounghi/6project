@@ -1,9 +1,10 @@
 package com.VO;
 
 public class MemberVO {
-	private String email;
-	private String username;
-	private String password;
+	private String email;	// id
+	private String username;	// name
+	private String password;	// pw
+	private String joindate;	// joindate
 		
 	public String getEmail() {
 		return email;
@@ -23,6 +24,12 @@ public class MemberVO {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public String getJoindate() {
+		return joindate;
+	}
+	public void setJoindate(String joindate) {
+		this.joindate = joindate;
+	}
 	public MemberVO(String email,String password,String username) {
 		this.email = email;
 		this.password = password;
@@ -33,6 +40,14 @@ public class MemberVO {
 		this.email = email;
 		this.password = password;
 	}
+	public MemberVO(String email, String username, String password, String joindate) {
+		super();
+		this.email = email;
+		this.username = username;
+		this.password = password;
+		this.joindate = joindate;
+	}
+	
 	
 	
 	
