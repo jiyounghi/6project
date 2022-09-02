@@ -16,7 +16,7 @@
     Document Title
     =============================================
     -->
-<title>Community</title>
+<title>Fun Bakery</title>
 <!--  
     Favicons
     =============================================
@@ -165,7 +165,7 @@
 				</div>
 			</section>
 		</div>
-		<%@ include file="footer.jsp"%>
+		<%@ include file="footer.jsp" %> 
 	</main>
 	<!--  
     JavaScripts

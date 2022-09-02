@@ -88,7 +88,7 @@
 					<% if(username!=null){ %>
 						<li><a href="LogoutCon">로그아웃</a></li>
 						<% if(username.equals("admin")){ %>
-							<li><a href="ManageCon">회원관리</a></li>
+							<li><a href="member_manage.jsp">회원관리</a></li>
 						<%} %>
 					<%}else{ %>
 						<li><a href="login_register.jsp">로그인</a></li>

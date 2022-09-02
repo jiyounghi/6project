@@ -16,7 +16,7 @@
     Document Title
     =============================================
     -->
-    <title>Titan | Multipurpose HTML5 Template</title>
+    <title>Fun Bakery</title>
     <!--  
     Favicons
     =============================================

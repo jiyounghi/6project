@@ -37,3 +37,5 @@ select b_seq, b_category, b_name from t_bread order by b_seq;
 select * from(select b_img, b_name, b_category from t_bread order by b_count) where rownum<=3;
 
 SELECT * FROM(SELECT b.article_seq, b.article_title, m.mb_name FROM t_community b, t_member m WHERE b.mb_id = m.mb_id ORDER BY article_seq DESC) WHERE ROWNUM<=5;
+
+Select * from t_member

@@ -24,12 +24,12 @@
 					<h5 class="widget-title font-alt">Recent Article</h5>
 					<ul class="icon-list">
 						<%
-							BoardDAO bdao = new BoardDAO();
-							ArrayList<BoardVO> flist = bdao.footer();
+							BoardDAO adao = new BoardDAO();
+							ArrayList<BoardVO> flist = adao.footer();
 							
-							for(BoardVO vo : flist){
+							for(BoardVO avo : flist){
 						%>
-						<li><%=vo.getMb_name() %> on <a href="BoardDetailCon?seq=<%=vo.getArticle_seq() %>"><%=vo.getArticle_title() %></a></li>
+						<li><%=avo.getMb_name() %> on <a href="BoardDetailCon?seq=<%=avo.getArticle_seq() %>"><%=avo.getArticle_title() %></a></li>
 						<%	} %>
 					</ul>
 				</div>
@@ -52,20 +52,20 @@
 					<h5 class="widget-title font-alt">Popular Posts</h5>
 					<ul class="widget-posts">
 						<%
-							BakeryDAO dao = new BakeryDAO();
-							ArrayList<BakeryVO> list = dao.popular();
+							BakeryDAO bdao = new BakeryDAO();
+							ArrayList<BakeryVO> plist = bdao.popular();
 							
-							for(BakeryVO vo : list){
+							for(BakeryVO bvo : plist){
 						%>
 						<li class="clearfix">
 							<div class="widget-posts-image">
-								<a href="#"><img src="<%=vo.getB_img() %>" alt="Post Thumbnail" /></a>
+								<a href="#"><img src="<%=bvo.getB_img() %>" alt="Post Thumbnail" /></a>
 							</div>
 							<div class="widget-posts-body">
 								<div class="widget-posts-title">
-									<a href="#"><%=vo.getB_name() %></a>
+									<a href="#"><%=bvo.getB_name() %></a>
 								</div>
-								<div class="widget-posts-meta"><%=vo.getB_category() %></div>
+								<div class="widget-posts-meta"><%=bvo.getB_category() %></div>
 							</div>
 						</li>
 						<%	} %>
