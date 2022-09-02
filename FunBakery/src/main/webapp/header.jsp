@@ -27,7 +27,7 @@
 								<li><a href="BakeryCon?seq=5">카스테라</a></li>
 								<li><a href="BakeryCon?seq=6">티라미수</a></li>
 							</ul></li>
-						<li class="dropdown"><a class="dropdown-toggle" href="CategoryCon?cat=구움과자" data-toggle="dropdown">구움과자</a>
+						<li class="dropdown"><a class="dropdown-toggle" href="CategoryCon?cat=구운과자" data-toggle="dropdown">구운과자</a>
 							<ul class="dropdown-menu">
 								<li><a href="BakeryCon?seq=7">레몬 마들렌</a></li>
 								<li><a href="BakeryCon?seq=8">플레인 스콘</a></li>
@@ -76,15 +76,7 @@
 				</li>
 				<li><a href="tip.jsp">유의사항</a></li>
 				<li><a href="BoardListCon">게시판</a></li>
-				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#">재료 및 도구</a>
-					<ul class="dropdown-menu">
-					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">판매처</a>
-						<ul class="dropdown-menu">
-							<li><a href="http://www.bncmarket.com/" target="_blank">b&c market</a></li>
-							<li><a href="http://www.bakingfarm.co.kr/" target="_blank">baking farm</a></li>
-						</ul></li>
-					<li><a href="info.jsp">정보</a></li>
-				</ul></li>
+				<li><a href="http://www.bncmarket.com/" target="_blank" >재료구매</a></li>
 					<% if(username!=null){ %>
 						<li><a href="LogoutCon">로그아웃</a></li>
 						<% if(username.equals("admin")){ %>

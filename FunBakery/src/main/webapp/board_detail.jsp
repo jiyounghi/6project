@@ -15,7 +15,7 @@
     Document Title
     =============================================
     -->
-    <title>Fun Bakery</title>
+    <title>View</title>
     <!--  
     Favicons
     =============================================

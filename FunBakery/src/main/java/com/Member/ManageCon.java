@@ -7,12 +7,27 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.DAO.MemberDAO;
+import com.VO.MemberVO;
+
 @WebServlet("/ManageCon")
 public class ManageCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		// 여기다 만들면 됩니다!
-	
+		request.setCharacterEncoding("utf-8");
+		
+		String mb_id = (String)request.getParameter("name");
+		System.out.println(mb_id);
+		
+		MemberDAO dao = new MemberDAO();
+		int cnt = dao.Delete(mb_id);
+		
+		if(cnt > 0) {
+			System.out.println("회원 삭제 성공");
+		}else {
+			System.out.println("회원 삭제 실패");
+		}
+		
+		response.sendRedirect("member_manage.jsp");
 	}
 
 }
