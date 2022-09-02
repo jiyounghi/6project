@@ -88,4 +88,11 @@ public class BoardVO {
 		this.article_content = article_content;
 	}
 	
+	public BoardVO(int article_seq, String article_title, String mb_name, String id) {
+		super();
+		this.article_seq = article_seq;
+		this.article_title = article_title;
+		this.mb_name = mb_name;
+	}
+	
 }

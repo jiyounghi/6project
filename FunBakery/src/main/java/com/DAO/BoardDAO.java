@@ -274,4 +274,34 @@ public class BoardDAO {
 		}
 		return cnt;
 	}
+
+	public ArrayList<BoardVO> footer(){
+		BoardVO vo = null;
+		ArrayList<BoardVO> flist = new ArrayList<>();
+		
+		try {
+			dbConn();
+			
+			String sql = "SELECT * FROM(SELECT b.article_seq, b.article_title, m.mb_name, m.mb_id FROM t_community b, t_member m WHERE b.mb_id = m.mb_id ORDER BY article_seq DESC) WHERE ROWNUM<=5";
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				int seq = rs.getInt(1);
+				String title = rs.getString(2);
+				String name = rs.getString(3);
+				String id = rs.getString(4);
+				
+				vo = new BoardVO(seq, title, name, id);
+				flist.add(vo);
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+		
+		return flist;
+	}
 }

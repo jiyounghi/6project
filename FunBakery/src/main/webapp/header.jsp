@@ -20,57 +20,57 @@
 					<ul class="dropdown-menu" role="menu">
 						<li class="dropdown"><a class="dropdown-toggle" href="CategoryCon?cat=케이크" data-toggle="dropdown">케이크</a>
 							<ul class="dropdown-menu">
-								<li><a href="#">생크림케이크</a></li>
-								<li><a href="#">치즈케이크</a></li>
-								<li><a href="#">초코케이크</a></li>
-								<li><a href="#">당근케이크</a></li>
-								<li><a href="#">카스테라</a></li>
-								<li><a href="#">티라미수</a></li>
+								<li><a href="BakeryCon?seq=1">생크림케이크</a></li>
+								<li><a href="BakeryCon?seq=2">치즈케이크</a></li>
+								<li><a href="BakeryCon?seq=3">초코케이크</a></li>
+								<li><a href="BakeryCon?seq=4">당근케이크</a></li>
+								<li><a href="BakeryCon?seq=5">카스테라</a></li>
+								<li><a href="BakeryCon?seq=6">티라미수</a></li>
 							</ul></li>
 						<li class="dropdown"><a class="dropdown-toggle" href="CategoryCon?cat=구움과자" data-toggle="dropdown">구움과자</a>
 							<ul class="dropdown-menu">
-								<li><a href="#">레몬 마들렌</a></li>
-								<li><a href="#">플레인 스콘</a></li>
-								<li><a href="#">크림치즈 스콘</a></li>
-								<li><a href="#">오레오브라우니</a></li>
-								<li><a href="#">황치즈머핀</a></li>
-								<li><a href="#">대파치즈스콘</a></li>
+								<li><a href="BakeryCon?seq=7">레몬 마들렌</a></li>
+								<li><a href="BakeryCon?seq=8">플레인 스콘</a></li>
+								<li><a href="BakeryCon?seq=9">크림치즈 스콘</a></li>
+								<li><a href="BakeryCon?seq=10">오레오브라우니</a></li>
+								<li><a href="BakeryCon?seq=11">황치즈머핀</a></li>
+								<li><a href="BakeryCon?seq=12">대파치즈스콘</a></li>
 							</ul></li>
 						<li class="dropdown"><a class="dropdown-toggle" href="CategoryCon?cat=빵" data-toggle="dropdown">(건강)빵</a>
 							<ul class="dropdown-menu">
-								<li><a href="#">소금빵</a></li>
-								<li><a href="#">모닝빵</a></li>
-								<li><a href="#">모카빵</a></li>
-								<li><a href="#">포카치아</a></li>
-								<li><a href="#">호밀빵</a></li>
-								<li><a href="#">꽈배기 도너츠</a></li>
+								<li><a href="BakeryCon?seq=13">소금빵</a></li>
+								<li><a href="BakeryCon?seq=14">모닝빵</a></li>
+								<li><a href="BakeryCon?seq=15">모카빵</a></li>
+								<li><a href="BakeryCon?seq=16">포카치아</a></li>
+								<li><a href="BakeryCon?seq=17">호밀빵</a></li>
+								<li><a href="BakeryCon?seq=18">꽈배기 도너츠</a></li>
 							</ul></li>
 						<li class="dropdown"><a class="dropdown-toggle" href="CategoryCon?cat=쿠키" data-toggle="dropdown">쿠키</a>
 							<ul class="dropdown-menu">
-								<li><a href="#">버터 쿠키</a></li>
-								<li><a href="#">초코칩 쿠키</a></li>
-								<li><a href="#">코코아 쿠키</a></li>
-								<li><a href="#">치즈 쿠키</a></li>
-								<li><a href="#">얼그레이 쿠키</a></li>
-								<li><a href="#">녹차 쿠키</a></li>
+								<li><a href="BakeryCon?seq=19">버터 쿠키</a></li>
+								<li><a href="BakeryCon?seq=20">초코칩 쿠키</a></li>
+								<li><a href="BakeryCon?seq=21">코코아 쿠키</a></li>
+								<li><a href="BakeryCon?seq=22">치즈 쿠키</a></li>
+								<li><a href="BakeryCon?seq=23">얼그레이 쿠키</a></li>
+								<li><a href="BakeryCon?seq=24">녹차 쿠키</a></li>
 							</ul></li>
-						<li class="dropdown"><a href="CategoryCon?cat=노오븐">노오븐</a>
+						<li class="dropdown"><a class="dropdown-toggle"  href="CategoryCon?cat=노오븐" data-toggle="dropdown">노오븐</a>
 							<ul class="dropdown-menu">
-								<li><a href="#">초코 브라우니</a></li>
-								<li><a href="#">카스테라</a></li>
-								<li><a href="#">고구마 케이크</a></li>
-								<li><a href="#">타르트</a></li>
-								<li><a href="#">검은깨 쿠키</a></li>
-								<li><a href="#">고구마 빵</a></li>
+								<li><a href="BakeryCon?seq=25">초코 브라우니</a></li>
+								<li><a href="BakeryCon?seq=26">카스테라</a></li>
+								<li><a href="BakeryCon?seq=27">고구마 케이크</a></li>
+								<li><a href="BakeryCon?seq=28">타르트</a></li>
+								<li><a href="BakeryCon?seq=29">검은깨 쿠키</a></li>
+								<li><a href="BakeryCon?seq=30">고구마 빵</a></li>
 							</ul></li>
-						<li class="dropdown"><a href="CategoryCon?cat=냉동생지">냉동생지</a>
+						<li class="dropdown"><a class="dropdown-toggle"  href="CategoryCon?cat=냉동생지" data-toggle="dropdown">냉동생지</a>
 							<ul class="dropdown-menu">
-								<li><a href="#">유령 머핀</a></li>
-								<li><a href="#">치즈빵-오징어 먹물</a></li>
-								<li><a href="#">부추빵</a></li>
-								<li><a href="#">크로플</a></li>
-								<li><a href="#">데니쉬식빵</a></li>
-								<li><a href="#">브레즈앤롤</a></li>
+								<li><a href="BakeryCon?seq=31">유령 머핀</a></li>
+								<li><a href="BakeryCon?seq=32">치즈빵-오징어 먹물</a></li>
+								<li><a href="BakeryCon?seq=33">부추빵</a></li>
+								<li><a href="BakeryCon?seq=34">크로플</a></li>
+								<li><a href="BakeryCon?seq=35">데니쉬식빵</a></li>
+								<li><a href="BakeryCon?seq=36">브레즈앤롤</a></li>
 							</ul></li>
 					</ul>
 				</li>
