@@ -2,7 +2,6 @@ select * from T_MEMBER;
 
 insert into T_MEMBER values('admin','admin','admin',sysdate,'a');
 
-<<<<<<< HEAD
 insert into T_COMMUNITY values(1, '제목입니다', '내용입니다', '22/08/25', 'admin',0);
 insert into T_COMMUNITY values(2, '제목입니다', '내용입니다', '22/08/26', 'admin',0);
 insert into T_COMMUNITY values(t_community_SEQ.nextval,'제목입니다', '내용입니다', '22/08/26', 'admin',0);
@@ -32,7 +31,3 @@ select b_category, count(b_seq) count from t_bread group by b_category;
 SELECT * FROM (SELECT rownum rn, a.* FROM(SELECT b_seq, b_category, b_name, b_img, b_count FROM t_bread WHERE b_category='케이크' ORDER BY b_seq)a) WHERE rn>0 AND rn <= 5;
 
 SELECT b_category, COUNT(b_category) FROM t_bread GROUP BY b_category;
-
-select b_seq, b_category, b_name from t_bread order by b_seq;
-
-select * from(select b_img, b_name, b_category from t_bread order by b_count) where rownum<=3;

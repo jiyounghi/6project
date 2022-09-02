@@ -27,7 +27,7 @@
 								<li><a href="#">카스테라</a></li>
 								<li><a href="#">티라미수</a></li>
 							</ul></li>
-						<li class="dropdown"><a class="dropdown-toggle" href="CategoryCon?cat=구움과자" data-toggle="dropdown">구움과자</a>
+						<li class="dropdown"><a class="dropdown-toggle" href="CategoryCon?cat=구운과자" data-toggle="dropdown">구운과자</a>
 							<ul class="dropdown-menu">
 								<li><a href="#">레몬 마들렌</a></li>
 								<li><a href="#">플레인 스콘</a></li>
@@ -55,36 +55,12 @@
 								<li><a href="#">녹차 쿠키</a></li>
 							</ul></li>
 						<li class="dropdown"><a href="CategoryCon?cat=노오븐">노오븐</a>
-							<ul class="dropdown-menu">
-								<li><a href="#">초코 브라우니</a></li>
-								<li><a href="#">카스테라</a></li>
-								<li><a href="#">고구마 케이크</a></li>
-								<li><a href="#">타르트</a></li>
-								<li><a href="#">검은깨 쿠키</a></li>
-								<li><a href="#">고구마 빵</a></li>
-							</ul></li>
 						<li class="dropdown"><a href="CategoryCon?cat=냉동생지">냉동생지</a>
-							<ul class="dropdown-menu">
-								<li><a href="#">유령 머핀</a></li>
-								<li><a href="#">치즈빵-오징어 먹물</a></li>
-								<li><a href="#">부추빵</a></li>
-								<li><a href="#">크로플</a></li>
-								<li><a href="#">데니쉬식빵</a></li>
-								<li><a href="#">브레즈앤롤</a></li>
-							</ul></li>
 					</ul>
 				</li>
 				<li><a href="tip.jsp">유의사항</a></li>
 				<li><a href="BoardListCon">게시판</a></li>
-				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#">재료 및 도구</a>
-					<ul class="dropdown-menu">
-					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">판매처</a>
-						<ul class="dropdown-menu">
-							<li><a href="http://www.bncmarket.com/" target="_blank">b&c market</a></li>
-							<li><a href="http://www.bakingfarm.co.kr/" target="_blank">baking farm</a></li>
-						</ul></li>
-					<li><a href="info.jsp">정보</a></li>
-				</ul></li>
+				<li><a href="http://www.bncmarket.com/" target="_blank" >재료구매</a></li>
 					<% if(username!=null){ %>
 						<li><a href="LogoutCon">로그아웃</a></li>
 						<% if(username.equals("admin")){ %>

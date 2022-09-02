@@ -1,6 +1,3 @@
-<%@page import="com.VO.BakeryVO"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="com.DAO.BakeryDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -35,12 +32,12 @@
 				<div class="widget">
 					<h5 class="widget-title font-alt">레시피 분류</h5>
 					<ul class="icon-list">
-						<li><a href="#">케이크</a></li>
-						<li><a href="#">구움과자</a></li>
-						<li><a href="#">(건강)빵</a></li>
-						<li><a href="#">쿠키</a></li>
-						<li><a href="#">노오븐</a></li>
-						<li><a href="#">냉동생지</a></li>
+						<li><a href="#">케이크 - 1</a></li>
+						<li><a href="#">구움과자 - 2</a></li>
+						<li><a href="#">(건강)빵 - 3</a></li>
+						<li><a href="#">쿠키 - 4</a></li>
+						<li><a href="#">노오븐 - 5</a></li>
+						<li><a href="#">냉동생지 - 6</a></li>
 					</ul>
 				</div>
 			</div>
@@ -48,24 +45,28 @@
 				<div class="widget">
 					<h5 class="widget-title font-alt">Popular Posts</h5>
 					<ul class="widget-posts">
-						<%
-							BakeryDAO dao = new BakeryDAO();
-							ArrayList<BakeryVO> list = dao.popular();
-							
-							for(BakeryVO vo : list){
-						%>
 						<li class="clearfix">
 							<div class="widget-posts-image">
-								<a href="#"><img src="<%=vo.getB_img() %>" alt="Post Thumbnail" /></a>
+								<a href="#"><img src="assets/images/rp-1.jpg" alt="Post Thumbnail" /></a>
 							</div>
 							<div class="widget-posts-body">
 								<div class="widget-posts-title">
-									<a href="#"><%=vo.getB_name() %></a>
+									<a href="#">Designer Desk Essentials</a>
 								</div>
-								<div class="widget-posts-meta"><%=vo.getB_category() %></div>
+								<div class="widget-posts-meta">23 january</div>
 							</div>
 						</li>
-						<%	} %>
+						<li class="clearfix">
+							<div class="widget-posts-image">
+								<a href="#"><img src="assets/images/rp-2.jpg" alt="Post Thumbnail" /></a>
+							</div>
+							<div class="widget-posts-body">
+								<div class="widget-posts-title">
+									<a href="#">Realistic Business Card Mockup</a>
+								</div>
+								<div class="widget-posts-meta">15 February</div>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
