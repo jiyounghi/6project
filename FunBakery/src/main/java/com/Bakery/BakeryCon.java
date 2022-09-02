@@ -54,7 +54,7 @@ public class BakeryCon extends HttpServlet {
 		request.setAttribute("taste3", taste3);
 		request.setAttribute("breadInfo", breadInfo);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("recipe_detail_page.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("recipe_detail.jsp");
 		rd.forward(request, response);
 		
 	}

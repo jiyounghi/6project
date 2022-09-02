@@ -93,7 +93,14 @@
                   <ul class="widget-posts">
                     <c:forEach items="${plist }" var="list">
                     <li class="clearfix">
-                      <div class="widget-posts-image"><a href="#"><img src="${list.b_img }" alt="Post Thumbnail"/></a></div>
+                      <c:choose>
+                      <c:when test="${list.b_category eq '노오븐' || list.b_category eq '냉동생지'}">
+                      <div class="widget-posts-image"><a href="BakeryOneCon?seq=${list.b_seq }"><img src="${list.b_img }" alt="Post Thumbnail"/></a></div>
+                      </c:when>
+                      <c:otherwise>
+                      <div class="widget-posts-image"><a href="BakeryCon?seq=${list.b_seq }"><img src="${list.b_img }" alt="Post Thumbnail"/></a></div>
+                      </c:otherwise>
+                      </c:choose>
                       <div class="widget-posts-body">
                         <div class="widget-posts-title"><a href="#">${list.b_name }</a></div>
                         <div class="widget-posts-meta">${list.b_category }</div>
@@ -109,9 +116,18 @@
 					<c:forEach items="${brlist }" var="list">
 					<div class="col-sm-6 col-md-6 col-lg-6">
 		                <div class="shop-item">
-		                  <div class="shop-item-image"><a href="shop_single_product.html" target="_blank"><img style="width:600px; height:400px;" src="${list.b_img }" alt="Accessories Pack"/></a>
+		                  <c:choose>
+		                  <c:when test="${list.b_category eq '노오븐' || list.b_category eq '냉동생지'}">
+		                  <div class="shop-item-image"><a href="BakeryOneCon?seq=${list.b_seq }"><img style="width:600px; height:400px;" src="${list.b_img }"/></a>
 		                  </div>
-		                  <h4 class="shop-item-title font-alt"><a href="#">${list.b_name }</a></h4>
+		                  <h4 class="shop-item-title font-alt"><a href="BakeryOneCon?seq=${list.b_seq }">${list.b_name }</a></h4>
+		                  </c:when>
+		                  <c:otherwise>
+		                  <div class="shop-item-image"><a href="BakeryCon?seq=${list.b_seq }"><img style="width:600px; height:400px;" src="${list.b_img }"/></a>
+		                  </div>
+		                  <h4 class="shop-item-title font-alt"><a href="BakeryCon?seq=${list.b_seq }">${list.b_name }</a></h4>
+		                  </c:otherwise>
+		                  </c:choose>
 		                </div>
 	                </div>
 					</c:forEach>
