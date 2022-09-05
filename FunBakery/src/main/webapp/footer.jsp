@@ -21,7 +21,7 @@
 			</div>
 			<div class="col-sm-3">
 				<div class="widget">
-					<h5 class="widget-title footer-font">Recent Article</h5>
+					<h5 class="widget-title footer-font">Recent Community</h5>
 					<ul class="icon-list">
 						<%
 							BoardDAO adao = new BoardDAO();
@@ -36,7 +36,7 @@
 			</div>
 			<div class="col-sm-3">
 				<div class="widget">
-					<h5 class="widget-title footer-font">레시피 분류</h5>
+					<h5 class="widget-title footer-font">Recipe</h5>
 					<ul class="icon-list">
 						<li><a href="CategoryCon?cat=케이크">케이크</a></li>
 						<li><a href="CategoryCon?cat=구움과자">구움과자</a></li>

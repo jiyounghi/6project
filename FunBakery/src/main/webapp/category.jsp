@@ -78,7 +78,7 @@
               <div class="col-sm-4 col-md-3 sidebar" style="height:1400px;">
               	<div style="border-right: 1px solid #c2c2c2; position:sticky;top:17.5%">
                 <div class="widget">
-                  <h5 class="widget-title font-alt">레시피 종류</h5>
+                  <h5 class="widget-title font-alt">Recipe</h5>
                   <ul class="icon-list">
                  	<li><a href="CategoryCon?cat=케이크">케이크</a></li>
 					<li><a href="CategoryCon?cat=구움과자">구움과자</a></li>
