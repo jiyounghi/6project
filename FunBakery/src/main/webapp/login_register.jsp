@@ -86,7 +86,7 @@
                   <div class="form-group">
                     <input type="submit" class="btn btn-block btn-round btn-b" value="Login">
                   </div>
-                  <div class="form-group"><a href="">Forgot Password?</a></div>
+                  
                 </form>
               </div>
               <div class="col-sm-5">
