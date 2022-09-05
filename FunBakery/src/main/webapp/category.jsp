@@ -61,12 +61,12 @@
       <!-- 헤더부분 -->
 	  <%@ include file="header.jsp" %>
       <div class="main">
-        <section class="module bg-dark-60 shop-page-header" data-background="assets/images/shop/product-page-bg.jpg">
+        <section class="module bg-dark-60 shop-page-header" data-background="assets/images/background/recipe.png">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">레시피</h2>
-                <div class="module-subtitle font-serif">먹고 싶은게 있었으면 좋겠네?</div>
+                <h2 class="module-title font-alt">RECIPE</h2>
+                <!-- <div class="module-subtitle font-serif">먹고 싶은게 있었으면 좋겠네?</div> -->
               </div>
             </div>
           </div>
@@ -120,12 +120,12 @@
 		                  <c:when test="${list.b_category eq '노오븐' || list.b_category eq '냉동생지'}">
 		                  <div class="shop-item-image"><a href="BakeryOneCon?seq=${list.b_seq }"><img style="width:600px; height:400px;" src="${list.b_img }"/></a>
 		                  </div>
-		                  <h4 class="shop-item-title font-alt"><a href="BakeryOneCon?seq=${list.b_seq }">${list.b_name }</a></h4>
+		                  <h4 class="shop-item-title font-alt" id="category-title1"><a href="BakeryOneCon?seq=${list.b_seq }">${list.b_name }</a></h4>
 		                  </c:when>
 		                  <c:otherwise>
 		                  <div class="shop-item-image"><a href="BakeryCon?seq=${list.b_seq }"><img style="width:600px; height:400px;" src="${list.b_img }"/></a>
 		                  </div>
-		                  <h4 class="shop-item-title font-alt"><a href="BakeryCon?seq=${list.b_seq }">${list.b_name }</a></h4>
+		                  <h4 class="shop-item-title font-alt" id="category-title2"><a href="BakeryCon?seq=${list.b_seq }">${list.b_name }</a></h4>
 		                  </c:otherwise>
 		                  </c:choose>
 		                </div>

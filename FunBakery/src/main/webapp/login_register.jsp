@@ -10,7 +10,7 @@
     Document Title
     =============================================
     -->
-    <title>Titan | Multipurpose HTML5 Template</title>
+    <title>Fun Bakery</title>
     <!--  
     Favicons
     =============================================
@@ -61,7 +61,7 @@
       <!-- 헤더부분 -->
 	  <%@ include file="header.jsp" %>
       <div class="main">
-        <section class="module bg-dark-30" data-background="assets/images/section-4.jpg">
+        <section class="module bg-dark-30" data-background="assets/images/background/login.jpg">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">

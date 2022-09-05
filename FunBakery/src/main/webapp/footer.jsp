@@ -11,7 +11,7 @@
 		<div class="row">
 			<div class="col-sm-3">
 				<div class="widget">
-					<h5 class="widget-title font-alt">About Fun Bakery</h5>
+					<h5 class="widget-title footer-font">About Fun Bakery</h5>
 					<p>팀장 : 문지영</p>
 					<p>팀원 : 노성진</p>
 					<p>팀원 : 박현성</p>
@@ -21,7 +21,7 @@
 			</div>
 			<div class="col-sm-3">
 				<div class="widget">
-					<h5 class="widget-title font-alt">Recent Article</h5>
+					<h5 class="widget-title footer-font">Recent Article</h5>
 					<ul class="icon-list">
 						<%
 							BoardDAO adao = new BoardDAO();
@@ -36,7 +36,7 @@
 			</div>
 			<div class="col-sm-3">
 				<div class="widget">
-					<h5 class="widget-title font-alt">레시피 분류</h5>
+					<h5 class="widget-title footer-font">레시피 분류</h5>
 					<ul class="icon-list">
 						<li><a href="CategoryCon?cat=케이크">케이크</a></li>
 						<li><a href="CategoryCon?cat=구움과자">구움과자</a></li>
@@ -49,7 +49,7 @@
 			</div>
 			<div class="col-sm-3">
 				<div class="widget">
-					<h5 class="widget-title font-alt">Popular Posts</h5>
+					<h5 class="widget-title footer-font">Popular Posts</h5>
 					<ul class="widget-posts">
 						<%
 							BakeryDAO bdao = new BakeryDAO();
@@ -84,7 +84,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6">
-				<p class="copyright font-alt">
+				<p class="copyright footer-font">
 					&copy; 2022&nbsp;<a href="index.html">Fun Bakery</a>, All Rights Reserved
 				</p>
 			</div>
