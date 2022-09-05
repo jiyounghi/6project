@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.List;
 
 import com.VO.MemberVO;
 
@@ -93,7 +92,33 @@ public class MemberDAO {
 		}
 		return username;
 	}
-	public ArrayList<MemberVO> Select() {	// 전체 회원 검색
+	
+	public int getTotal() {
+		int result = 0;
+		
+		try {
+			dbConn();
+			
+			String sql = "SELECT COUNT(*) total FROM t_member";
+			
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+			
+			if(rs.next()) {
+				result = rs.getInt(1);
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+		
+		return result;
+		
+	}
+	
+	public ArrayList<MemberVO> Select(int pageNum, int amount) {	// 전체 회원 검색
 		String mb_id = "";
 		String mb_pw = "";
 		String mb_name = "";
@@ -104,15 +129,17 @@ public class MemberDAO {
 		try {
 			dbConn();
 			
-			String sql = "Select * from t_member";
+			String sql = "SELECT * FROM (SELECT rownum rn, a.* FROM(SELECT mb_id, mb_pw, mb_name, mb_joindate FROM t_member m ORDER BY mb_joindate)a) WHERE rn>? AND rn <= ?";
 			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, (pageNum - 1) * amount);
+			psmt.setInt(2, pageNum * amount );
 			
 			rs = psmt.executeQuery();
 			while (rs.next()) {
-				mb_id = rs.getString("mb_id");
-				mb_pw = rs.getString("mb_pw");
-				mb_name = rs.getString("mb_name");
-				mb_joindate = rs.getString("mb_joindate");
+				mb_id = rs.getString(2);
+				mb_pw = rs.getString(3);
+				mb_name = rs.getString(4);
+				mb_joindate = rs.getString(5);
 				
 				MemberVO vo = new MemberVO(mb_id, mb_pw, mb_name, mb_joindate);
 				

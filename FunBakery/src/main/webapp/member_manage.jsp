@@ -115,12 +115,8 @@
 									<th style="text-align: center;">회원 가입일자</th>
 									<th style="text-align: center;"><b>회원 삭제하기</b></th>
 								</tr>
-								<%
-								MemberDAO dao = new MemberDAO();
-								ArrayList<MemberVO> list = dao.Select();
-								for (int i = 0; i < list.size(); i++) {
-									if(!list.get(i).getEmail().equals("admin")){
-								%>
+								<% ArrayList<MemberVO> list = (ArrayList<MemberVO>)request.getAttribute("mlist"); %>
+								<% for(int i=0; i<list.size(); i++){%>
 								<tr>
 									<td style="width: 25%;"><%=list.get(i).getEmail()%></td>
 									<td style="width: 25%;"><%=list.get(i).getPassword()%></td>
@@ -129,11 +125,12 @@
 									<td style="width: 15%;">
 										<!-- 회원 삭제 -->
 										<button class="btn btn-g btn-round"
-											onclick="location.href='ManageCon?name=<%=list.get(i).getEmail()%>'"><i class="fa fa-cog fa-spin"></i><b>&nbsp;회원삭제</b></button>
+											onclick="location.href='MemberDeleteCon?name=<%=list.get(i).getEmail()%>'">
+											<i class="fa fa-cog fa-spin"></i><b>&nbsp;회원삭제</b>
+										</button>
 									</td>
 								</tr>
 								<%} %>
-								<%}%>
 							</table>
 						</div>
 						<!-- 페이지이동 -->
@@ -165,7 +162,7 @@
 				</div>
 			</section>
 		</div>
-		<%@ include file="footer.jsp" %> 
+		<%@ include file="footer.jsp"%>
 	</main>
 	<!--  
     JavaScripts
