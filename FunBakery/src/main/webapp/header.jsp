@@ -36,7 +36,7 @@
 								<li><a href="BakeryCon?seq=11">황치즈머핀</a></li>
 								<li><a href="BakeryCon?seq=12">대파치즈스콘</a></li>
 							</ul></li>
-						<li class="dropdown"><a class="dropdown-toggle" href="CategoryCon?cat=빵" data-toggle="dropdown">(건강)빵</a>
+						<li class="dropdown"><a class="dropdown-toggle" href="CategoryCon?cat=빵" data-toggle="dropdown">빵</a>
 							<ul class="dropdown-menu">
 								<li><a href="BakeryCon?seq=13">소금빵</a></li>
 								<li><a href="BakeryCon?seq=14">모닝빵</a></li>
