@@ -95,14 +95,12 @@
 		<%@ include file="header.jsp"%>
 		<div class="main">
 			<section class="module bg-dark-60 blog-page-header"
-				data-background="assets/images/blog_bg.jpg">
+				data-background="assets/images/background/tip.jpg">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-6 col-sm-offset-3">
-							<h2 class="module-title font-alt">Info</h2>
-							<div class="module-subtitle font-serif">A wonderful
-								serenity has taken possession of my entire soul, like these
-								sweet mornings of spring which I enjoy with my whole heart.</div>
+							<h2 class="module-title font-alt">INFORMATION</h2>
+							
 						</div>
 					</div>
 				</div>
@@ -114,7 +112,7 @@
 						<div class="col-sm-4 col-md-3 sidebar"
 							style="border-right: 1px solid #c2c2c2">
 							<div class="widget">
-								<h5 class="widget-title font-alt">Blog Categories</h5>
+								<h5 class="widget-title font-alt">Categories</h5>
 								<ul class="icon-list">
 									<li><a href="#none" id="all">전체 - 16</a></li>
 									<li><a href="#none" id="ingredients">재료 - 6</a></li>
@@ -123,13 +121,13 @@
 							</div>
 						</div>
 						<!-- 사이드바 -->
-						<div class="col-sm-8">
+						<div class="col-sm-8" id="info-img">
 							<div id="ingre">
 								<div class="col-sm-6 col-md-6 col-lg-6 ingredients">
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/밀가루.png"
-												alt="Blog-post Thumbnail" />
+												alt="Blog-post Thumbnail" style="border-radius: 20px;" />
 										</div>
 										<div class="post-header font-alt">
 											<h2 class="post-title">
@@ -145,7 +143,7 @@
 									<div class="post">
 										<div class="post-thumbnail">
 											<img src="assets/images/info/밀가루.png"
-												alt="Blog-post Thumbnail"/>
+												alt="Blog-post Thumbnail" style="border-radius: 20px;"/>
 										</div>
 										<div class="post-header font-alt">
 											<h2 class="post-title">

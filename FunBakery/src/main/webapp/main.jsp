@@ -78,7 +78,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">레시피</h2>
+                <h2 class="module-title" id="main-category-font"><b>RECIPE</b></h2>
                 <div class="module-subtitle font-serif"></div>
               </div>
             </div>
@@ -86,34 +86,34 @@
           <div class="container">
           <ul class="works-grid works-grid-gut works-grid-3 works-hover-w" id="works-grid">
             <li class="work-item illustration webdesign"><a href="CategoryCon?cat=케이크">
-                <div class="work-image"><img src="assets/images/work-1.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">케이크</h3>
+                <div class="work-image"><img src="assets/images/category/케이크.jpg" alt="Portfolio Item"/></div>
+                <div class="work-caption">
+                  <h1 class="main-category-font">케이크</h1>
                 </div></a></li>
             <li class="work-item marketing photography"><a href="CategoryCon?cat=구움과자">
-                <div class="work-image"><img src="assets/images/work-2.jpg" alt="Portfolio Item"/></div>
+                <div class="work-image"><img src="assets/images/category/구움과자.jpg" alt="Portfolio Item"/></div>
                 <div class="work-caption font-alt">
-                  <h3 class="work-title">구움과자</h3>
+                  <h1 class="main-category-font">구움과자</h1>
                 </div></a></li>
             <li class="work-item illustration photography"><a href="CategoryCon?cat=빵">
-                <div class="work-image"><img src="assets/images/work-3.jpg" alt="Portfolio Item"/></div>
+                <div class="work-image"><img src="assets/images/category/빵.jpg" alt="Portfolio Item"/></div>
                 <div class="work-caption font-alt">
-                  <h3 class="work-title">(건강)빵</h3>
+                  <h1 class="main-category-font">빵</h1>
                 </div></a></li>
             <li class="work-item marketing photography"><a href="CategoryCon?cat=쿠키">
-                <div class="work-image"><img src="assets/images/work-4.jpg" alt="Portfolio Item"/></div>
+                <div class="work-image"><img src="assets/images/category/쿠키.jpg" alt="Portfolio Item"/></div>
                 <div class="work-caption font-alt">
-                  <h3 class="work-title">쿠키</h3>
+                  <h1 class="main-category-font">쿠키</h1>
                 </div></a></li>
             <li class="work-item illustration webdesign"><a href="CategoryCon?cat=노오븐">
-                <div class="work-image"><img src="assets/images/work-5.jpg" alt="Portfolio Item"/></div>
+                <div class="work-image"><img src="assets/images/category/노오븐.jpg" alt="Portfolio Item"/></div>
                 <div class="work-caption font-alt">
-                  <h3 class="work-title">노오븐</h3>
+                  <h1 class="main-category-font">노오븐</h1>
                 </div></a></li>
             <li class="work-item marketing webdesign"><a href="CategoryCon?cat=냉동생지">
-                <div class="work-image"><img src="assets/images/work-6.jpg" alt="Portfolio Item"/></div>
+                <div class="work-image"><img src="assets/images/category/냉동생지.jpg" alt="Portfolio Item"/></div>
                 <div class="work-caption font-alt">
-                  <h3 class="work-title">냉동생지</h3>
+                  <h1 class="main-category-font">냉동생지</h1>
                 </div></a></li>
           </ul>
           </div>
