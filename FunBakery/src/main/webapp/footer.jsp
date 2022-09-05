@@ -40,7 +40,7 @@
 					<ul class="icon-list">
 						<li><a href="CategoryCon?cat=케이크">케이크</a></li>
 						<li><a href="CategoryCon?cat=구움과자">구움과자</a></li>
-						<li><a href="CategoryCon?cat=">(건강)빵</a></li>
+						<li><a href="CategoryCon?cat=">빵</a></li>
 						<li><a href="CategoryCon?cat=빵">쿠키</a></li>
 						<li><a href="CategoryCon?cat=노오븐">노오븐</a></li>
 						<li><a href="CategoryCon?cat=냉동생지">냉동생지</a></li>
