@@ -78,15 +78,15 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 mb-sm-40">
-                  <%out.print("<img style='width: 500px;' src=" + breadInfo.getB_img() +" alt='Bread image'>");%>
+                  <%out.print("<img style='width: 500px; height: 500px;' src=" + breadInfo.getB_img() +" alt='Bread image'>");%>
               </div>
               <div class="col-sm-6" id="breadinfo">
-                <div class="row" style="margin-bottom: 40px">
+                <div class="row" id="breadname-col" style="margin-bottom: 40px">
                   <div class="col-sm-12">
                     <h1 class="product-title" id="breadname"><%=breadInfo.getB_name() %></h1>
                   </div>
                 </div>
-                <div class="row mb-20">
+                <div class="row mb-20" id="breaddesc-col">
                   <div class="col-sm-12">
                     <div class="description" id="breaddesc">
                       <%=breadInfo.getB_desc() %>
@@ -166,27 +166,6 @@
                 </ul>
                 <div class="tab-content">
                 	<!-- 버튼1 시작 -->
-                  <div class="tab-pane active" id="description">
-                     <!--  버튼1의 내용!  -->
-                     
-                     <div class="best_tit">
-                     	
-                          	<b id="r_index">재료</b>
-                          	<!--  재료 비율 계산기 + 재료테이블   -->
-                          	<form class="form_ingr" id="ingr_cal">
-			                    <input class="input_ingr_name" type="text" name="name" placeholder="재료명을 입력해주세요." />
-			                    <input class="input_ingr_weight" type="number" name="weight" placeholder="재료량을 입력해주세요." />
-			                    <button type="submit">입력</button>
-			                </form>
-                          
-                      </div>
-                     
-                
-                     
-                     <!-- <hr width='90%'> -->
-                     <!--  재료 테이블 시작 -->
-          
-
                 <%
                   // 해당 레시피의 재료명과 재료량을 배열에 담아서 js로 넘기기
                         ArrayList<ArrayList<BakeryVO>> taste1 = (ArrayList<ArrayList<BakeryVO>>)request.getAttribute("taste1");
@@ -202,6 +181,35 @@
                         
                         
                      %>   
+                  <div class="tab-pane active" id="description">
+                     <!--  버튼1의 내용!  -->
+                     
+                     <div class="best_tit">
+                     	
+                          	<b id="r_index">재료</b>
+                          	<!--  재료 비율 계산기 + 재료테이블   -->
+                          	<form class="form_ingr" id="ingr_cal">
+                          		<b id="ingr_cal_tit">재료 계산기</b>
+			                    <select class="input_ingr_name" style="height: 25px;">
+			                    	<option value='' selected>재료명을 선택해주세요.</option>
+			                    	<%
+			                    		for (int i = 0; i < taste1.get(1).size(); i++) {
+			                    			out.print("<option>" + taste1.get(1).get(i).getIngr_name() + "</option>");
+			                    		}
+			                    	%>
+			                    </select>
+			                    <input class="input_ingr_weight" type="number" name="weight" placeholder="재료량을 입력해주세요." />
+			                    <button class="btn btn-g btn-round" id="cal-button" type="submit">입력</button>
+			                </form>
+                          
+                      </div>
+                     
+                
+                     
+                     <!-- <hr width='90%'> -->
+                     <!--  재료 테이블 시작 -->
+          
+
                      
                      <script src="assets/js/recipe_cal.js"></script>
                      
@@ -223,7 +231,7 @@
                         
                         // 클래스에 넣어주기 위해 딕셔너리 생성 (key-ingrName, value-ingrWeight)
                         let ingrTable = {};
-                        for(var j=0; j<(ingrName.length)-1; j++) {
+                        for(var j=0; j<(ingrName.length); j++) {
                            let key = ingrName[j];
                            ingrTable[key] = ingrWeight[j];
                         }

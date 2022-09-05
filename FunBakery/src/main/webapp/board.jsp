@@ -65,18 +65,23 @@
       <!-- 헤더부분 -->
 	  <%@ include file="header.jsp" %>
       <div class="main">
+   			<section class="module bg-dark-60 blog-page-header"
+				data-background="assets/images/background/community.png">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-3">
+							<h1 class="module-title font-alt">Community</h1>
+						</div>
+					</div>
+				</div>
+			</section>
         <section class="module">
           <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <h1 class="module-title font-alt">Community</h1>
-              </div>
-            </div>
             <hr class="divider-w pt-20">
             <div class="row">
               <div class="col-sm-12">
               	<form method="post">
-                <table class="table table-striped">
+                <table class="table table-striped community-font">
                     <tr>
                       <th></th>
                       <th style="text-align: center">제목</th>

@@ -64,15 +64,19 @@
 		<%@ include file="header.jsp" %>
       </nav>
       <div class="main">
+      		<section class="module bg-dark-60 blog-page-header"
+				data-background="assets/images/background/faq.png">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-3">
+							<h1 class="module-title font-alt">TIP</h1>
+						</div>
+					</div>
+				</div>
+			</section>
         <section class="module">
           <div class="container">
-			  <div class="container">
-	            <div class="row">
-	              <div class="col-sm-6 col-sm-offset-3">
-	                <h1 class="module-title font-alt">베이킹 시 유의 사항</h1>
-	              </div>
-	            </div>
-	          </div>
+
 	          <hr class="divider-w pt-20">
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2">

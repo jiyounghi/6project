@@ -78,15 +78,15 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 mb-sm-40">
-                  <%out.print("<img style='width: 500px;' src=" + breadInfo.getB_img() +" alt='Bread image'>");%>
+                  <%out.print("<img style='width: 500px; height: 500px;' src=" + breadInfo.getB_img() +" alt='Bread image'>");%>
               </div>
               <div class="col-sm-6" id="breadinfo">
-                <div class="row" style="margin-bottom: 40px">
+                <div class="row" id="breadname-col" style="margin-bottom: 40px">
                   <div class="col-sm-12">
                     <h1 class="product-title" id="breadname"><%=breadInfo.getB_name() %></h1>
                   </div>
                 </div>
-                <div class="row mb-20">
+                <div class="row mb-20" id="breaddesc-col">
                   <div class="col-sm-12">
                     <div class="description" id="breaddesc">
                       <%=breadInfo.getB_desc() %>
@@ -100,9 +100,9 @@
               <div class="col-sm-12">
                 <ul class="nav nav-tabs font-alt" role="tablist">
                   
-                  <li class="active"><a id="taste1" href="#description" data-toggle="tab">레시피1</a></li>
-                  <li><a id="taste2" href="#data-sheet" data-toggle="tab">레시피2</a></li>
-                  <li><a id="taste3" href="#reviews" data-toggle="tab">레시피3</a></li>
+                  <li class="active"><a id="taste1" href="#description" data-toggle="tab">밀가루가 적은 레시피</a></li>
+                  <li><a id="taste2" href="#data-sheet" data-toggle="tab">달달한 레시피</a></li>
+                  <li><a id="taste3" href="#reviews" data-toggle="tab">맛이 진한 레시피</a></li>
                   
                   <div class="best_tit_rmn">
                       <button id="btnMeasureModal" type="button" class="btn btn-default" onclick="modalOn()" style="float:right; margin:0 15px 5px 0;">계량법 안내</button>
@@ -170,25 +170,6 @@
                 	<!-- 버튼1 시작 -->
                   <div class="tab-pane active" id="description">
                      <!--  버튼1의 내용!  -->
-                     
-                     <div class="best_tit">
-                     	
-                          	<b id="r_index">재료</b>
-                          	<!--  재료 비율 계산기 + 재료테이블   -->
-                          	<form class="form_ingr" id="ingr_cal">
-			                    <input class="input_ingr_name" type="text" name="name" placeholder="재료명을 입력해주세요." />
-			                    <input class="input_ingr_weight" type="number" name="weight" placeholder="재료량을 입력해주세요." />
-			                    <button type="submit">입력</button>
-			                </form>
-                          
-                      </div>
-                     
-                
-                     
-                     <!-- <hr width='90%'> -->
-                     <!--  재료 테이블 시작 -->
-          
-
                 <%
                   // 해당 레시피의 재료명과 재료량을 배열에 담아서 js로 넘기기
                         ArrayList<ArrayList<BakeryVO>> taste1 = (ArrayList<ArrayList<BakeryVO>>)request.getAttribute("taste1");
@@ -204,6 +185,32 @@
                         
                         
                      %>   
+                     
+                     <div class="best_tit">
+                     	
+                          	<b id="r_index">재료</b>
+                          	<!--  재료 비율 계산기 + 재료테이블   -->
+                          	<form class="form_ingr" id="ingr_cal">
+                          	<b id="ingr_cal_tit">재료 계산기</b>
+			                    <select class="input_ingr_name" style="height: 25px;">
+			                    	<option value='' selected>재료명을 선택해주세요.</option>
+			                    	<%
+			                    		for (int i = 0; i < taste1.get(1).size(); i++) {
+			                    			out.print("<option>" + taste1.get(1).get(i).getIngr_name() + "</option>");
+			                    		}
+			                    	%>
+			                    </select>
+			                    <!-- <input class="input_ingr_name" type="text" name="name" placeholder="재료명을 입력해주세요." /> -->
+			                    <input class="input_ingr_weight" type="number" name="weight" placeholder="재료량을 입력해주세요." />
+			                    <button class="btn btn-g btn-round" id="cal-button" type="submit">입력</button>
+			                </form>
+                          
+                      </div>
+                     
+                
+
+                     
+                     <!--  재료 테이블 시작 -->
                      
                      <script src="assets/js/recipe_cal.js"></script>
                      
@@ -225,7 +232,7 @@
                         
                         // 클래스에 넣어주기 위해 딕셔너리 생성 (key-ingrName, value-ingrWeight)
                         let ingrTable = {};
-                        for(var j=0; j<(ingrName.length)-1; j++) {
+                        for(var j=0; j<(ingrName.length); j++) {
                            let key = ingrName[j];
                            ingrTable[key] = ingrWeight[j];
                         }
@@ -295,26 +302,6 @@
                   	  <!--  버튼 2 시작 -->
                   <div class="tab-pane" id="data-sheet">
                   
-                  
-                   <!--  재료 비율 계산기 + 재료테이블   -->
-                		<div class="best_tit">
-                     	
-                          	<b id="r_index">재료</b>
-                          	<!--  재료 비율 계산기 + 재료테이블   -->
-                          	<form class="form_ingr2">
-			                    <input class="input_ingr_name2" type="text" name="name" placeholder="재료명을 입력해주세요." />
-			                    <input class="input_ingr_weight2" type="number" name="weight" placeholder="재료량을 입력해주세요." />
-			                    <button type="submit">입력</button>
-			                </form>
-                          
-                      </div>
-                
-                     
-                     <!-- <hr width='90%'> -->
-                     
-                     <!-- toHtml() 결과가 들어갈 곳 -->
-                     <ul class='ingre_two' id='two_type'></ul>
-
                 <%
                   // 해당 레시피의 재료명과 재료량을 배열에 담아서 js로 넘기기
                         ArrayList<ArrayList<BakeryVO>> taste2 = (ArrayList<ArrayList<BakeryVO>>)request.getAttribute("taste2");
@@ -329,6 +316,34 @@
                         }
                    
                      %>   
+                  
+                   <!--  재료 비율 계산기 + 재료테이블   -->
+                		<div class="best_tit">
+                     	
+                          	<b id="r_index">재료</b>
+                          	<!--  재료 비율 계산기 + 재료테이블   -->
+                          	<form class="form_ingr2">
+                          		<b id="ingr_cal_tit">재료 계산기</b>
+			                    <select class="input_ingr_name2" style="height: 25px;">
+			                    	<option value='' selected>재료명을 선택해주세요.</option>
+			                    	<%
+			                    		for (int i = 0; i < taste2.get(1).size(); i++) {
+			                    			out.print("<option>" + taste2.get(1).get(i).getIngr_name() + "</option>");
+			                    		}
+			                    	%>
+			                    </select>
+			                    <input class="input_ingr_weight2" type="number" name="weight" placeholder="재료량을 입력해주세요." />
+			                    <button class="btn btn-g btn-round" id="cal-button" type="submit">입력</button>
+			                </form>
+                          
+                      </div>
+                
+                     
+                     <!-- <hr width='90%'> -->
+                     
+                     <!-- toHtml() 결과가 들어갈 곳 -->
+                     <ul class='ingre_two' id='two_type'></ul>
+
 
                      <script>
                         // jsp 코드의 재료명 배열을 자바스크립트 배열로 옮기기 
@@ -345,7 +360,7 @@
                         
                         // 클래스에 넣어주기 위해 딕셔너리 생성 (key-ingrName, value-ingrWeight)
                         let ingrTable2 = {};
-                        for(var j=0; j<(ingrName2.length)-1; j++) {
+                        for(var j=0; j<(ingrName2.length); j++) {
                            let key2 = ingrName2[j];
                            ingrTable2[key2] = ingrWeight2[j];
                         }
@@ -408,27 +423,6 @@
                   </div></div>
                   
                   <!--  버튼 3 시작 -->
-                  <div class="tab-pane" id="reviews">
-                    <div class="comments reviews">
-                     
-                     
-                     <!--  재료 비율 계산기 + 재료테이블   -->
-                		<div class="best_tit">
-                     	
-                          	<b id="r_index">재료</b>
-                          	<!--  재료 비율 계산기 + 재료테이블   -->
-                          	<form class="form_ingr3">
-			                    <input class="input_ingr_name3" type="text" name="name" placeholder="재료명을 입력해주세요." />
-			                    <input class="input_ingr_weight3" type="number" name="weight" placeholder="재료량을 입력해주세요." />
-			                    <button type="submit">입력</button>
-			                </form>
-                      </div>
-                     
-                     <!-- <hr width='90%'> -->
-                     
-                     <!-- toHtml() 결과가 들어갈 곳 -->
-                     <ul class='ingre_three' id='three_type'></ul>
-
                 <%
                   // 해당 레시피의 재료명과 재료량을 배열에 담아서 js로 넘기기
                         ArrayList<ArrayList<BakeryVO>> taste3 = (ArrayList<ArrayList<BakeryVO>>)request.getAttribute("taste3");
@@ -443,6 +437,35 @@
                         }
                    
                      %>   
+                  <div class="tab-pane" id="reviews">
+                    <div class="comments reviews">
+                     
+                     
+                     <!--  재료 비율 계산기 + 재료테이블   -->
+                		<div class="best_tit">
+                     	
+                          	<b id="r_index">재료</b>
+                          	<!--  재료 비율 계산기 + 재료테이블   -->
+                          	<form class="form_ingr3">
+                          	<b id="ingr_cal_tit">재료 계산기</b>
+								<select class="input_ingr_name3" style="height: 25px;">
+			                    	<option value='' selected>재료명을 선택해주세요.</option>
+			                    	<%
+			                    		for (int i = 0; i < taste3.get(1).size(); i++) {
+			                    			out.print("<option>" + taste3.get(1).get(i).getIngr_name() + "</option>");
+			                    		}
+			                    	%>
+			                    </select>
+			                    <input class="input_ingr_weight3" type="number" name="weight" placeholder="재료량을 입력해주세요." />
+			                    <button class="btn btn-g btn-round" id="cal-button" type="submit">입력</button>
+			                </form>
+                      </div>
+                     
+                     <!-- <hr width='90%'> -->
+                     
+                     <!-- toHtml() 결과가 들어갈 곳 -->
+                     <ul class='ingre_three' id='three_type'></ul>
+
 
                      <script>
                         // jsp 코드의 재료명 배열을 자바스크립트 배열로 옮기기 
@@ -459,7 +482,7 @@
                         
                         // 클래스에 넣어주기 위해 딕셔너리 생성 (key-ingrName, value-ingrWeight)
                         let ingrTable3 = {};
-                        for(var k=0; k<(ingrName3.length)-1; k++) {
+                        for(var k=0; k<(ingrName3.length); k++) {
                            let key3 = ingrName3[k];
                            ingrTable3[key3] = ingrWeight3[k];
                         }
