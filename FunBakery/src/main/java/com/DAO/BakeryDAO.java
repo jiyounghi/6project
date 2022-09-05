@@ -220,7 +220,7 @@ public class BakeryDAO {
 		ArrayList<BakeryVO> list = new ArrayList<>();
 		try {
 			dbConn();
-			String sql = "select b_name, b_desc, b_img from t_bread where b_seq = ?";
+			String sql = "select b_name, b_desc, b_img, b_count from t_bread where b_seq = ?";
 			
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, b_seq);
@@ -232,8 +232,11 @@ public class BakeryDAO {
 				String getb_name = rs.getString(1);
 				String getb_desc = rs.getString(2);
 				String getb_img = rs.getString(3);
-				
+				int count = rs.getInt(4);
+			
 				vo = new BakeryVO(b_seq, getb_name, getb_desc, getb_img);
+				count++;
+				countUpdate(count, b_seq);
 
 			} else {
 				System.out.println("빵 정보 실패");
@@ -246,6 +249,19 @@ public class BakeryDAO {
 		}
 		
 		return vo;
+	}
+	
+	public void countUpdate(int count, int seq) {
+		try {
+			String sql = "UPDATE t_bread SET b_count=? WHERE b_seq=?";
+			psmt = conn.prepareStatement(sql);
+			
+			psmt.setInt(1, count);
+			psmt.setInt(2, seq);
+			psmt.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public ArrayList<BakeryVO> category(String cat){
@@ -317,7 +333,7 @@ public class BakeryDAO {
 		try {
 			dbConn();
 			
-			String sql = "SELECT * FROM(SELECT b_seq, b_img, b_name, b_category, b_count FROM t_bread ORDER BY b_count) WHERE rownum<=3";
+			String sql = "SELECT * FROM(SELECT b_seq, b_img, b_name, b_category, b_count FROM t_bread ORDER BY b_count desc) WHERE rownum<=3";
 			psmt = conn.prepareStatement(sql);
 
 			rs = psmt.executeQuery();
