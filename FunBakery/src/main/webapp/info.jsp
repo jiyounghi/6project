@@ -112,7 +112,7 @@
 						<div class="col-sm-4 col-md-3 sidebar"
 							style="border-right: 1px solid #c2c2c2">
 							<div class="widget">
-								<h5 class="widget-title font-alt">Blog Categories</h5>
+								<h5 class="widget-title font-alt">Categories</h5>
 								<ul class="icon-list">
 									<li><a href="#none" id="all">전체 - 16</a></li>
 									<li><a href="#none" id="ingredients">재료 - 6</a></li>
@@ -121,7 +121,7 @@
 							</div>
 						</div>
 						<!-- 사이드바 -->
-						<div class="col-sm-8">
+						<div class="col-sm-8" id="info-img">
 							<div id="ingre">
 								<div class="col-sm-6 col-md-6 col-lg-6 ingredients">
 									<div class="post">

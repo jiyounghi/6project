@@ -232,7 +232,7 @@
                         
                         // 클래스에 넣어주기 위해 딕셔너리 생성 (key-ingrName, value-ingrWeight)
                         let ingrTable = {};
-                        for(var j=0; j<(ingrName.length)-1; j++) {
+                        for(var j=0; j<(ingrName.length); j++) {
                            let key = ingrName[j];
                            ingrTable[key] = ingrWeight[j];
                         }
@@ -360,7 +360,7 @@
                         
                         // 클래스에 넣어주기 위해 딕셔너리 생성 (key-ingrName, value-ingrWeight)
                         let ingrTable2 = {};
-                        for(var j=0; j<(ingrName2.length)-1; j++) {
+                        for(var j=0; j<(ingrName2.length); j++) {
                            let key2 = ingrName2[j];
                            ingrTable2[key2] = ingrWeight2[j];
                         }
@@ -482,7 +482,7 @@
                         
                         // 클래스에 넣어주기 위해 딕셔너리 생성 (key-ingrName, value-ingrWeight)
                         let ingrTable3 = {};
-                        for(var k=0; k<(ingrName3.length)-1; k++) {
+                        for(var k=0; k<(ingrName3.length); k++) {
                            let key3 = ingrName3[k];
                            ingrTable3[key3] = ingrWeight3[k];
                         }

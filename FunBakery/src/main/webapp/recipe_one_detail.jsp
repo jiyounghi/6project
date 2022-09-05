@@ -231,7 +231,7 @@
                         
                         // 클래스에 넣어주기 위해 딕셔너리 생성 (key-ingrName, value-ingrWeight)
                         let ingrTable = {};
-                        for(var j=0; j<(ingrName.length)-1; j++) {
+                        for(var j=0; j<(ingrName.length); j++) {
                            let key = ingrName[j];
                            ingrTable[key] = ingrWeight[j];
                         }

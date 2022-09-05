@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-	헤더 & 푸터 & 커뮤니티 & 메인
+	헤더 & 푸터 & 커뮤니티 & 메인 & 인포
 --------------------------------------------------------------*/
 
 .nav.navbar-nav.navbar-right{
@@ -15,6 +15,21 @@
 .main-category-font {
 	font-family: 'Pretendard-Regular';
 	font-size: 20px;
+}
+
+.works-grid img{
+  width: 370px;
+  height: 240px;
+}
+
+#info-img img{
+	border-radius: 20px;
+}
+
+.main-category-font{
+	font-family: 'Pretendard-Regular';
+	font-size: 40px;
+	color: #111;
 }
 
 /*--------------------------------------------------------------
