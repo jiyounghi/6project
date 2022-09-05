@@ -327,8 +327,8 @@
 			                    <select class="input_ingr_name2" style="height: 25px;">
 			                    	<option value='' selected>재료명을 선택해주세요.</option>
 			                    	<%
-			                    		for (int i = 0; i < taste1.get(1).size(); i++) {
-			                    			out.print("<option>" + taste1.get(1).get(i).getIngr_name() + "</option>");
+			                    		for (int i = 0; i < taste2.get(1).size(); i++) {
+			                    			out.print("<option>" + taste2.get(1).get(i).getIngr_name() + "</option>");
 			                    		}
 			                    	%>
 			                    </select>
@@ -451,8 +451,8 @@
 								<select class="input_ingr_name3" style="height: 25px;">
 			                    	<option value='' selected>재료명을 선택해주세요.</option>
 			                    	<%
-			                    		for (int i = 0; i < taste1.get(1).size(); i++) {
-			                    			out.print("<option>" + taste1.get(1).get(i).getIngr_name() + "</option>");
+			                    		for (int i = 0; i < taste3.get(1).size(); i++) {
+			                    			out.print("<option>" + taste3.get(1).get(i).getIngr_name() + "</option>");
 			                    		}
 			                    	%>
 			                    </select>

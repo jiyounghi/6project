@@ -78,7 +78,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">레시피</h2>
+                <h2 class="module-title" id="main-category-font"><b>레시피</b></h2>
                 <div class="module-subtitle font-serif"></div>
               </div>
             </div>
@@ -98,7 +98,7 @@
             <li class="work-item illustration photography"><a href="CategoryCon?cat=빵">
                 <div class="work-image"><img src="assets/images/work-3.jpg" alt="Portfolio Item"/></div>
                 <div class="work-caption font-alt">
-                  <h3 class="work-title">(건강)빵</h3>
+                  <h3 class="work-title">빵</h3>
                 </div></a></li>
             <li class="work-item marketing photography"><a href="CategoryCon?cat=쿠키">
                 <div class="work-image"><img src="assets/images/work-4.jpg" alt="Portfolio Item"/></div>

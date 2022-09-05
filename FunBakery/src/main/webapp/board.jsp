@@ -66,7 +66,7 @@
 	  <%@ include file="header.jsp" %>
       <div class="main">
    			<section class="module bg-dark-60 blog-page-header"
-				data-background="assets/images/background/community.jpg">
+				data-background="assets/images/background/community.png">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-6 col-sm-offset-3">

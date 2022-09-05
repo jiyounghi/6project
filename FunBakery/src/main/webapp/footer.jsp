@@ -60,9 +60,9 @@
 						<li class="clearfix">
 							<div class="widget-posts-image">
 								<%if(bvo.getB_category().equals("노오븐") || bvo.getB_category().equals("냉동생지")){ %>
-								<a href="BakeryOneCon?seq=<%=bvo.getB_seq() %>"><img src="<%=bvo.getB_img() %>" alt="Post Thumbnail" /></a>
+								<a href="BakeryOneCon?seq=<%=bvo.getB_seq() %>"><img style="width: 64px; height: 64px" src="<%=bvo.getB_img() %>" alt="Post Thumbnail" /></a>
 								<%}else{ %>
-								<a href="BakeryCon?seq=<%=bvo.getB_seq() %>"><img src="<%=bvo.getB_img() %>" alt="Post Thumbnail" /></a>
+								<a href="BakeryCon?seq=<%=bvo.getB_seq() %>"><img style="width: 64px; height: 64px"s src="<%=bvo.getB_img() %>" alt="Post Thumbnail" /></a>
 								<%} %>
 							</div>
 							<div class="widget-posts-body">
