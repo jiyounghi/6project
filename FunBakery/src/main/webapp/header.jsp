@@ -23,9 +23,9 @@
 								<li><a href="BakeryCon?seq=1">생크림케이크</a></li>
 								<li><a href="BakeryCon?seq=2">치즈케이크</a></li>
 								<li><a href="BakeryCon?seq=3">초코케이크</a></li>
-								<li><a href="BakeryCon?seq=4">당근케이크</a></li>
-								<li><a href="BakeryCon?seq=5">카스테라</a></li>
-								<li><a href="BakeryCon?seq=6">티라미수</a></li>
+								<li><a href="BakeryCon?seq=4">카스테라</a></li>
+								<li><a href="BakeryCon?seq=5">티라미수</a></li>
+								<li><a href="BakeryCon?seq=6">당근케이크</a></li>
 							</ul></li>
 						<li class="dropdown"><a class="dropdown-toggle" href="CategoryCon?cat=구움과자" data-toggle="dropdown">구움과자</a>
 							<ul class="dropdown-menu">

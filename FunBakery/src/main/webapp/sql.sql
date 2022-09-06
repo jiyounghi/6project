@@ -39,3 +39,30 @@ select * from(select b_img, b_name, b_category from t_bread order by b_count) wh
 SELECT * FROM(SELECT b.article_seq, b.article_title, m.mb_name FROM t_community b, t_member m WHERE b.mb_id = m.mb_id ORDER BY article_seq DESC) WHERE ROWNUM<=5;
 
 Select * from t_member
+
+insert into t_member values('jy','1234','jy',sysdate,'a');
+insert into t_member values('sj','1234','sj',sysdate,'a');
+insert into t_member values('yj','1234','yj',sysdate,'a');
+insert into t_member values('hw','1234','hw',sysdate,'a');
+insert into t_member values('hs','1234','hs',sysdate,'a');
+insert into t_member values('test1','1234','test1',sysdate,'n');
+insert into t_member values('test2','1234','test2',sysdate,'n');
+insert into t_member values('test3','1234','test3',sysdate,'n');
+insert into t_member values('test4','1234','test4',sysdate,'n');
+insert into t_member values('test5','1234','test5',sysdate,'n');
+insert into t_member values('test6','1234','test6',sysdate,'n');
+insert into t_member values('test7','1234','test7',sysdate,'n');
+insert into t_member values('test8','1234','test8',sysdate,'n');
+
+insert into t_community values(t_community_SEQ.nextval,'안녕하세요 팀장 문지영입니다','반갑습니다',sysdate,'jy',0);
+insert into t_community values(t_community_SEQ.nextval,'안녕하세요 팀원 노성진입니다','반갑습니다',sysdate,'sj',0);
+insert into t_community values(t_community_SEQ.nextval,'안녕하세요 팀원 윤예지입니다','반갑습니다',sysdate,'yj',0);
+insert into t_community values(t_community_SEQ.nextval,'안녕하세요 팀원 이현우입니다','반갑습니다',sysdate,'hw',0);
+insert into t_community values(t_community_SEQ.nextval,'안녕하세요 팀원 박현성입니다','반갑습니다',sysdate,'hs',0);
+insert into t_community values(t_community_SEQ.nextval,'오늘의 글귀','테스트중',sysdate,'jy',0);
+insert into t_community values(t_community_SEQ.nextval,'반갑습니다','1',sysdate,'sj',0);
+insert into t_community values(t_community_SEQ.nextval,'오늘은','2',sysdate,'yj',0);
+insert into t_community values(t_community_SEQ.nextval,'오늘의 꿀팁','3',sysdate,'hw',0);
+insert into t_community values(t_community_SEQ.nextval,'태풍이 몰아치는 어느 날','4',sysdate,'hs',0);
+
+truncate from T_COMMUNITY
