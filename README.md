@@ -34,33 +34,6 @@
         </ul>
     </li>
 </ul>
-
-<div markdown="1">
-<details>
-<summary>기능1</summary>
-<div markdown="1">
-안녕
-</div>
-</details>
-<details>
-<summary>기능2</summary>
-<div markdown="1">
-안녕
-</div>
-</details>
-<details>
-<summary>기능3</summary>
-<div markdown="1">
-안녕
-</div>
-</details>
-<details>
-<summary>기능4</summary>
-<div markdown="1">
-안녕
-</div>
-</details>
-</div>
 </details>
 <!-- 기술 스택 -->
 <details>
