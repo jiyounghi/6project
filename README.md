@@ -1,20 +1,50 @@
-# Fun (便) Bakery (팀명 : 베이킹왕문지영)
+# :birthday: Fun (便) Bakery (팀명 : 베이킹왕문지영)
 ![Fun_便_Bakery](/uploads/f80967022cd4c783b16febc35091b5ac/Fun_便_Bakery.png)
 
 ## 👀 프로젝트 소개
-* 프로젝트명 : 
-* 프로젝트설명 : 
-<br>
+* 프로젝트명 : 사용자 취향 맞춤 베이킹 레시피 제공 서비스
+* 프로젝트 설명 : 홈베이킹을 하는 사람들에게 본인 취향에 맞는 레시피를 쉽게 찾을 수 있도록 레시피의 특징을 파악하여 
+
+베이킹 레시피를 찾는 사람들이 본인 취향에 맞는 레시피를 쉽게 찾을 수 있도록 레시피에 사용되는 재료 종류와 양에 따라 레시피를 분류하여 제공하고 
+재료량 계산기능을 제공하여 계량에 대한 번거로움을 줄
 
 ## 📅 프로젝트 기간
-2022.04.22 ~ 2022.06.03 (6주)
+2022.08.16 ~ 2022.09.07 (4주)
 <br>
-
-## ⭐ 주요 기능
-*
-
-## ⛏ 기술스택
-
+<!-- 주요기능 -->
+<details>
+<summary><h2>⭐ 주요 기능</h2></summary>
+<div markdown="1">
+<details>
+<summary>기능1</summary>
+<div markdown="1">
+안녕
+</div>
+</details>
+<details>
+<summary>기능2</summary>
+<div markdown="1">
+안녕
+</div>
+</details>
+<details>
+<summary>기능3</summary>
+<div markdown="1">
+안녕
+</div>
+</details>
+<details>
+<summary>기능4</summary>
+<div markdown="1">
+안녕
+</div>
+</details>
+</div>
+</details>
+<!-- 기술 스택 -->
+<details>
+<summary><h2>⛏ 기술스택</h1></summary>
+<div markdown="1">
 <table>
     <tr>
         <th>구분</th>
@@ -62,19 +92,44 @@
         </td>
     </tr>
 </table>
+</div>
+</details>
 
-## 🏗️ 시스템 아키텍처
 
-## 📌 유스케이스
+<!-- ## 🏗️ 시스템 아키텍처 -->
 
-## 📌 서비스 흐름도
+<!-- ## 📌 유스케이스 -->
+<!-- 서비스 흐름도 -->
+<details>
+<summary><h2>📌 서비스 흐름도</h2></summary>
+<div markdown="1">
 ![image](/uploads/a2e60c64980febc5f84c8131c479ddfb/image.png)
+<br>
+</div>
+</details>
 
-## 📌 ER 다이어그램
+<!-- ER 다이어그램 -->
+<details>
+<summary><h2>📌 ER 다이어그램</h2></summary>
+<div markdown="1">
+![image](/uploads/f0e6a80a571e71857c10b57341f7e554/image.png)
+<br>
+</div>
+</details>
 
-## 🖥 화면구성
+<!-- 화면 구성 -->
+<details>
+<summary><h2>🖥 화면구성</h2></summary>
+<div markdown="1">
 ![image](/uploads/50600db93f2967f95559fdd379368d08/image.png)
-## 👥 팀원역할
+<br>
+</div>
+</details>
+
+<!-- 팀원 역할 -->
+<details>
+<summary><h2>👥 팀원역할</h2></summary>
+<div markdown="1">
 <table>
   <tr>
     <td align="center"><img src="image-1.png" width="100" height="100"/></td>
@@ -105,7 +160,10 @@
     <td align="center"><a href="https://github.com/gusdn820" target='_blank'>github</a></td>
   </tr>
 </table>
+</div>
+</details>
 
-## 🧐 트러블슈팅
+
+<!-- ## 🧐 트러블슈팅 -->
 
 <br>
