@@ -68,12 +68,43 @@
 ## 📌 유스케이스
 
 ## 📌 서비스 흐름도
+![image](/uploads/a2e60c64980febc5f84c8131c479ddfb/image.png)
 
 ## 📌 ER 다이어그램
 
 ## 🖥 화면구성
-
+![image](/uploads/50600db93f2967f95559fdd379368d08/image.png)
 ## 👥 팀원역할
+<table>
+  <tr>
+    <td align="center"><img src="image-1.png" width="100" height="100"/></td>
+    <td align="center"><img src="https://mb.ntdtv.kr/assets/uploads/2019/01/Screen-Shot-2019-01-08-at-4.31.55-PM-e1546932545978.png" width="100" height="100"/></td>
+    <td align="center"><img src="https://mblogthumb-phinf.pstatic.net/20160127_177/krazymouse_1453865104404DjQIi_PNG/%C4%AB%C4%AB%BF%C0%C7%C1%B7%BB%C1%EE_%B6%F3%C0%CC%BE%F0.png?type=w2" width="100" height="100"/></td>
+    <td align="center"><img src="https://i.pinimg.com/236x/ed/bb/53/edbb53d4f6dd710431c1140551404af9.jpg" width="100" height="100"/></td>
+    <td align="center"><img src="https://pbs.twimg.com/media/B-n6uPYUUAAZSUx.png" width="100" height="100"/></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>문지영</strong></td>
+    <td align="center"><strong>노성진</strong></td>
+    <td align="center"><strong>박현성</strong></td>
+    <td align="center"><strong>윤예지</strong></td>
+    <td align="center"><strong>이현우</strong></td>
+  </tr>
+  <tr>
+    <td align="left"><b>- 프로젝트 총괄<br>- 데이터 수집 및 전처리<br>- 재료량 계산기능 구현</b></td>
+    <td align="left"><b>- 웹 UI/UX<br>- 로그인,회원가입 기능<br>- 계량법 안내 모달 구현</b></td>
+    <td align="left"><b>- 웹 UI/UX<br>- 게시판 기능 구현<br>- 사이드바 기능 구현</b></td>
+    <td align="left"><b>- 웹 UI/UX<br>- 데이터 수집 및 전처리<br>- 레시피 분류 기능 구현</b></td>
+    <td align="left"><b>- 데이터 수집 및 전처리<br>- DB구축<br>- 회원관리 기능 구현</b></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/jiyounghi" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/shtjdwls1" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/hyeontjd" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/yeeeeeji" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/gusdn820" target='_blank'>github</a></td>
+  </tr>
+</table>
 
 ## 🧐 트러블슈팅
 
