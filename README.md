@@ -1,5 +1,5 @@
 # :birthday: Fun (便) Bakery (팀명 : 베이킹왕문지영)
-![Fun_便_Bakery](/uploads/f80967022cd4c783b16febc35091b5ac/Fun_便_Bakery.png)
+<img src="https://gwangju-ai-gitlab.elice.io/spring_b/bakingmoon/firstteamproject/uploads/f80967022cd4c783b16febc35091b5ac/Fun_%E4%BE%BF_Bakery.png"/>
 
 ## 👀 프로젝트 소개
 * 프로젝트명 : 사용자 취향 맞춤 베이킹 레시피 제공 서비스
@@ -97,7 +97,7 @@
 <details>
 <summary><h2>📌 서비스 흐름도</h2></summary>
 <div markdown="1">
-![image](/uploads/a2e60c64980febc5f84c8131c479ddfb/image.png)
+    <img src="https://gwangju-ai-gitlab.elice.io/spring_b/bakingmoon/firstteamproject/uploads/a2e60c64980febc5f84c8131c479ddfb/image.png"/>
 <br>
 </div>
 </details>
@@ -106,7 +106,7 @@
 <details>
 <summary><h2>📌 ER 다이어그램</h2></summary>
 <div markdown="1">
-![image](/uploads/f0e6a80a571e71857c10b57341f7e554/image.png)
+    <img src="https://gwangju-ai-gitlab.elice.io/spring_b/bakingmoon/firstteamproject/uploads/f0e6a80a571e71857c10b57341f7e554/image.png"/>
 <br>
 </div>
 </details>
@@ -115,7 +115,7 @@
 <details>
 <summary><h2>🖥 화면구성</h2></summary>
 <div markdown="1">
-![image](/uploads/50600db93f2967f95559fdd379368d08/image.png)
+    <img src="https://gwangju-ai-gitlab.elice.io/spring_b/bakingmoon/firstteamproject/uploads/50600db93f2967f95559fdd379368d08/image.png">
 <br>
 </div>
 </details>
@@ -161,3 +161,4 @@
 <!-- ## 🧐 트러블슈팅 -->
 
 <br>
+
