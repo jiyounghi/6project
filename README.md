@@ -1,5 +1,5 @@
 # :birthday: Fun (便) Bakery (팀명 : 베이킹왕문지영)
-![Fun_便_Bakery](/uploads/f80967022cd4c783b16febc35091b5ac/Fun_便_Bakery.png)
+<img src="https://gwangju-ai-gitlab.elice.io/spring_b/bakingmoon/firstteamproject/uploads/f80967022cd4c783b16febc35091b5ac/Fun_%E4%BE%BF_Bakery.png"/>
 
 ## 👀 프로젝트 소개
 * 프로젝트명 : 사용자 취향 맞춤 베이킹 레시피 제공 서비스
